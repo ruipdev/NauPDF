@@ -19,9 +19,9 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: PDF8
+          - name: pdffdp
             file: Dockerfile
-          - name: pdf8-nonroot
+          - name: pdffdp-nonroot
             file: Dockerfile.nonroot
     steps:
       - name: Checkout code

@@ -1,4 +1,4 @@
-name: PDF8 CodeQL config
+name: pdffdp CodeQL config
 
 paths-ignore:
   - dist
@@ -6,9 +6,9 @@ paths-ignore:
   - coverage
   - node_modules
   - vendor
-  - pdf8-pymupdf-wasm
+  - pdffdp-pymupdf-wasm
   - libreoffice-wasm-package
-  - pdf8-airgap-bundle
+  - pdffdp-airgap-bundle
   - public/pdfjs-viewer
   - public/pdfjs-annotation-viewer
   - public/libreoffice-wasm

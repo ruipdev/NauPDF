@@ -1,6 +1,6 @@
 # Deploy with Nginx
 
-Host PDF8 on your own server using Nginx.
+Host pdffdp on your own server using Nginx.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Host PDF8 on your own server using Nginx.
 ## Step 1: Build the Project
 
 ```bash
-git clone https://github.com/alam00000/pdf8.git
-cd PDF8
+git clone https://github.com/alam00000/pdffdp.git
+cd pdffdp
 npm install
 npm run build
 ```
@@ -26,14 +26,14 @@ VITE_BRAND_NAME="AcmePDF" VITE_BRAND_LOGO="images/acme-logo.svg" npm run build
 ## Step 2: Copy Files
 
 ```bash
-sudo mkdir -p /var/www/PDF8
-sudo cp -r dist/* /var/www/PDF8/
-sudo chown -R www-data:www-data /var/www/PDF8
+sudo mkdir -p /var/www/pdffdp
+sudo cp -r dist/* /var/www/pdffdp/
+sudo chown -R www-data:www-data /var/www/pdffdp
 ```
 
 ## Step 3: Nginx Configuration
 
-Create `/etc/nginx/sites-available/PDF8`:
+Create `/etc/nginx/sites-available/pdffdp`:
 
 ```nginx
 server {
@@ -50,7 +50,7 @@ server {
     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
 
-    root /var/www/PDF8;
+    root /var/www/pdffdp;
     index index.html;
 
     # Gzip compression
@@ -114,7 +114,7 @@ server {
 ## Step 4: Enable the Site
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/PDF8 /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/pdffdp /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -132,7 +132,7 @@ To host at `/pdf/`:
 
 ```nginx
 location /pdf/ {
-    alias /var/www/PDF8/;
+    alias /var/www/pdffdp/;
     try_files $uri $uri/ /pdf/index.html;
 }
 ```

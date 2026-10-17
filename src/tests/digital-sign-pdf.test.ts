@@ -119,7 +119,7 @@ describe('timestampPdf', () => {
   it('should pre-proxy the TSA URL when CORS proxy is configured', async () => {
     vi.stubEnv(
       'VITE_CORS_PROXY_URL',
-      'https://pdf8-cors-proxy.pdf8.workers.dev'
+      'https://pdffdp-cors-proxy.pdffdp.workers.dev'
     );
     vi.resetModules();
     const { timestampPdf: freshTimestamp } =
@@ -132,7 +132,7 @@ describe('timestampPdf', () => {
       signdate: { url: string };
     };
     expect(callArg.signdate.url).toMatch(
-      /^https:\/\/pdf8-cors-proxy\.PDF8\.workers\.dev\?url=/
+      /^https:\/\/pdffdp-cors-proxy\.pdffdp\.workers\.dev\?url=/
     );
     expect(callArg.signdate.url).toContain(
       encodeURIComponent('http://timestamp.digicert.com')
@@ -164,8 +164,8 @@ describe('timestampPdf', () => {
       configurable: true,
       value: {
         protocol: 'https:',
-        origin: 'https://www.pdf8.com',
-        hostname: 'www.pdf8.com',
+        origin: 'https://www.pdffdp.com',
+        hostname: 'www.pdffdp.com',
       },
     });
     vi.resetModules();
@@ -179,7 +179,7 @@ describe('timestampPdf', () => {
       signdate: { url: string };
     };
     expect(callArg.signdate.url).toMatch(
-      /^https:\/\/pdf8-cors-proxy\.PDF8\.workers\.dev\?url=/
+      /^https:\/\/pdffdp-cors-proxy\.pdffdp\.workers\.dev\?url=/
     );
     expect(callArg.signdate.url).toContain(
       encodeURIComponent('http://timestamp.digicert.com')

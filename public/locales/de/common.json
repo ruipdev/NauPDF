@@ -12,7 +12,7 @@
     "noLanguagesFound": "Keine Sprachen gefunden"
   },
   "donation": {
-    "message": "Liebst du PDF8? Hilf uns, es kostenlos und Open Source zu halten!",
+    "message": "Liebst du pdffdp? Hilf uns, es kostenlos und Open Source zu halten!",
     "button": "Spenden"
   },
   "hero": {
@@ -29,7 +29,7 @@
   },
   "features": {
     "title": "Warum",
-    "PDF8": "PDF8 nutzen?",
+    "pdffdp": "pdffdp nutzen?",
     "noSignup": {
       "title": "Keine Anmeldung",
       "description": "Sofort starten, keine Registrierung notwendig."
@@ -187,8 +187,8 @@
     "questions": "Fragen",
     "sectionTitle": "Häufig gestellte Fragen",
     "isFree": {
-      "question": "Ist PDF8 wirklich kostenlos?",
-      "answer": "Ja, absolut. Alle Werkzeuge auf PDF8 sind zu 100% kostenlos nutzbar, ohne Dateilimits, ohne Anmeldung und ohne Wasserzeichen. Wir glauben, dass jeder Zugang zu einfachen, leistungsstarken PDF-Werkzeugen verdient, ohne Bezahlschranke."
+      "question": "Ist pdffdp wirklich kostenlos?",
+      "answer": "Ja, absolut. Alle Werkzeuge auf pdffdp sind zu 100% kostenlos nutzbar, ohne Dateilimits, ohne Anmeldung und ohne Wasserzeichen. Wir glauben, dass jeder Zugang zu einfachen, leistungsstarken PDF-Werkzeugen verdient, ohne Bezahlschranke."
     },
     "areFilesSecure": {
       "question": "Sind meine Dateien sicher? Wo werden sie verarbeitet?",
@@ -196,27 +196,27 @@
     },
     "platforms": {
       "question": "Funktioniert es auf Mac, Windows und Mobilgeräten?",
-      "answer": "Ja! Da PDF8 vollständig in deinem Browser läuft, funktioniert es auf jedem Betriebssystem mit einem modernen Webbrowser, einschließlich Windows, macOS, Linux, iOS und Android."
+      "answer": "Ja! Da pdffdp vollständig in deinem Browser läuft, funktioniert es auf jedem Betriebssystem mit einem modernen Webbrowser, einschließlich Windows, macOS, Linux, iOS und Android."
     },
     "gdprCompliant": {
-      "question": "Ist PDF8 DSGVO-konform?",
-      "answer": "Ja. PDF8 ist vollständig DSGVO-konform. Da die gesamte Dateiverarbeitung lokal in deinem Browser erfolgt und wir deine Dateien nie sammeln oder übertragen, haben wir keinen Zugang zu deinen Daten. Dies stellt sicher, dass du immer die Kontrolle über deine Dokumente hast."
+      "question": "Ist pdffdp DSGVO-konform?",
+      "answer": "Ja. pdffdp ist vollständig DSGVO-konform. Da die gesamte Dateiverarbeitung lokal in deinem Browser erfolgt und wir deine Dateien nie sammeln oder übertragen, haben wir keinen Zugang zu deinen Daten. Dies stellt sicher, dass du immer die Kontrolle über deine Dokumente hast."
     },
     "dataStorage": {
       "question": "Speichert oder verfolgt ihr meine Dateien?",
-      "answer": "Nein. Wir speichern, verfolgen oder protokollieren deine Dateien niemals. Alles, was du auf PDF8 tust, geschieht im Speicher deines Browsers und verschwindet, sobald du die Seite schließt. Es gibt keine Uploads, keine Verlaufsprotokolle und keine Server."
+      "answer": "Nein. Wir speichern, verfolgen oder protokollieren deine Dateien niemals. Alles, was du auf pdffdp tust, geschieht im Speicher deines Browsers und verschwindet, sobald du die Seite schließt. Es gibt keine Uploads, keine Verlaufsprotokolle und keine Server."
     },
     "different": {
-      "question": "Was unterscheidet PDF8 von anderen PDF-Werkzeugen?",
-      "answer": "Die meisten PDF-Werkzeuge laden deine Dateien zur Verarbeitung auf einen Server hoch. PDF8 tut das nie. Wir verwenden sichere, moderne Webtechnologie, um Dateien direkt in deinem Browser zu verarbeiten. Das bedeutet schnellere Verarbeitung, stärkere Privatsphäre und vollständige Sicherheit."
+      "question": "Was unterscheidet pdffdp von anderen PDF-Werkzeugen?",
+      "answer": "Die meisten PDF-Werkzeuge laden deine Dateien zur Verarbeitung auf einen Server hoch. pdffdp tut das nie. Wir verwenden sichere, moderne Webtechnologie, um Dateien direkt in deinem Browser zu verarbeiten. Das bedeutet schnellere Verarbeitung, stärkere Privatsphäre und vollständige Sicherheit."
     },
     "browserBased": {
       "question": "Wie schützt mich die browserbasierte Verarbeitung?",
-      "answer": "Durch die vollständige Ausführung in deinem Browser stellt PDF8 sicher, dass deine Dateien nie dein Gerät verlassen. Dies eliminiert die Risiken von Server-Hacks, Datenschutzverletzungen oder unbefugtem Zugriff. Deine Dateien gehören dir — Immer."
+      "answer": "Durch die vollständige Ausführung in deinem Browser stellt pdffdp sicher, dass deine Dateien nie dein Gerät verlassen. Dies eliminiert die Risiken von Server-Hacks, Datenschutzverletzungen oder unbefugtem Zugriff. Deine Dateien gehören dir — Immer."
     },
     "analytics": {
       "question": "Verwendet ihr Cookies oder Analysen, um mich zu verfolgen?",
-      "answer": "Nein. PDF8 verfolgt Sie in keiner Weise. Wir verwenden keine Cookies, keine Analysetools und keine Tracking-Skripte – auch nicht auf der Live-Website pdf8.com. Wir wissen nie, wer Sie sind oder was Sie mit den Tools tun."
+      "answer": "Nein. pdffdp verfolgt Sie in keiner Weise. Wir verwenden keine Cookies, keine Analysetools und keine Tracking-Skripte – auch nicht auf der Live-Website pdffdp.com. Wir wissen nie, wer Sie sind oder was Sie mit den Tools tun."
     }
   },
   "testimonials": {
@@ -226,11 +226,11 @@
   },
   "support": {
     "title": "Gefällt dir meine Arbeit?",
-    "description": "PDF8 ist eine Herzensangelegenheit, entwickelt, um ein kostenloses, privates und leistungsstarkes PDF-Toolkit für alle bereitzustellen. Wenn du es nützlich findest, erwäge gerne, die Entwicklung zu unterstützen. Jeder Kaffee hilft!",
+    "description": "pdffdp ist eine Herzensangelegenheit, entwickelt, um ein kostenloses, privates und leistungsstarkes PDF-Toolkit für alle bereitzustellen. Wenn du es nützlich findest, erwäge gerne, die Entwicklung zu unterstützen. Jeder Kaffee hilft!",
     "buyMeCoffee": "Kauf mir einen Kaffee"
   },
   "footer": {
-    "copyright": "© 2026 PDF8. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 pdffdp. Alle Rechte vorbehalten.",
     "version": "Version",
     "company": "Unternehmen",
     "aboutUs": "Über uns",
@@ -295,9 +295,9 @@
     "philosophy": {
       "label": "Unsere Kernphilosophie",
       "title": "Privatsphäre zuerst. Immer.",
-      "description": "In einer Zeit, in der Daten eine Ware sind, gehen wir einen anderen Weg. Die gesamte Verarbeitung für pdf8-Werkzeuge erfolgt lokal in deinem Browser. Das bedeutet, deine Dateien berühren niemals unsere Server, wir sehen deine Dokumente nie und verfolgen nicht, was du tust. Deine Dokumente bleiben voll und ganz privat, ohne Hintertürchen. Privatsphäre ist nicht nur eine Funktion; es ist unser Fundament."
+      "description": "In einer Zeit, in der Daten eine Ware sind, gehen wir einen anderen Weg. Die gesamte Verarbeitung für pdffdp-Werkzeuge erfolgt lokal in deinem Browser. Das bedeutet, deine Dateien berühren niemals unsere Server, wir sehen deine Dokumente nie und verfolgen nicht, was du tust. Deine Dokumente bleiben voll und ganz privat, ohne Hintertürchen. Privatsphäre ist nicht nur eine Funktion; es ist unser Fundament."
     },
-    "whyPdf8": {
+    "whyPdffdp": {
       "title": "Warum",
       "speed": {
         "title": "Für Schnelligkeit gebaut",
@@ -318,7 +318,7 @@
     },
     "cta": {
       "title": "Bereit loszulegen?",
-      "description": "Schließ dich Tausenden von Benutzer*innen an, die PDF8 für ihre tägliche Arbeit vertrauen. Erlebe den Unterschied, den Privatsphäre und Leistung machen können.",
+      "description": "Schließ dich Tausenden von Benutzer*innen an, die pdffdp für ihre tägliche Arbeit vertrauen. Erlebe den Unterschied, den Privatsphäre und Leistung machen können.",
       "button": "Alle Werkzeuge erkunden"
     }
   },

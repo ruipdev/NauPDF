@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const POSTS_DIR = path.resolve(__dirname, '../blog/posts');
 const BLOG_DIR = path.resolve(__dirname, '../blog');
-const SITE_URL = 'https://www.pdf8.com';
+const SITE_URL = 'https://www.pdffdp.com';
 const AUTHOR = {
   name: 'Alam',
   url: `${SITE_URL}/blog/author-alam`,
@@ -193,7 +193,7 @@ function renderPost({ slug, meta, body }) {
     <meta property="og:title" content="${escapeHtml(meta.ogTitle || meta.h1)}" />
     <meta property="og:description" content="${escapeHtml(meta.description)}" />
     <meta property="og:image" content="${SITE_URL}/images/og-tools.png" />
-    <meta property="og:site_name" content="PDF8" />
+    <meta property="og:site_name" content="pdffdp" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
@@ -228,7 +228,7 @@ function renderPost({ slug, meta, body }) {
         />
         <div>
           <a href="/blog/author-alam" class="text-gray-200 font-semibold hover:text-indigo-300">${AUTHOR.name}</a>,
-          builds PDF8 ·
+          builds pdffdp ·
           <time datetime="${meta.date}">${formatDate(meta.date)}</time>
         </div>
       </div>
@@ -264,7 +264,7 @@ ${renderFaqs(meta.faqs)}
           },
           publisher: {
             '@type': 'Organization',
-            name: 'PDF8',
+            name: 'pdffdp',
             url: SITE_URL,
           },
         },
@@ -324,22 +324,22 @@ function renderIndex(posts) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The PDF8 Blog | Privacy-First PDF Guides</title>
+    <title>The pdffdp Blog | Privacy-First PDF Guides</title>
     <meta
       name="description"
-      content="Guides and honest comparisons from the maintainer of PDF8: how PDF tools handle your files, and how to get things done without uploading them."
+      content="Guides and honest comparisons from the maintainer of pdffdp: how PDF tools handle your files, and how to get things done without uploading them."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${SITE_URL}/blog/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${SITE_URL}/blog/" />
-    <meta property="og:title" content="The PDF8 Blog" />
+    <meta property="og:title" content="The pdffdp Blog" />
     <meta
       property="og:description"
-      content="Guides and honest comparisons from the maintainer of PDF8."
+      content="Guides and honest comparisons from the maintainer of pdffdp."
     />
     <meta property="og:image" content="${SITE_URL}/images/og-tools.png" />
-    <meta property="og:site_name" content="PDF8" />
+    <meta property="og:site_name" content="pdffdp" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
@@ -351,10 +351,10 @@ function renderIndex(posts) {
     {{> navbar }}
 
     <section class="max-w-3xl mx-auto px-4 py-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">The PDF8 Blog</h1>
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">The pdffdp Blog</h1>
       <p class="text-gray-300 leading-relaxed mb-2">
         I'm <a href="/blog/author-alam" class="${LINK_CLASS}">Alam</a>. I build
-        PDF8 and write about PDFs, how they work, and the weird things I
+        pdffdp and write about PDFs, how they work, and the weird things I
         run into along the way.
       </p>
     </section>
@@ -374,13 +374,13 @@ ${cards}
         {
           '@context': 'https://schema.org',
           '@type': 'Blog',
-          name: 'The PDF8 Blog',
+          name: 'The pdffdp Blog',
           url: `${SITE_URL}/blog/`,
           description:
-            'Guides and honest comparisons from the maintainer of PDF8.',
+            'Guides and honest comparisons from the maintainer of pdffdp.',
           publisher: {
             '@type': 'Organization',
-            name: 'PDF8',
+            name: 'pdffdp',
             url: SITE_URL,
           },
         },

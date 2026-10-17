@@ -64,7 +64,7 @@ const init = async () => {
       }
 
       const githubLink = document.querySelector(
-        'a[href*="github.com/alam00000/pdf8"]'
+        'a[href*="github.com/alam00000/pdffdp"]'
       );
       if (githubLink) {
         (githubLink as HTMLElement).style.display = 'none';
@@ -112,7 +112,7 @@ const init = async () => {
         (divider as HTMLElement).style.display = 'none';
       });
 
-      const brandName = __BRAND_NAME__ || 'PDF8';
+      const brandName = __BRAND_NAME__ || 'pdffdp';
       document.title = `${brandName} - ${t('simpleMode.title')}`;
 
       const toolsHeader = document.getElementById('tools-header');
@@ -599,7 +599,7 @@ const init = async () => {
     !__SIMPLE_MODE__ &&
     !__DISABLE_GITHUB_STARS__
   ) {
-    fetch('https://api.github.com/repos/alam00000/pdf8')
+    fetch('https://api.github.com/repos/alam00000/pdffdp')
       .then((response) => response.json())
       .then((data) => {
         if (data.stargazers_count !== undefined) {

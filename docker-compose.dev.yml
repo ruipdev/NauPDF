@@ -1,11 +1,11 @@
 services:
-  pdf8:
+  pdffdp:
     build:
       context: .
       dockerfile: Dockerfile
       args:
         SIMPLE_MODE: false # false for default mode, true for simple mode
-    container_name: pdf8
+    container_name: pdffdp
     ports:
       - '8080:8080'
     restart: unless-stopped

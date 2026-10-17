@@ -10,24 +10,24 @@ Kubernetes may be overkill for a static site, but it can be a great fit if you a
 > - `Cross-Origin-Opener-Policy: same-origin`
 > - `Cross-Origin-Embedder-Policy: require-corp`
 >
-> The official PDF8 nginx images include these headers. In Kubernetes, **Ingress/Gateway controllers are also reverse proxies**, so ensure these headers are preserved (or add them at the edge).
+> The official pdffdp nginx images include these headers. In Kubernetes, **Ingress/Gateway controllers are also reverse proxies**, so ensure these headers are preserved (or add them at the edge).
 
 ## Prereqs
 
 - Kubernetes cluster
 - Helm v3
-- A PDF8 nginx image (e.g. `ghcr.io/alam00000/pdf8:<tag>`) that serves on **port 8080**
+- A pdffdp nginx image (e.g. `ghcr.io/alam00000/pdffdp:<tag>`) that serves on **port 8080**
 
 ## Deploy with Helm
 
 ### Install from this repo (local chart)
 
 ```bash
-kubectl create namespace PDF8
+kubectl create namespace pdffdp
 
-helm upgrade --install pdf8 /path/to/pdf8/chart \
-  --namespace PDF8 \
-  --set image.repository=ghcr.io/alam00000/pdf8 \
+helm upgrade --install pdffdp /path/to/pdffdp/chart \
+  --namespace pdffdp \
+  --set image.repository=ghcr.io/alam00000/pdffdp \
   --set image.tag=latest
 ```
 
@@ -38,11 +38,11 @@ If the chart is published to GHCR as an OCI artifact:
 ```bash
 export GHCR_USERNAME="<github-org-or-user>"
 
-helm upgrade --install pdf8 oci://ghcr.io/$GHCR_USERNAME/charts/pdf8 \
-  --namespace PDF8 \
+helm upgrade --install pdffdp oci://ghcr.io/$GHCR_USERNAME/charts/pdffdp \
+  --namespace pdffdp \
   --create-namespace \
   --version 0.1.0 \
-  --set image.repository=ghcr.io/alam00000/pdf8 \
+  --set image.repository=ghcr.io/alam00000/pdffdp \
   --set image.tag=latest
 ```
 
@@ -51,7 +51,7 @@ helm upgrade --install pdf8 oci://ghcr.io/$GHCR_USERNAME/charts/pdf8 \
 ### Port-forward (quick test)
 
 ```bash
-kubectl -n PDF8 port-forward deploy/PDF8 8080:8080
+kubectl -n pdffdp port-forward deploy/pdffdp 8080:8080
 ```
 
 ### Ingress (optional)
@@ -78,15 +78,15 @@ Example (Cloudflare Gateway API operator):
 ```yaml
 gateway:
   enabled: true
-  name: pdf8-tunnel
-  namespace: PDF8
+  name: pdffdp-tunnel
+  namespace: pdffdp
   gatewayClassName: cloudflare
 
 httpRoute:
   enabled: true
   parentRefs:
-    - name: pdf8-tunnel
-      namespace: PDF8
+    - name: pdffdp-tunnel
+      namespace: pdffdp
       sectionName: http
   hostnames:
     - pdfs.example.com
@@ -96,7 +96,7 @@ httpRoute:
 
 ### What "should" happen
 
-PDF8’s nginx config sets the required response headers. Most Ingress/Gateway controllers **pass upstream response headers through unchanged**.
+pdffdp’s nginx config sets the required response headers. Most Ingress/Gateway controllers **pass upstream response headers through unchanged**.
 
 ### What can break it
 
@@ -132,9 +132,9 @@ ingress:
 
 ## `.mjs` MIME-type errors (Sign PDF / Form Filler iframe blank)
 
-If the browser console shows `Failed to load module script: ... non-JavaScript MIME type "application/octet-stream"` on a `.mjs` request, an Ingress/Gateway controller in front of the PDF8 nginx is replacing the upstream `Content-Type` header with `application/octet-stream`.
+If the browser console shows `Failed to load module script: ... non-JavaScript MIME type "application/octet-stream"` on a `.mjs` request, an Ingress/Gateway controller in front of the pdffdp nginx is replacing the upstream `Content-Type` header with `application/octet-stream`.
 
-The PDF8 image's nginx already serves `.mjs` as `application/javascript`. The fix is to stop the controller from stripping/replacing it. For nginx-ingress:
+The pdffdp image's nginx already serves `.mjs` as `application/javascript`. The fix is to stop the controller from stripping/replacing it. For nginx-ingress:
 
 ```yaml
 ingress:
@@ -156,7 +156,7 @@ httpRoute:
   enabled: true
   hostnames: [pdf.example.com]
   parentRefs:
-    - name: pdf8-tunnel
+    - name: pdffdp-tunnel
       namespace: misc
       sectionName: http
   rules:
@@ -182,8 +182,8 @@ Use a ConfigMap to disable tools at runtime without rebuilding the image:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: pdf8-config
-  namespace: PDF8
+  name: pdffdp-config
+  namespace: pdffdp
 data:
   config.json: |
     {
@@ -196,7 +196,7 @@ Mount it into the served directory:
 ```yaml
 spec:
   containers:
-    - name: PDF8
+    - name: pdffdp
       volumeMounts:
         - name: config
           mountPath: /usr/share/nginx/html/config.json
@@ -205,7 +205,7 @@ spec:
   volumes:
     - name: config
       configMap:
-        name: pdf8-config
+        name: pdffdp-config
 ```
 
 Tool IDs are the page URL without `.html` — open any tool and look at the URL (e.g., `edit-pdf`, `merge-pdf`, `compress-pdf`). Disabled tools are hidden from the homepage, search, shortcuts, workflow builder, and direct URL access. See the [Docker guide](/self-hosting/docker#disabling-specific-tools) for the full list of options.

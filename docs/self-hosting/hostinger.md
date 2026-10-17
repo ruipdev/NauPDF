@@ -1,6 +1,6 @@
 # Deploy to Hostinger
 
-[Hostinger](https://hostinger.com) is a popular shared hosting provider. This guide covers deploying PDF8 to Hostinger's shared hosting.
+[Hostinger](https://hostinger.com) is a popular shared hosting provider. This guide covers deploying pdffdp to Hostinger's shared hosting.
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@
 ## Step 1: Build the Project
 
 ```bash
-git clone https://github.com/alam00000/pdf8.git
-cd PDF8
+git clone https://github.com/alam00000/pdffdp.git
+cd pdffdp
 npm install
 npm run build
 ```
@@ -142,8 +142,8 @@ AddType image/webp .webp
 # 5. REDIRECTS & ROUTING
 # ============================================
 # Canonical WWW (update domain as needed)
-RewriteCond %{HTTP_HOST} ^PDF8\.com [NC]
-RewriteRule ^(.*)$ https://www.pdf8.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^pdffdp\.com [NC]
+RewriteRule ^(.*)$ https://www.pdffdp.com/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} off
@@ -249,7 +249,7 @@ If headers aren't being applied, contact Hostinger support to enable `mod_header
 
 ### 404 Errors on Page Refresh
 
-Make sure the `.html` extension rule and language routes are correctly configured. PDF8 uses static HTML files, not SPA routing:
+Make sure the `.html` extension rule and language routes are correctly configured. pdffdp uses static HTML files, not SPA routing:
 
 ```apache
 # Language routes serve actual files from language directories

@@ -1,6 +1,6 @@
 # WASM Proxy Setup Guide
 
-PDF8 uses a Cloudflare Worker to proxy WASM library requests, bypassing CORS restrictions when loading AGPL-licensed components (PyMuPDF, Ghostscript, CoherentPDF) from external sources.
+pdffdp uses a Cloudflare Worker to proxy WASM library requests, bypassing CORS restrictions when loading AGPL-licensed components (PyMuPDF, Ghostscript, CoherentPDF) from external sources.
 
 ## Quick Start
 
@@ -23,48 +23,48 @@ npx wrangler secret put GS_SOURCE -c wasm-wrangler.toml
 npx wrangler secret put CPDF_SOURCE -c wasm-wrangler.toml
 
 # Option B: Set via Cloudflare Dashboard
-# Go to Workers & Pages > pdf8-wasm-proxy > Settings > Variables
+# Go to Workers & Pages > pdffdp-wasm-proxy > Settings > Variables
 ```
 
 **Recommended Source URLs:**
 
-- PYMUPDF_SOURCE: `https://cdn.jsdelivr.net/npm/@pdf8/pymupdf-wasm@0.11.16/`
-- GS_SOURCE: `https://cdn.jsdelivr.net/npm/@pdf8/gs-wasm/assets/`
+- PYMUPDF_SOURCE: `https://cdn.jsdelivr.net/npm/@pdffdp/pymupdf-wasm@0.11.16/`
+- GS_SOURCE: `https://cdn.jsdelivr.net/npm/@pdffdp/gs-wasm/assets/`
 - CPDF_SOURCE: `https://cdn.jsdelivr.net/npm/coherentpdf/dist/`
 
-> **Note:** You can use your own hosted WASM files instead of the recommended URLs. Just ensure your files match the expected directory structure and file names that PDF8 expects for each module.
+> **Note:** You can use your own hosted WASM files instead of the recommended URLs. Just ensure your files match the expected directory structure and file names that pdffdp expects for each module.
 
-### 3. Configure PDF8
+### 3. Configure pdffdp
 
 **Option A: Environment variables (recommended — zero-config for users)**
 
 Set these in `.env.production` or pass as Docker build args:
 
 ```bash
-VITE_WASM_PYMUPDF_URL=https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/pymupdf/
-VITE_WASM_GS_URL=https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/gs/
-VITE_WASM_CPDF_URL=https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/cpdf/
+VITE_WASM_PYMUPDF_URL=https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/pymupdf/
+VITE_WASM_GS_URL=https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/gs/
+VITE_WASM_CPDF_URL=https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/cpdf/
 ```
 
 **Option B: Manual per-user configuration**
 
-In PDF8's Advanced Settings (wasm-settings.html), enter:
+In pdffdp's Advanced Settings (wasm-settings.html), enter:
 
 | Module      | URL                                                                 |
 | ----------- | ------------------------------------------------------------------- |
-| PyMuPDF     | `https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/pymupdf/` |
-| Ghostscript | `https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/gs/`      |
-| CoherentPDF | `https://pdf8-wasm-proxy.<your-subdomain>.workers.dev/cpdf/`    |
+| PyMuPDF     | `https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/pymupdf/` |
+| Ghostscript | `https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/gs/`      |
+| CoherentPDF | `https://pdffdp-wasm-proxy.<your-subdomain>.workers.dev/cpdf/`    |
 
 ## Custom Domain (Optional)
 
-To use a custom domain like `wasm.pdf8.com`:
+To use a custom domain like `wasm.pdffdp.com`:
 
 1. Add route in `wasm-wrangler.toml`:
 
 ```toml
 routes = [
-  { pattern = "wasm.pdf8.com/*", zone_name = "pdf8.com" }
+  { pattern = "wasm.pdffdp.com/*", zone_name = "pdffdp.com" }
 ]
 ```
 

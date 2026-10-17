@@ -2196,7 +2196,7 @@ downloadBtn.addEventListener('click', async () => {
 
     // Set document metadata for accessibility
     pdfDoc.setTitle('Fillable Form');
-    pdfDoc.setAuthor('PDF8');
+    pdfDoc.setAuthor('pdffdp');
     pdfDoc.setLanguage('en-US');
 
     const radioGroups = new Map<

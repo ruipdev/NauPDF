@@ -1,6 +1,6 @@
 # Deploy with Apache
 
-Host PDF8 using Apache HTTP Server.
+Host pdffdp using Apache HTTP Server.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Host PDF8 using Apache HTTP Server.
 ## Step 1: Build the Project
 
 ```bash
-git clone https://github.com/alam00000/pdf8.git
-cd PDF8
+git clone https://github.com/alam00000/pdffdp.git
+cd pdffdp
 npm install
 npm run build
 ```
@@ -26,14 +26,14 @@ VITE_BRAND_NAME="AcmePDF" VITE_BRAND_LOGO="images/acme-logo.svg" npm run build
 ## Step 2: Copy Files
 
 ```bash
-sudo mkdir -p /var/www/PDF8
-sudo cp -r dist/* /var/www/PDF8/
-sudo chown -R www-data:www-data /var/www/PDF8
+sudo mkdir -p /var/www/pdffdp
+sudo cp -r dist/* /var/www/pdffdp/
+sudo chown -R www-data:www-data /var/www/pdffdp
 ```
 
 ## Step 3: Apache Configuration
 
-Create `/etc/apache2/sites-available/PDF8.conf`:
+Create `/etc/apache2/sites-available/pdffdp.conf`:
 
 ```apache
 <VirtualHost *:80>
@@ -43,13 +43,13 @@ Create `/etc/apache2/sites-available/PDF8.conf`:
 
 <VirtualHost *:443>
     ServerName your-domain.com
-    DocumentRoot /var/www/PDF8
+    DocumentRoot /var/www/pdffdp
 
     SSLEngine on
     SSLCertificateFile /etc/letsencrypt/live/your-domain.com/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/your-domain.com/privkey.pem
 
-    <Directory /var/www/PDF8>
+    <Directory /var/www/pdffdp>
         Options -Indexes +FollowSymLinks
         AllowOverride All
         Require all granted
@@ -99,7 +99,7 @@ Create `/etc/apache2/sites-available/PDF8.conf`:
 
 ## Step 4: .htaccess for Routing
 
-Create `/var/www/PDF8/.htaccess`:
+Create `/var/www/pdffdp/.htaccess`:
 
 ```apache
 RewriteEngine On
@@ -152,7 +152,7 @@ sudo a2enmod deflate
 ## Step 6: Enable the Site
 
 ```bash
-sudo a2ensite PDF8.conf
+sudo a2ensite pdffdp.conf
 sudo apache2ctl configtest
 sudo systemctl reload apache2
 ```
@@ -270,6 +270,6 @@ Ensure `mod_headers` is enabled: `sudo a2enmod headers`
 ### Permission Denied
 
 ```bash
-sudo chown -R www-data:www-data /var/www/PDF8
-sudo chmod -R 755 /var/www/PDF8
+sudo chown -R www-data:www-data /var/www/pdffdp
+sudo chmod -R 755 /var/www/pdffdp
 ```

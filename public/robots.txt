@@ -1,12 +1,12 @@
-# PDF8 Robots.txt
-# https://www.pdf8.com
+# pdffdp Robots.txt
+# https://www.pdffdp.com
 
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.pdf8.com/sitemap.xml
+Sitemap: https://www.pdffdp.com/sitemap.xml
 
 # Disallow internal/system paths
 Disallow: /api/

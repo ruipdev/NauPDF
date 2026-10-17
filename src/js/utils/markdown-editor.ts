@@ -75,7 +75,7 @@ export interface MarkdownEditorOptions {
 
 export type { MarkdownItOptions } from '@/types';
 
-const DEFAULT_MARKDOWN = `# Welcome to PDF8 Markdown Editor
+const DEFAULT_MARKDOWN = `# Welcome to pdffdp Markdown Editor
 
 This is a **live preview** markdown editor with full plugin support.
 
@@ -85,7 +85,7 @@ This is a **live preview** markdown editor with full plugin support.
 
 - **Bold** and *italic* text
 - ~~Strikethrough~~ text
-- [Links](https://pdf8.com)
+- [Links](https://pdffdp.com)
 - ==Highlighted text== using mark
 - ++Inserted text++ using ins
 - H~2~O for subscript
@@ -145,12 +145,12 @@ graph TD
 \`\`\`mermaid
 sequenceDiagram
     participant User
-    participant PDF8
+    participant PDFfdp
     participant Server
-    User->>PDF8: Upload PDF
-    pdf8->>PDF8: Process locally
-    pdf8-->>User: Download result
-    Note over PDF8: No server needed!
+    User->>PDFfdp: Upload PDF
+    PDFfdp->>PDFfdp: Process locally
+    PDFfdp-->>User: Download result
+    Note over pdffdp: No server needed!
 \`\`\`
 
 ### Pie Chart
@@ -218,7 +218,7 @@ erDiagram
 
 \`\`\`mermaid
 mindmap
-    root((PDF8))
+    root((PDFfdp))
         Convert
             Word to PDF
             Excel to PDF

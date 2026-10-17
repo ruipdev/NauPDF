@@ -2,10 +2,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "pdf8.name" . }}
+  name: {{ include "pdffdp.name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "pdf8.labels" . | nindent 4 }}
+    {{- include "pdffdp.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
@@ -36,7 +36,7 @@ spec:
             {{- end }}
             backend:
               service:
-                name: {{ include "pdf8.name" $ }}
+                name: {{ include "pdffdp.name" $ }}
                 port:
                   number: {{ $.Values.service.port }}
           {{- end }}

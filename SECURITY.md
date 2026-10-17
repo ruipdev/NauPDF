@@ -2,7 +2,7 @@
 
 ## Non-Root User Support
 
-PDF8 now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
+pdffdp now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
 
 ### Security Benefits
 
@@ -16,18 +16,18 @@ PDF8 now uses nginx-unprivileged for enhanced security. This follows the Princip
 #### Default Configuration (nginx-unprivileged)
 
 ```bash
-docker build -t PDF8 .
-docker run -p 8080:8080 PDF8
+docker build -t pdffdp .
+docker run -p 8080:8080 pdffdp
 ```
 
 #### Simple Mode
 
 ```bash
 # Build with simple mode enabled
-docker build --build-arg SIMPLE_MODE=true -t pdf8-simple .
+docker build --build-arg SIMPLE_MODE=true -t pdffdp-simple .
 
 # Run the container
-docker run -p 8080:8080 pdf8-simple
+docker run -p 8080:8080 pdffdp-simple
 ```
 
 #### Kubernetes Example
@@ -36,7 +36,7 @@ docker run -p 8080:8080 pdf8-simple
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: PDF8
+  name: pdffdp
 spec:
   template:
     spec:
@@ -45,8 +45,8 @@ spec:
         runAsUser: 2000
         runAsGroup: 2000
       containers:
-        - name: PDF8
-          image: PDF8:latest
+        - name: pdffdp
+          image: pdffdp:latest
           ports:
             - containerPort: 8080
 ```
@@ -56,7 +56,7 @@ spec:
 ```yaml
 version: '3.8'
 services:
-  PDF8:
+  pdffdp:
     build:
       context: .
       dockerfile: Dockerfile

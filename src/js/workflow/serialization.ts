@@ -134,7 +134,7 @@ async function deserializeWorkflow(
   }
 }
 
-const TEMPLATES_KEY = 'pdf8-workflow-templates';
+const TEMPLATES_KEY = 'pdffdp-workflow-templates';
 
 interface StoredTemplates {
   [name: string]: SerializedWorkflow;

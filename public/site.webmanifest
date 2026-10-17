@@ -1,6 +1,6 @@
 {
-    "name": "PDF8",
-    "short_name": "PDF8",
+    "name": "pdffdp",
+    "short_name": "pdffdp",
     "description": "Free online PDF tools - Privacy-first PDF toolkit that works 100% in your browser",
     "start_url": "/",
     "display": "standalone",

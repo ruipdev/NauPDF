@@ -1,5 +1,5 @@
 {
-  "name": "pdf8",
+  "name": "pdffdp",
   "private": true,
   "version": "2.8.8",
   "license": "AGPL-3.0-only",
@@ -91,8 +91,8 @@
     "@types/node-forge": "^1.3.14",
     "@types/papaparse": "^5.5.2",
     "archiver": "^7.0.1",
-    "pdf8-pdfium": "file:vendor/pdf8-pdfium/pdf8-pdfium-813903c93c75.tgz",
-    "pdf8-viewer": "file:vendor/pdf8-viewer/pdf8-viewer-813903c93c75.tgz",
+    "pdffdp-pdfium": "file:vendor/pdffdp-pdfium/pdffdp-pdfium-813903c93c75.tgz",
+    "pdffdp-viewer": "file:vendor/pdffdp-viewer/pdffdp-viewer-813903c93c75.tgz",
     "blob-stream": "^0.1.3",
     "bwip-js": "^4.8.0",
     "cropperjs": "^1.6.2",

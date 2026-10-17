@@ -14,13 +14,13 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  FORK_URL: https://github.com/alam00000/pdf8-pdfium-viewer
+  FORK_URL: https://github.com/alam00000/pdffdp-pdfium-viewer
   HUSKY: 0
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    if: github.repository == 'alam00000/pdf8'
+    if: github.repository == 'alam00000/pdffdp'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -28,8 +28,8 @@ jobs:
       - name: Read current upstream marker
         id: current
         run: |
-          if [ -f vendor/pdf8-viewer/.upstream-version ]; then
-            echo "version=$(cat vendor/pdf8-viewer/.upstream-version)" >> "$GITHUB_OUTPUT"
+          if [ -f vendor/pdffdp-viewer/.upstream-version ]; then
+            echo "version=$(cat vendor/pdffdp-viewer/.upstream-version)" >> "$GITHUB_OUTPUT"
           else
             echo "version=" >> "$GITHUB_OUTPUT"
           fi
@@ -83,7 +83,7 @@ jobs:
           cp "$VENDOR/pdfium.wasm" "$STAGE/editcore.wasm"
           cat > "$STAGE/package.json" <<JSON
           {
-            "name": "pdf8-pdfium",
+            "name": "pdffdp-pdfium",
             "version": "0.0.0-$SHA",
             "type": "module",
             "main": "editcore.js",
@@ -91,10 +91,10 @@ jobs:
             "license": "AGPL-3.0"
           }
           JSON
-          mkdir -p vendor/pdf8-pdfium
-          OUT="vendor/pdf8-pdfium/pdf8-pdfium-$SHA.tgz"
+          mkdir -p vendor/pdffdp-pdfium
+          OUT="vendor/pdffdp-pdfium/pdffdp-pdfium-$SHA.tgz"
           tar -czf "$OUT" -C "$(dirname "$STAGE")" package
-          find vendor/pdf8-pdfium -maxdepth 1 -name 'pdf8-pdfium*.tgz' ! -name "$(basename "$OUT")" -delete
+          find vendor/pdffdp-pdfium -maxdepth 1 -name 'pdffdp-pdfium*.tgz' ! -name "$(basename "$OUT")" -delete
           echo "tarball=$OUT" >> "$GITHUB_OUTPUT"
 
       - name: Build the viewer
@@ -119,7 +119,7 @@ jobs:
           const fs = require('fs');
           const p = process.env.PKG;
           const pkg = JSON.parse(fs.readFileSync(p, 'utf8'));
-          pkg.name = 'pdf8-viewer';
+          pkg.name = 'pdffdp-viewer';
           pkg.dependencies = pkg.dependencies || {};
           // The rollup bundle inlines every @embedpdf/* package, so these
           // declared deps would only pull unused copies from upstream npm.
@@ -129,10 +129,10 @@ jobs:
           }
           fs.writeFileSync(p, JSON.stringify(pkg, null, 2) + '\n');
           NODE
-          mkdir -p vendor/pdf8-viewer
-          OUT="vendor/pdf8-viewer/pdf8-viewer-$SHA.tgz"
+          mkdir -p vendor/pdffdp-viewer
+          OUT="vendor/pdffdp-viewer/pdffdp-viewer-$SHA.tgz"
           tar -czf "$OUT" -C "$TMP" package
-          find vendor/pdf8-viewer -maxdepth 1 -name 'pdf8-viewer-*.tgz' ! -name "$(basename "$OUT")" -delete
+          find vendor/pdffdp-viewer -maxdepth 1 -name 'pdffdp-viewer-*.tgz' ! -name "$(basename "$OUT")" -delete
           echo "tarball=$OUT" >> "$GITHUB_OUTPUT"
 
       - name: Point dependencies at the new tarballs
@@ -141,8 +141,8 @@ jobs:
           node -e "
             const fs = require('fs');
             const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-            pkg.dependencies['pdf8-pdfium'] = 'file:' + process.argv[1];
-            pkg.dependencies['pdf8-viewer'] = 'file:' + process.argv[2];
+            pkg.dependencies['pdffdp-pdfium'] = 'file:' + process.argv[1];
+            pkg.dependencies['pdffdp-viewer'] = 'file:' + process.argv[2];
             fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
           " "${{ steps.engine.outputs.tarball }}" "${{ steps.viewer.outputs.tarball }}"
 
@@ -155,16 +155,16 @@ jobs:
         run: |
           set -euo pipefail
           npm install
-          test -s node_modules/pdf8-pdfium/editcore.wasm
-          if find node_modules/pdf8-viewer -name '*.wasm' | grep -q .; then
+          test -s node_modules/pdffdp-pdfium/editcore.wasm
+          if find node_modules/pdffdp-viewer -name '*.wasm' | grep -q .; then
             echo "::error::viewer package still ships a wasm; the engine would be duplicated"
             exit 1
           fi
-          if ! grep -q "pdf8-pdfium/editcore.wasm" src/js/logic/edit-pdf-page.ts; then
+          if ! grep -q "pdffdp-pdfium/editcore.wasm" src/js/logic/edit-pdf-page.ts; then
             echo "::error::the PDF editor no longer points at the shared engine"
             exit 1
           fi
-          echo "engine sha256: $(sha256sum node_modules/pdf8-pdfium/editcore.wasm | cut -c1-16)"
+          echo "engine sha256: $(sha256sum node_modules/pdffdp-pdfium/editcore.wasm | cut -c1-16)"
 
       - name: Typecheck and test
         if: steps.gate.outputs.run == 'true'
@@ -175,8 +175,8 @@ jobs:
       - name: Write upstream marker
         if: steps.gate.outputs.run == 'true'
         run: |
-          echo "${{ steps.upstream.outputs.version }}" > vendor/pdf8-viewer/.upstream-version
-          echo "${{ steps.upstream.outputs.version }}" > vendor/pdf8-pdfium/.upstream-version
+          echo "${{ steps.upstream.outputs.version }}" > vendor/pdffdp-viewer/.upstream-version
+          echo "${{ steps.upstream.outputs.version }}" > vendor/pdffdp-pdfium/.upstream-version
 
       - name: Create Pull Request
         if: steps.gate.outputs.run == 'true'
@@ -189,8 +189,8 @@ jobs:
             `${{ steps.upstream.outputs.version }}`, so the text editor and the
             PDF editor run the same engine.
 
-            - `pdf8-pdfium` — the engine wasm, packed from the fork's published `src/vendor`
-            - `pdf8-viewer` — the snippet bundle, packed **without** `dist/pdfium.wasm`
+            - `pdffdp-pdfium` — the engine wasm, packed from the fork's published `src/vendor`
+            - `pdffdp-viewer` — the snippet bundle, packed **without** `dist/pdfium.wasm`
 
             The viewer loads the shared engine through `EmbedPDF.init({ wasmUrl })`.
             CI verified a single wasm on disk, typecheck, and the test suite.

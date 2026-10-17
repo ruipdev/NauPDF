@@ -1,13 +1,13 @@
 services:
-  pdf8:
+  pdffdp:
     # GitHub Container Registry (Recommended)
-    # Self-Hosted build - ghcr.io/alam00000/pdf8-simple:latest
-    # Commercial build  - ghcr.io/alam00000/pdf8:latest
+    # Self-Hosted build - ghcr.io/alam00000/pdffdp-simple:latest
+    # Commercial build  - ghcr.io/alam00000/pdffdp:latest
     # Docker Hub (Alternative)
-    # Self-Hosted build - pdf8team/pdf8-simple:latest
-    # Commercial build  - pdf8team/pdf8:latest
-    image: ghcr.io/alam00000/pdf8-simple:latest
-    container_name: pdf8
+    # Self-Hosted build - pdffdpteam/pdffdp-simple:latest
+    # Commercial build  - pdffdpteam/pdffdp:latest
+    image: ghcr.io/alam00000/pdffdp-simple:latest
+    container_name: pdffdp
     restart: unless-stopped
     ports:
       - '8080:8080'

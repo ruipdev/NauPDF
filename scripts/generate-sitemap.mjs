@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const LOCALES_DIR = path.resolve(__dirname, '../public/locales');
-const SITE_URL = (process.env.SITE_URL || 'https://www.pdf8.com').replace(
+const SITE_URL = (process.env.SITE_URL || 'https://www.pdffdp.com').replace(
   /\/+$/,
   ''
 );

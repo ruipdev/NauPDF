@@ -26,7 +26,7 @@ const DEFAULT_WASM_ORIGINS = {
   cpdf: 'https://cdn.jsdelivr.net',
 };
 const DEFAULT_CORS_PROXY_ORIGIN =
-  'https://pdf8-cors-proxy.pdf8.workers.dev';
+  'https://pdffdp-cors-proxy.pdffdp.workers.dev';
 const DEFAULT_OCR_FONT_CDN_ORIGIN = 'https://rawcdn.githack.com';
 
 const wasmOrigins = [

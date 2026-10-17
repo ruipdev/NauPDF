@@ -1,4 +1,4 @@
-name = "pdf8-wasm-proxy"
+name = "pdffdp-wasm-proxy"
 main = "wasm-proxy-worker.js"
 compatibility_date = "2024-01-01"
 
@@ -11,7 +11,7 @@ compatibility_date = "2024-01-01"
 #
 # Set environment secrets (one of the following methods):
 #   Option A: Cloudflare Dashboard
-#     Go to Workers & Pages > pdf8-wasm-proxy > Settings > Variables
+#     Go to Workers & Pages > pdffdp-wasm-proxy > Settings > Variables
 #     Add: PYMUPDF_SOURCE, GS_SOURCE, CPDF_SOURCE
 #
 #   Option B: Wrangler CLI
@@ -25,11 +25,11 @@ compatibility_date = "2024-01-01"
 # Set these as secrets in the Cloudflare dashboard or via wrangler:
 #
 # PYMUPDF_SOURCE: Base URL to PyMuPDF WASM files
-#   Example: https://cdn.jsdelivr.net/npm/@pdf8/pymupdf-wasm/assets
+#   Example: https://cdn.jsdelivr.net/npm/@pdffdp/pymupdf-wasm/assets
 #            https://your-bucket.r2.cloudflarestorage.com/pymupdf
 #
 # GS_SOURCE: Base URL to Ghostscript WASM files
-#   Example: https://cdn.jsdelivr.net/npm/@pdf8/gs-wasm/assets
+#   Example: https://cdn.jsdelivr.net/npm/@pdffdp/gs-wasm/assets
 #            https://your-bucket.r2.cloudflarestorage.com/gs
 #
 # CPDF_SOURCE: Base URL to CoherentPDF files
@@ -37,12 +37,12 @@ compatibility_date = "2024-01-01"
 #            https://your-bucket.r2.cloudflarestorage.com/cpdf
 
 # =============================================================================
-# USAGE FROM PDF8
+# USAGE FROM pdffdp
 # =============================================================================
-# In PDF8's WASM Settings page, configure URLs like:
-#   PyMuPDF: https://wasm.pdf8.com/pymupdf/
-#   Ghostscript: https://wasm.pdf8.com/gs/
-#   CoherentPDF: https://wasm.pdf8.com/cpdf/
+# In pdffdp's WASM Settings page, configure URLs like:
+#   PyMuPDF: https://wasm.pdffdp.com/pymupdf/
+#   Ghostscript: https://wasm.pdffdp.com/gs/
+#   CoherentPDF: https://wasm.pdffdp.com/cpdf/
 
 # =============================================================================
 # RATE LIMITING (Optional but recommended)
@@ -63,7 +63,7 @@ id = "b88e030b308941118cd484e3fcb3ae49"
 # =============================================================================
 # CUSTOM DOMAIN (Optional)
 # =============================================================================
-# If you want a custom domain like wasm.pdf8.com:
+# If you want a custom domain like wasm.pdffdp.com:
 # routes = [
-#   { pattern = "wasm.pdf8.com/*", zone_name = "pdf8.com" }
+#   { pattern = "wasm.pdffdp.com/*", zone_name = "pdffdp.com" }
 # ]

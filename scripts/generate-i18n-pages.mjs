@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const LOCALES_DIR = path.resolve(__dirname, '../public/locales');
-const SITE_URL = (process.env.SITE_URL || 'https://www.pdf8.com').replace(
+const SITE_URL = (process.env.SITE_URL || 'https://www.pdffdp.com').replace(
   /\/+$/,
   ''
 );
@@ -102,7 +102,7 @@ function applyServerTranslations(document, langResources) {
   });
 }
 
-const ORGANIZATION_LD_MARKER = 'data-pdf8-organization';
+const ORGANIZATION_LD_MARKER = 'data-pdffdp-organization';
 
 function injectOrganizationLd(document) {
   if (document.querySelector(`script[${ORGANIZATION_LD_MARKER}]`)) return;
@@ -120,14 +120,14 @@ function injectOrganizationLd(document) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'PDF8',
+    name: 'pdffdp',
     url: SITE_URL,
     logo: `${SITE_URL}/images/favicon.svg`,
     sameAs: [
-      'https://github.com/alam00000/pdf8',
-      'https://x.com/pdf8',
-      'https://www.linkedin.com/company/pdf8/',
-      'https://www.instagram.com/thepdf8/',
+      'https://github.com/alam00000/pdffdp',
+      'https://x.com/pdffdp',
+      'https://www.linkedin.com/company/pdffdp/',
+      'https://www.instagram.com/thepdffdp/',
     ],
   };
   const script = document.createElement('script');
@@ -137,8 +137,8 @@ function injectOrganizationLd(document) {
   document.body.appendChild(script);
 }
 
-const BREADCRUMB_MARKER = 'data-pdf8-breadcrumb';
-const BRAND_NAME = process.env.VITE_BRAND_NAME || 'PDF8';
+const BREADCRUMB_MARKER = 'data-pdffdp-breadcrumb';
+const BRAND_NAME = process.env.VITE_BRAND_NAME || 'pdffdp';
 
 function buildLocalHomeHref(lang) {
   const langSegment = lang === 'en' ? '/' : `/${lang}/`;
@@ -267,7 +267,7 @@ function processFileForLanguage(
     title =
       tools[translationKey].pageTitle ||
       (tools[translationKey].name
-        ? `${tools[translationKey].name} - PDF8`
+        ? `${tools[translationKey].name} - pdffdp`
         : null);
     description = tools[translationKey].subtitle;
   }

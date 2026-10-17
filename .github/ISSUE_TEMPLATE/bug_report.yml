@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Report a bug in PDF8
+description: Report a bug in pdffdp
 title: "(Bug) "
 labels: ["bug", "needs triage"]
 body:
@@ -92,9 +92,9 @@ body:
       required: true
 
   - type: input
-    id: pdf8-version
+    id: pdffdp-version
     attributes:
-      label: PDF8 Version
+      label: pdffdp Version
       description: Check the footer or package.json
       placeholder: "1.15.4"
     validations:

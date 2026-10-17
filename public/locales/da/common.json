@@ -12,7 +12,7 @@
     "noLanguagesFound": "Ingen sprog fundet"
   },
   "donation": {
-    "message": "Elsker du PDF8? Hjælp os med at holde det gratis og open source!",
+    "message": "Elsker du pdffdp? Hjælp os med at holde det gratis og open source!",
     "button": "Donér"
   },
   "hero": {
@@ -29,7 +29,7 @@
   },
   "features": {
     "title": "Hvorfor vælge",
-    "PDF8": "PDF8?",
+    "pdffdp": "pdffdp?",
     "noSignup": {
       "title": "Ingen tilmelding",
       "description": "Start med det samme, ingen konti eller e-mails."
@@ -187,7 +187,7 @@
     "questions": "Spørgsmål",
     "sectionTitle": "Ofte stillede spørgsmål",
     "isFree": {
-      "question": "Er PDF8 virkelig gratis?",
+      "question": "Er pdffdp virkelig gratis?",
       "answer": "Ja, absolut. Alle værktøjer er 100% gratis at bruge, uden filgrænser, uden tilmeldinger og uden vandmærker."
     },
     "areFilesSecure": {
@@ -196,10 +196,10 @@
     },
     "platforms": {
       "question": "Virker det på Mac, Windows og mobil?",
-      "answer": "Ja! PDF8 virker på alle moderne browsere, uanset styresystem."
+      "answer": "Ja! pdffdp virker på alle moderne browsere, uanset styresystem."
     },
     "gdprCompliant": {
-      "question": "Er PDF8 GDPR-kompatibel?",
+      "question": "Er pdffdp GDPR-kompatibel?",
       "answer": "Ja. Da vi ikke indsamler eller behandler dine filer på vores servere, er dine data altid under din kontrol."
     },
     "dataStorage": {
@@ -207,8 +207,8 @@
       "answer": "Nej. Vi gemmer eller sporer aldrig dine filer. Alt foregår i din browser."
     },
     "different": {
-      "question": "Hvad gør PDF8 anderledes?",
-      "answer": "De fleste PDF-værktøjer uploader dine filer til en server. PDF8 gør det hele lokalt i din browser."
+      "question": "Hvad gør pdffdp anderledes?",
+      "answer": "De fleste PDF-værktøjer uploader dine filer til en server. pdffdp gør det hele lokalt i din browser."
     },
     "browserBased": {
       "question": "Hvordan gør browserbaseret behandling mig sikker?",
@@ -216,7 +216,7 @@
     },
     "analytics": {
       "question": "Bruger I cookies eller analyseværktøjer?",
-      "answer": "Nej. PDF8 sporer dig slet ikke. Vi bruger hverken cookies, analyseværktøjer eller sporingsscripts – heller ikke på den live hjemmeside pdf8.com. Vi ved aldrig, hvem du er, eller hvad du bruger værktøjerne til."
+      "answer": "Nej. pdffdp sporer dig slet ikke. Vi bruger hverken cookies, analyseværktøjer eller sporingsscripts – heller ikke på den live hjemmeside pdffdp.com. Vi ved aldrig, hvem du er, eller hvad du bruger værktøjerne til."
     }
   },
   "testimonials": {
@@ -226,11 +226,11 @@
   },
   "support": {
     "title": "Kan du lide mit arbejde?",
-    "description": "PDF8 er et passioneret projekt, bygget for at tilbyde et gratis og privat PDF-værktøj til alle.",
+    "description": "pdffdp er et passioneret projekt, bygget for at tilbyde et gratis og privat PDF-værktøj til alle.",
     "buyMeCoffee": "Køb en kaffe til mig"
   },
   "footer": {
-    "copyright": "© 2026 PDF8. Alle rettigheder forbeholdes.",
+    "copyright": "© 2026 pdffdp. Alle rettigheder forbeholdes.",
     "version": "Version",
     "company": "Virksomhed",
     "aboutUs": "Om os",
@@ -297,7 +297,7 @@
       "title": "Privatliv først. Altid.",
       "description": "Alt sker lokalt i din browser. Dine dokumenter er 100% private."
     },
-    "whyPdf8": {
+    "whyPdffdp": {
       "title": "Hvorfor",
       "speed": {
         "title": "Bygget til hastighed",

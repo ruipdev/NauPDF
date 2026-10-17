@@ -2,7 +2,7 @@
 
 The digital signature tool uses a CORS proxy to fetch issuer certificates from external Certificate Authorities (CAs). This is necessary because many CA servers don't include CORS headers in their responses, which prevents direct browser-based fetching.
 
-Additionally, many CA servers serve certificates over plain HTTP. When your PDF8 instance is hosted over HTTPS, browsers block these HTTP requests (mixed content policy). The CORS proxy resolves both issues by routing requests through an HTTPS endpoint with proper headers.
+Additionally, many CA servers serve certificates over plain HTTP. When your pdffdp instance is hosted over HTTPS, browsers block these HTTP requests (mixed content policy). The CORS proxy resolves both issues by routing requests through an HTTPS endpoint with proper headers.
 
 ## How It Works
 
@@ -15,7 +15,7 @@ When signing a PDF with a certificate:
 
 ## Self-Hosting the CORS Proxy
 
-If you're self-hosting PDF8, you'll need to deploy your own CORS proxy for digital signatures to work with certificates that require chain fetching.
+If you're self-hosting pdffdp, you'll need to deploy your own CORS proxy for digital signatures to work with certificates that require chain fetching.
 
 ### Option 1: Cloudflare Workers (Recommended)
 
@@ -31,11 +31,11 @@ If you're self-hosting PDF8, you'll need to deploy your own CORS proxy for digit
    wrangler login
    ```
 
-3. **Clone PDF8 and update allowed origins**:
+3. **Clone pdffdp and update allowed origins**:
 
    ```bash
-   git clone https://github.com/alam00000/pdf8.git
-   cd PDF8/cloudflare
+   git clone https://github.com/alam00000/pdffdp.git
+   cd pdffdp/cloudflare
    ```
 
    Open `cors-proxy-worker.js` and change the `ALLOWED_ORIGINS` array to your domain:
@@ -48,7 +48,7 @@ If you're self-hosting PDF8, you'll need to deploy your own CORS proxy for digit
    ```
 
    ::: warning Important
-   Without this change, the proxy will reject all requests from your site with a **403 Forbidden** error. The default only allows requests from `pdf8.com`.
+   Without this change, the proxy will reject all requests from your site with a **403 Forbidden** error. The default only allows requests from `pdffdp.com`.
    :::
 
 4. **Deploy the proxy**:
@@ -57,9 +57,9 @@ If you're self-hosting PDF8, you'll need to deploy your own CORS proxy for digit
    wrangler deploy
    ```
 
-   Note your worker URL (e.g., `https://pdf8-cors-proxy.your-subdomain.workers.dev`).
+   Note your worker URL (e.g., `https://pdffdp-cors-proxy.your-subdomain.workers.dev`).
 
-5. **Rebuild PDF8 with the proxy URL**:
+5. **Rebuild pdffdp with the proxy URL**:
 
    If using Docker:
 
@@ -67,7 +67,7 @@ If you're self-hosting PDF8, you'll need to deploy your own CORS proxy for digit
    export VITE_CORS_PROXY_URL="https://your-worker.workers.dev"
    DOCKER_BUILDKIT=1 docker build \
      --secret id=VITE_CORS_PROXY_URL,env=VITE_CORS_PROXY_URL \
-     -t your-PDF8 .
+     -t your-pdffdp .
    ```
 
    If building from source:

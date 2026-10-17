@@ -1,16 +1,16 @@
 # Getting Started
 
-Welcome to PDF8! This guide will help you get up and running quickly.
+Welcome to pdffdp! This guide will help you get up and running quickly.
 
-## What is PDF8?
+## What is pdffdp?
 
-PDF8 is a free, open-source, privacy-first PDF toolkit that runs **entirely in your browser**. Your files never leave your device—all processing happens locally using WebAssembly (WASM) technology.
+pdffdp is a free, open-source, privacy-first PDF toolkit that runs **entirely in your browser**. Your files never leave your device—all processing happens locally using WebAssembly (WASM) technology.
 
 ## Quick Start
 
 ### Option 1: Use the Hosted Version
 
-Visit [pdf8.com](https://pdf8.com) to use PDF8 instantly—no installation required.
+Visit [pdffdp.com](https://pdffdp.com) to use pdffdp instantly—no installation required.
 
 ### Option 2: Self-Host with Docker
 
@@ -25,15 +25,15 @@ Visit [pdf8.com](https://pdf8.com) to use PDF8 instantly—no installation requi
 
 ```bash
 # Pull and run the Docker image (self-hosted build)
-docker run -d -p 3000:8080 ghcr.io/alam00000/pdf8-simple:latest
+docker run -d -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
 
 # Or use Docker Compose
-curl -O https://raw.githubusercontent.com/alam00000/pdf8/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/alam00000/pdffdp/main/docker-compose.yml
 docker compose up -d
 ```
 
 > [!TIP]
-> PDF8 ships in two builds: the **Self-Hosted build** (`pdf8-simple`, used above) for internal/team/organization deployments, and the **Commercial build** (`PDF8:latest`) used by pdf8.com itself and by commercial license holders running public-facing deployments. Both ship the same PDF tools — the Commercial build adds the pdf8.com hero, FAQ, testimonials, and footer. If in doubt, use the Self-Hosted build.
+> pdffdp ships in two builds: the **Self-Hosted build** (`pdffdp-simple`, used above) for internal/team/organization deployments, and the **Commercial build** (`pdffdp:latest`) used by pdffdp.com itself and by commercial license holders running public-facing deployments. Both ship the same PDF tools — the Commercial build adds the pdffdp.com hero, FAQ, testimonials, and footer. If in doubt, use the Self-Hosted build.
 
 Then open `http://localhost:3000` in your browser.
 
@@ -44,8 +44,8 @@ Then open `http://localhost:3000` in your browser.
 
 ```bash
 # Clone the repository
-git clone https://github.com/alam00000/pdf8.git
-cd PDF8
+git clone https://github.com/alam00000/pdffdp.git
+cd pdffdp
 
 # Install dependencies
 npm install
@@ -67,7 +67,7 @@ npm run dev
 
 ## Browser Support
 
-PDF8 works best on modern browsers:
+pdffdp works best on modern browsers:
 
 - ✅ Chrome/Edge 90+
 - ✅ Firefox 90+
@@ -76,5 +76,5 @@ PDF8 works best on modern browsers:
 ## Next Steps
 
 - [Explore all tools](/tools/)
-- [Self-host PDF8](/self-hosting/)
+- [Self-host pdffdp](/self-hosting/)
 - [Contribute to the project](/contributing)

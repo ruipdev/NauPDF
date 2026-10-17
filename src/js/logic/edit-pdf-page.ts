@@ -9,11 +9,11 @@ import { editorFontFallback } from '../config/editor-fonts.js';
 import { needsFontEmbedding } from '../utils/freetext-script.js';
 
 const embedPdfWasmUrl = new URL(
-  'pdf8-pdfium/editcore.wasm',
+  'pdffdp-pdfium/editcore.wasm',
   import.meta.url
 ).href;
 
-import type { EmbedPdfContainer } from 'pdf8-viewer';
+import type { EmbedPdfContainer } from 'pdffdp-viewer';
 import type {
   AnnotationPluginLite,
   DocManagerPlugin,
@@ -176,7 +176,7 @@ async function handleFiles(files: FileList) {
       pdfContainer.textContent = '';
       pdfWrapper.classList.remove('hidden');
 
-      const { default: EmbedPDF } = await import('pdf8-viewer');
+      const { default: EmbedPDF } = await import('pdffdp-viewer');
       const disabledCategories = getEditorDisabledCategories();
       viewerInstance = EmbedPDF.init({
         disabledCategories,

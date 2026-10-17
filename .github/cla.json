@@ -1,18 +1,18 @@
 {
-    "name": "PDF8 CLA",
+    "name": "pdffdp CLA",
     "text": [
-        "Thank you for your contribution to PDF8!",
+        "Thank you for your contribution to pdffdp!",
         "",
         "By signing this CLA, you agree to the terms of our Contributor License Agreement.",
         "",
         "**Individual Contributors**: Please review and sign our [Individual CLA (ICLA)](ICLA.md)",
         "",
-        "**Corporate Contributors**: If you are contributing on behalf of your employer, please have your organization sign our [Corporate CLA (CCLA)](CCLA.md) by contacting contact@pdf8.com"
+        "**Corporate Contributors**: If you are contributing on behalf of your employer, please have your organization sign our [Corporate CLA (CCLA)](CCLA.md) by contacting contact@pdffdp.com"
     ],
     "notes": {
-        "purpose": "This CLA enables PDF8's dual licensing model (AGPL-3.0 + commercial license)",
-        "icla_url": "https://github.com/alam00000/pdf8/blob/main/ICLA.md",
-        "ccla_url": "https://github.com/alam00000/pdf8/blob/main/CCLA.md",
-        "contact": "contact@pdf8.com"
+        "purpose": "This CLA enables pdffdp's dual licensing model (AGPL-3.0 + commercial license)",
+        "icla_url": "https://github.com/alam00000/pdffdp/blob/main/ICLA.md",
+        "ccla_url": "https://github.com/alam00000/pdffdp/blob/main/CCLA.md",
+        "contact": "contact@pdffdp.com"
     }
 }

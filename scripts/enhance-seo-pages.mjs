@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.resolve(__dirname, '../dist');
-const SITE_URL = (process.env.SITE_URL || 'https://www.pdf8.com').replace(
+const SITE_URL = (process.env.SITE_URL || 'https://www.pdffdp.com').replace(
   /\/+$/,
   ''
 );
@@ -113,8 +113,8 @@ function injectWebsiteSchema(document) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'PDF8',
-      alternateName: ['PDF8', 'pdf8.com'],
+      name: 'pdffdp',
+      alternateName: ['pdffdp', 'pdffdp.com'],
       url: `${SITE_URL}/`,
     },
     null,

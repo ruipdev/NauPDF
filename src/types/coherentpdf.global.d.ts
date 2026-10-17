@@ -1,11 +1,11 @@
 /*
- * coherentpdf.global.d.ts — TypeScript type definitions for PDF8 / CoherentPDF integration
+ * coherentpdf.global.d.ts — TypeScript type definitions for pdffdp / CoherentPDF integration
  *
- * These type definitions were written by Alam for use in the PDF8 project.
+ * These type definitions were written by Alam for use in the pdffdp project.
  * They describe APIs provided by the CoherentPDF library (cpdf.js) but are original
  * work created for type safety and integration.
  *
- * Copyright © 2026 PDF8
+ * Copyright © 2026 pdffdp
  * Licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+).
  */
 declare global {

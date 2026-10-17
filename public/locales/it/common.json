@@ -12,7 +12,7 @@
     "noLanguagesFound": "Nessuna lingua trovata"
   },
   "donation": {
-    "message": "Ti piace PDF8? Aiutaci a mantenerlo gratuito e open source!",
+    "message": "Ti piace pdffdp? Aiutaci a mantenerlo gratuito e open source!",
     "button": "Dona"
   },
   "hero": {
@@ -29,7 +29,7 @@
   },
   "features": {
     "title": "Perché scegliere",
-    "PDF8": "PDF8?",
+    "pdffdp": "pdffdp?",
     "noSignup": {
       "title": "Nessuna registrazione",
       "description": "Inizia subito, senza account né email."
@@ -187,8 +187,8 @@
     "questions": "Frequenti",
     "sectionTitle": "Domande frequenti",
     "isFree": {
-      "question": "PDF8 è davvero gratuito?",
-      "answer": "Sì, assolutamente. Tutti gli strumenti su PDF8 sono gratuiti al 100%, senza limiti di file, senza registrazioni e senza filigrane. Crediamo che tutti debbano poter accedere a strumenti PDF semplici e potenti senza barriere a pagamento."
+      "question": "pdffdp è davvero gratuito?",
+      "answer": "Sì, assolutamente. Tutti gli strumenti su pdffdp sono gratuiti al 100%, senza limiti di file, senza registrazioni e senza filigrane. Crediamo che tutti debbano poter accedere a strumenti PDF semplici e potenti senza barriere a pagamento."
     },
     "areFilesSecure": {
       "question": "I miei file sono sicuri? Dove vengono elaborati?",
@@ -196,27 +196,27 @@
     },
     "platforms": {
       "question": "Funziona su Mac, Windows e dispositivi mobili?",
-      "answer": "Sì! Poiché PDF8 viene eseguito interamente nel tuo browser, funziona su qualsiasi sistema operativo con un browser moderno, inclusi Windows, macOS, Linux, iOS e Android."
+      "answer": "Sì! Poiché pdffdp viene eseguito interamente nel tuo browser, funziona su qualsiasi sistema operativo con un browser moderno, inclusi Windows, macOS, Linux, iOS e Android."
     },
     "gdprCompliant": {
-      "question": "PDF8 è conforme al GDPR?",
-      "answer": "Sì. PDF8 è pienamente conforme al GDPR. Poiché tutte le elaborazioni avvengono localmente nel tuo browser e non raccogliamo né trasmettiamo i tuoi file a server, non abbiamo accesso ai tuoi dati. Questo garantisce che tu abbia sempre il controllo sui tuoi documenti."
+      "question": "pdffdp è conforme al GDPR?",
+      "answer": "Sì. pdffdp è pienamente conforme al GDPR. Poiché tutte le elaborazioni avvengono localmente nel tuo browser e non raccogliamo né trasmettiamo i tuoi file a server, non abbiamo accesso ai tuoi dati. Questo garantisce che tu abbia sempre il controllo sui tuoi documenti."
     },
     "dataStorage": {
       "question": "Conservate o tracciate i miei file?",
-      "answer": "No. Non conserviamo, tracciamo né registriamo i tuoi file. Tutto ciò che fai su PDF8 avviene nella memoria del tuo browser e scompare quando chiudi la pagina. Non ci sono upload, né log di cronologia, né server coinvolti."
+      "answer": "No. Non conserviamo, tracciamo né registriamo i tuoi file. Tutto ciò che fai su pdffdp avviene nella memoria del tuo browser e scompare quando chiudi la pagina. Non ci sono upload, né log di cronologia, né server coinvolti."
     },
     "different": {
-      "question": "Cosa rende PDF8 diverso dagli altri strumenti PDF?",
-      "answer": "La maggior parte degli strumenti PDF carica i file su un server per l'elaborazione. PDF8 non lo fa mai. Utilizziamo tecnologie web moderne e sicure per elaborare i tuoi file direttamente nel browser. Questo significa prestazioni più rapide, maggiore privacy e tranquillità."
+      "question": "Cosa rende pdffdp diverso dagli altri strumenti PDF?",
+      "answer": "La maggior parte degli strumenti PDF carica i file su un server per l'elaborazione. pdffdp non lo fa mai. Utilizziamo tecnologie web moderne e sicure per elaborare i tuoi file direttamente nel browser. Questo significa prestazioni più rapide, maggiore privacy e tranquillità."
     },
     "browserBased": {
       "question": "In che modo l'elaborazione nel browser mi protegge?",
-      "answer": "Eseguendosi interamente nel browser, PDF8 garantisce che i tuoi file non lascino mai il tuo dispositivo. Questo elimina i rischi di attacchi ai server, violazioni dei dati o accessi non autorizzati. I tuoi file restano sempre tuoi."
+      "answer": "Eseguendosi interamente nel browser, pdffdp garantisce che i tuoi file non lascino mai il tuo dispositivo. Questo elimina i rischi di attacchi ai server, violazioni dei dati o accessi non autorizzati. I tuoi file restano sempre tuoi."
     },
     "analytics": {
       "question": "Usate cookie o analytics per tracciarmi?",
-      "answer": "No. PDF8 non ti traccia in alcun modo. Non usiamo cookie, strumenti di analisi né script di tracciamento, nemmeno sul sito web live pdf8.com. Non sappiamo mai chi sei né cosa fai con gli strumenti."
+      "answer": "No. pdffdp non ti traccia in alcun modo. Non usiamo cookie, strumenti di analisi né script di tracciamento, nemmeno sul sito web live pdffdp.com. Non sappiamo mai chi sei né cosa fai con gli strumenti."
     }
   },
   "testimonials": {
@@ -226,11 +226,11 @@
   },
   "support": {
     "title": "Ti piace il mio lavoro?",
-    "description": "PDF8 è un progetto nato per passione, creato per offrire una cassetta degli attrezzi PDF gratuita, privata e potente per tutti. Se lo trovi utile, considera di supportarne lo sviluppo. Ogni caffè aiuta!",
+    "description": "pdffdp è un progetto nato per passione, creato per offrire una cassetta degli attrezzi PDF gratuita, privata e potente per tutti. Se lo trovi utile, considera di supportarne lo sviluppo. Ogni caffè aiuta!",
     "buyMeCoffee": "Offrimi un caffè"
   },
   "footer": {
-    "copyright": "© 2026 PDF8. Tutti i diritti riservati.",
+    "copyright": "© 2026 pdffdp. Tutti i diritti riservati.",
     "version": "Versione",
     "company": "Azienda",
     "aboutUs": "Chi siamo",
@@ -295,10 +295,10 @@
     "philosophy": {
       "label": "La nostra filosofia fondamentale",
       "title": "Prima la privacy. Sempre.",
-      "description": "In un'epoca in cui i dati sono una merce, adottiamo un approccio diverso. Tutte le elaborazioni per gli strumenti PDF8 avvengono localmente nel tuo browser. Questo significa che i tuoi file non toccano mai i nostri server, non vediamo i tuoi documenti e non tracciamo ciò che fai. I tuoi documenti restano completamente e inequivocabilmente privati. Non è solo una funzionalità; è il nostro fondamento."
+      "description": "In un'epoca in cui i dati sono una merce, adottiamo un approccio diverso. Tutte le elaborazioni per gli strumenti pdffdp avvengono localmente nel tuo browser. Questo significa che i tuoi file non toccano mai i nostri server, non vediamo i tuoi documenti e non tracciamo ciò che fai. I tuoi documenti restano completamente e inequivocabilmente privati. Non è solo una funzionalità; è il nostro fondamento."
     },
-    "whyPdf8": {
-      "title": "Perché PDF8",
+    "whyPdffdp": {
+      "title": "Perché pdffdp",
       "speed": {
         "title": "Progettato per la velocità",
         "description": "Nessuna attesa per upload o download verso un server. Elaborando i file direttamente nel browser con tecnologie web moderne come WebAssembly, offriamo una velocità impareggiabile per tutti i nostri strumenti."
@@ -318,7 +318,7 @@
     },
     "cta": {
       "title": "Pronto per iniziare?",
-      "description": "Unisciti a migliaia di utenti che si affidano a PDF8 per le loro esigenze quotidiane sui documenti. Sperimenta la differenza che privacy e prestazioni possono offrire.",
+      "description": "Unisciti a migliaia di utenti che si affidano a pdffdp per le loro esigenze quotidiane sui documenti. Sperimenta la differenza che privacy e prestazioni possono offrire.",
       "button": "Esplora tutti gli strumenti"
     }
   },

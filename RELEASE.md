@@ -215,16 +215,16 @@ git reset --hard HEAD~1
 1. **GitHub Actions Triggered**: Workflow starts building Docker image
 2. **Docker Build**: Multi-architecture image created
 3. **Docker Push**: Images pushed to Docker Hub with tags:
-   - `pdf8team/pdf8:latest`
-   - `pdf8team/pdf8:1.0.1`
-   - `pdf8team/pdf8:v1.0.1`
+   - `pdffdpteam/pdffdp:latest`
+   - `pdffdpteam/pdffdp:1.0.1`
+   - `pdffdpteam/pdffdp:v1.0.1`
 
 ### **End Result:**
 
 Users can immediately pull your new version:
 
 ```bash
-docker pull pdf8team/pdf8:1.0.1
+docker pull pdffdpteam/pdffdp:1.0.1
 ```
 
 ---
