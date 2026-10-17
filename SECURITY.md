@@ -2,7 +2,7 @@
 
 ## Non-Root User Support
 
-BentoPDF now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
+PDF8 now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
 
 ### Security Benefits
 
@@ -16,18 +16,18 @@ BentoPDF now uses nginx-unprivileged for enhanced security. This follows the Pri
 #### Default Configuration (nginx-unprivileged)
 
 ```bash
-docker build -t bentopdf .
-docker run -p 8080:8080 bentopdf
+docker build -t PDF8 .
+docker run -p 8080:8080 PDF8
 ```
 
 #### Simple Mode
 
 ```bash
 # Build with simple mode enabled
-docker build --build-arg SIMPLE_MODE=true -t bentopdf-simple .
+docker build --build-arg SIMPLE_MODE=true -t pdf8-simple .
 
 # Run the container
-docker run -p 8080:8080 bentopdf-simple
+docker run -p 8080:8080 pdf8-simple
 ```
 
 #### Kubernetes Example
@@ -36,7 +36,7 @@ docker run -p 8080:8080 bentopdf-simple
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bentopdf
+  name: PDF8
 spec:
   template:
     spec:
@@ -45,8 +45,8 @@ spec:
         runAsUser: 2000
         runAsGroup: 2000
       containers:
-        - name: bentopdf
-          image: bentopdf:latest
+        - name: PDF8
+          image: PDF8:latest
           ports:
             - containerPort: 8080
 ```
@@ -56,7 +56,7 @@ spec:
 ```yaml
 version: '3.8'
 services:
-  bentopdf:
+  PDF8:
     build:
       context: .
       dockerfile: Dockerfile

@@ -15,7 +15,7 @@ import { createHash } from 'crypto';
 
 function engineVersion(): string {
   try {
-    const dir = resolve(__dirname, 'node_modules/bentopdf-pdfium');
+    const dir = resolve(__dirname, 'node_modules/pdf8-pdfium');
     const h = createHash('sha256');
     for (const f of ['editcore.js', 'editcore.wasm']) {
       h.update(fs.readFileSync(resolve(dir, f)));
@@ -235,7 +235,7 @@ function buildCorsProxyAllowedHosts(): Set<string> {
     'cdn.jsdelivr.net',
     'fonts.googleapis.com',
     'fonts.gstatic.com',
-    'bentopdf-cors-proxy.bentopdf.workers.dev',
+    'pdf8-cors-proxy.pdf8.workers.dev',
     'timestamp.digicert.com',
     'timestamp.sectigo.com',
     'ts.ssl.com',
@@ -617,12 +617,12 @@ export default defineConfig(() => {
     },
     optimizeDeps: {
       include: ['pdfkit', 'blob-stream'],
-      exclude: ['coherentpdf', 'wasm-vips', 'bentopdf-pdfium'],
+      exclude: ['coherentpdf', 'wasm-vips', 'pdf8-pdfium'],
     },
     server: {
       host: process.env.VITE_DEV_HOST || 'localhost',
       watch: {
-        ignored: ['!**/node_modules/bentopdf-pdfium/**'],
+        ignored: ['!**/node_modules/pdf8-pdfium/**'],
       },
       headers: {
         'Cross-Origin-Opener-Policy': 'same-origin',

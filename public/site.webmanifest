@@ -1,6 +1,6 @@
 {
-    "name": "BentoPDF",
-    "short_name": "BentoPDF",
+    "name": "PDF8",
+    "short_name": "PDF8",
     "description": "Free online PDF tools - Privacy-first PDF toolkit that works 100% in your browser",
     "start_url": "/",
     "display": "standalone",

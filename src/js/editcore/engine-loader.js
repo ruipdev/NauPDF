@@ -1,4 +1,4 @@
-import createModule from 'bentopdf-pdfium';
+import createModule from 'pdf8-pdfium';
 
 const inBrowser = typeof window !== 'undefined';
 
@@ -11,7 +11,7 @@ try {
 
 function resolveWasmUrl() {
   if (inBrowser) {
-    const url = new URL('bentopdf-pdfium/editcore.wasm', import.meta.url);
+    const url = new URL('pdf8-pdfium/editcore.wasm', import.meta.url);
     if (import.meta.env?.DEV) {
       url.searchParams.set('v', ENGINE_VERSION);
     }
@@ -19,12 +19,12 @@ function resolveWasmUrl() {
   }
   const resolve = import.meta.resolve;
   if (typeof resolve !== 'function') return null;
-  return new URL(resolve('bentopdf-pdfium/editcore.wasm')).pathname;
+  return new URL(resolve('pdf8-pdfium/editcore.wasm')).pathname;
 }
 
 const wasmUrl = resolveWasmUrl();
 
-export const ENGINE_BUILD = `bentopdf-pdfium@${ENGINE_VERSION}`;
+export const ENGINE_BUILD = `pdf8-pdfium@${ENGINE_VERSION}`;
 
 export function createEngineModule(options) {
   return createModule({

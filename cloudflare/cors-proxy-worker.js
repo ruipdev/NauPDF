@@ -1,5 +1,5 @@
 /**
- * BentoPDF CORS Proxy Worker
+ * PDF8 CORS Proxy Worker
  *
  * This Cloudflare Worker proxies certificate requests for the digital signing tool.
  * It fetches certificates from external CAs that don't have CORS headers enabled
@@ -28,7 +28,7 @@ const ALLOWED_TSA_HOSTS = new Set([
   'tsa.mesign.com',
 ]);
 
-const ALLOWED_ORIGINS = ['https://www.bentopdf.com', 'https://bentopdf.com'];
+const ALLOWED_ORIGINS = ['https://www.pdf8.com', 'https://pdf8.com'];
 
 const SAFE_CONTENT_TYPES = [
   'application/x-x509-ca-cert',
@@ -449,7 +449,7 @@ export default {
         redirect: 'manual',
         signal: AbortSignal.timeout(10000),
         headers: {
-          'User-Agent': 'BentoPDF-CertProxy/1.0',
+          'User-Agent': 'pdf8-CertProxy/1.0',
         },
       };
 
