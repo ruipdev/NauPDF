@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const LOCALES_DIR = path.resolve(__dirname, '../public/locales');
-const SITE_URL = (process.env.SITE_URL || 'https://www.bentopdf.com').replace(
+const SITE_URL = (process.env.SITE_URL || 'https://www.naupdf.com').replace(
   /\/+$/,
   ''
 );
@@ -102,7 +102,7 @@ function applyServerTranslations(document, langResources) {
   });
 }
 
-const ORGANIZATION_LD_MARKER = 'data-bentopdf-organization';
+const ORGANIZATION_LD_MARKER = 'data-naupdf-organization';
 
 function injectOrganizationLd(document) {
   if (document.querySelector(`script[${ORGANIZATION_LD_MARKER}]`)) return;
@@ -120,14 +120,14 @@ function injectOrganizationLd(document) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'BentoPDF',
+    name: 'naupdf',
     url: SITE_URL,
     logo: `${SITE_URL}/images/favicon.svg`,
     sameAs: [
-      'https://github.com/alam00000/bentopdf',
-      'https://x.com/BentoPDF',
-      'https://www.linkedin.com/company/bentopdf/',
-      'https://www.instagram.com/thebentopdf/',
+      'https://github.com/alam00000/naupdf',
+      'https://x.com/naupdf',
+      'https://www.linkedin.com/company/naupdf/',
+      'https://www.instagram.com/thenaupdf/',
     ],
   };
   const script = document.createElement('script');
@@ -137,8 +137,8 @@ function injectOrganizationLd(document) {
   document.body.appendChild(script);
 }
 
-const BREADCRUMB_MARKER = 'data-bentopdf-breadcrumb';
-const BRAND_NAME = process.env.VITE_BRAND_NAME || 'BentoPDF';
+const BREADCRUMB_MARKER = 'data-naupdf-breadcrumb';
+const BRAND_NAME = process.env.VITE_BRAND_NAME || 'naupdf';
 
 function buildLocalHomeHref(lang) {
   const langSegment = lang === 'en' ? '/' : `/${lang}/`;
@@ -267,7 +267,7 @@ function processFileForLanguage(
     title =
       tools[translationKey].pageTitle ||
       (tools[translationKey].name
-        ? `${tools[translationKey].name} - BentoPDF`
+        ? `${tools[translationKey].name} - naupdf`
         : null);
     description = tools[translationKey].subtitle;
   }

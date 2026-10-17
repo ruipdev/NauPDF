@@ -215,16 +215,16 @@ git reset --hard HEAD~1
 1. **GitHub Actions Triggered**: Workflow starts building Docker image
 2. **Docker Build**: Multi-architecture image created
 3. **Docker Push**: Images pushed to Docker Hub with tags:
-   - `bentopdfteam/bentopdf:latest`
-   - `bentopdfteam/bentopdf:1.0.1`
-   - `bentopdfteam/bentopdf:v1.0.1`
+   - `naupdfteam/naupdf:latest`
+   - `naupdfteam/naupdf:1.0.1`
+   - `naupdfteam/naupdf:v1.0.1`
 
 ### **End Result:**
 
 Users can immediately pull your new version:
 
 ```bash
-docker pull bentopdfteam/bentopdf:1.0.1
+docker pull naupdfteam/naupdf:1.0.1
 ```
 
 ---

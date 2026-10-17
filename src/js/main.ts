@@ -64,7 +64,7 @@ const init = async () => {
       }
 
       const githubLink = document.querySelector(
-        'a[href*="github.com/alam00000/bentopdf"]'
+        'a[href*="github.com/alam00000/naupdf"]'
       );
       if (githubLink) {
         (githubLink as HTMLElement).style.display = 'none';
@@ -112,7 +112,7 @@ const init = async () => {
         (divider as HTMLElement).style.display = 'none';
       });
 
-      const brandName = __BRAND_NAME__ || 'BentoPDF';
+      const brandName = __BRAND_NAME__ || 'NauPDF';
       document.title = `${brandName} - ${t('simpleMode.title')}`;
 
       const toolsHeader = document.getElementById('tools-header');
@@ -599,7 +599,7 @@ const init = async () => {
     !__SIMPLE_MODE__ &&
     !__DISABLE_GITHUB_STARS__
   ) {
-    fetch('https://api.github.com/repos/alam00000/bentopdf')
+    fetch('https://api.github.com/repos/alam00000/naupdf')
       .then((response) => response.json())
       .then((data) => {
         if (data.stargazers_count !== undefined) {

@@ -1,5 +1,5 @@
 /**
- * BentoPDF CORS Proxy Worker
+ * naupdf CORS Proxy Worker
  *
  * This Cloudflare Worker proxies certificate requests for the digital signing tool.
  * It fetches certificates from external CAs that don't have CORS headers enabled
@@ -28,7 +28,7 @@ const ALLOWED_TSA_HOSTS = new Set([
   'tsa.mesign.com',
 ]);
 
-const ALLOWED_ORIGINS = ['https://www.bentopdf.com', 'https://bentopdf.com'];
+const ALLOWED_ORIGINS = ['https://www.naupdf.com', 'https://naupdf.com'];
 
 const SAFE_CONTENT_TYPES = [
   'application/x-x509-ca-cert',
@@ -449,7 +449,7 @@ export default {
         redirect: 'manual',
         signal: AbortSignal.timeout(10000),
         headers: {
-          'User-Agent': 'BentoPDF-CertProxy/1.0',
+          'User-Agent': 'naupdf-CertProxy/1.0',
         },
       };
 

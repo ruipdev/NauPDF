@@ -19,9 +19,9 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: bentopdf
+          - name: naupdf
             file: Dockerfile
-          - name: bentopdf-nonroot
+          - name: naupdf-nonroot
             file: Dockerfile.nonroot
     steps:
       - name: Checkout code
