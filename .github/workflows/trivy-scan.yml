@@ -19,9 +19,9 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: pdffdp
+          - name: naupdf
             file: Dockerfile
-          - name: pdffdp-nonroot
+          - name: naupdf-nonroot
             file: Dockerfile.nonroot
     steps:
       - name: Checkout code

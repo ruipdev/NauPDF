@@ -10,24 +10,24 @@ Kubernetes may be overkill for a static site, but it can be a great fit if you a
 > - `Cross-Origin-Opener-Policy: same-origin`
 > - `Cross-Origin-Embedder-Policy: require-corp`
 >
-> The official pdffdp nginx images include these headers. In Kubernetes, **Ingress/Gateway controllers are also reverse proxies**, so ensure these headers are preserved (or add them at the edge).
+> The official naupdf nginx images include these headers. In Kubernetes, **Ingress/Gateway controllers are also reverse proxies**, so ensure these headers are preserved (or add them at the edge).
 
 ## Prereqs
 
 - Kubernetes cluster
 - Helm v3
-- A pdffdp nginx image (e.g. `ghcr.io/alam00000/pdffdp:<tag>`) that serves on **port 8080**
+- A naupdf nginx image (e.g. `ghcr.io/alam00000/naupdf:<tag>`) that serves on **port 8080**
 
 ## Deploy with Helm
 
 ### Install from this repo (local chart)
 
 ```bash
-kubectl create namespace pdffdp
+kubectl create namespace naupdf
 
-helm upgrade --install pdffdp /path/to/pdffdp/chart \
-  --namespace pdffdp \
-  --set image.repository=ghcr.io/alam00000/pdffdp \
+helm upgrade --install naupdf /path/to/naupdf/chart \
+  --namespace naupdf \
+  --set image.repository=ghcr.io/alam00000/naupdf \
   --set image.tag=latest
 ```
 
@@ -38,11 +38,11 @@ If the chart is published to GHCR as an OCI artifact:
 ```bash
 export GHCR_USERNAME="<github-org-or-user>"
 
-helm upgrade --install pdffdp oci://ghcr.io/$GHCR_USERNAME/charts/pdffdp \
-  --namespace pdffdp \
+helm upgrade --install naupdf oci://ghcr.io/$GHCR_USERNAME/charts/naupdf \
+  --namespace naupdf \
   --create-namespace \
   --version 0.1.0 \
-  --set image.repository=ghcr.io/alam00000/pdffdp \
+  --set image.repository=ghcr.io/alam00000/naupdf \
   --set image.tag=latest
 ```
 
@@ -51,7 +51,7 @@ helm upgrade --install pdffdp oci://ghcr.io/$GHCR_USERNAME/charts/pdffdp \
 ### Port-forward (quick test)
 
 ```bash
-kubectl -n pdffdp port-forward deploy/pdffdp 8080:8080
+kubectl -n naupdf port-forward deploy/naupdf 8080:8080
 ```
 
 ### Ingress (optional)
@@ -78,15 +78,15 @@ Example (Cloudflare Gateway API operator):
 ```yaml
 gateway:
   enabled: true
-  name: pdffdp-tunnel
-  namespace: pdffdp
+  name: naupdf-tunnel
+  namespace: naupdf
   gatewayClassName: cloudflare
 
 httpRoute:
   enabled: true
   parentRefs:
-    - name: pdffdp-tunnel
-      namespace: pdffdp
+    - name: naupdf-tunnel
+      namespace: naupdf
       sectionName: http
   hostnames:
     - pdfs.example.com
@@ -96,7 +96,7 @@ httpRoute:
 
 ### What "should" happen
 
-pdffdp’s nginx config sets the required response headers. Most Ingress/Gateway controllers **pass upstream response headers through unchanged**.
+naupdf’s nginx config sets the required response headers. Most Ingress/Gateway controllers **pass upstream response headers through unchanged**.
 
 ### What can break it
 
@@ -132,9 +132,9 @@ ingress:
 
 ## `.mjs` MIME-type errors (Sign PDF / Form Filler iframe blank)
 
-If the browser console shows `Failed to load module script: ... non-JavaScript MIME type "application/octet-stream"` on a `.mjs` request, an Ingress/Gateway controller in front of the pdffdp nginx is replacing the upstream `Content-Type` header with `application/octet-stream`.
+If the browser console shows `Failed to load module script: ... non-JavaScript MIME type "application/octet-stream"` on a `.mjs` request, an Ingress/Gateway controller in front of the naupdf nginx is replacing the upstream `Content-Type` header with `application/octet-stream`.
 
-The pdffdp image's nginx already serves `.mjs` as `application/javascript`. The fix is to stop the controller from stripping/replacing it. For nginx-ingress:
+The naupdf image's nginx already serves `.mjs` as `application/javascript`. The fix is to stop the controller from stripping/replacing it. For nginx-ingress:
 
 ```yaml
 ingress:
@@ -156,7 +156,7 @@ httpRoute:
   enabled: true
   hostnames: [pdf.example.com]
   parentRefs:
-    - name: pdffdp-tunnel
+    - name: naupdf-tunnel
       namespace: misc
       sectionName: http
   rules:
@@ -182,8 +182,8 @@ Use a ConfigMap to disable tools at runtime without rebuilding the image:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: pdffdp-config
-  namespace: pdffdp
+  name: naupdf-config
+  namespace: naupdf
 data:
   config.json: |
     {
@@ -196,7 +196,7 @@ Mount it into the served directory:
 ```yaml
 spec:
   containers:
-    - name: pdffdp
+    - name: naupdf
       volumeMounts:
         - name: config
           mountPath: /usr/share/nginx/html/config.json
@@ -205,7 +205,7 @@ spec:
   volumes:
     - name: config
       configMap:
-        name: pdffdp-config
+        name: naupdf-config
 ```
 
 Tool IDs are the page URL without `.html` — open any tool and look at the URL (e.g., `edit-pdf`, `merge-pdf`, `compress-pdf`). Disabled tools are hidden from the homepage, search, shortcuts, workflow builder, and direct URL access. See the [Docker guide](/self-hosting/docker#disabling-specific-tools) for the full list of options.

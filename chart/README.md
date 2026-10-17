@@ -1,14 +1,14 @@
-# pdffdp Helm Chart
+# naupdf Helm Chart
 
-Deploys **pdffdp** as a **single NGINX container** serving the static frontend.
+Deploys **naupdf** as a **single NGINX container** serving the static frontend.
 
 ## Quickstart
 
 ### Option 1: Port-forward (testing)
 
 ```bash
-helm install pdffdp ./chart
-kubectl port-forward deploy/pdffdp 8080:8080
+helm install naupdf ./chart
+kubectl port-forward deploy/naupdf 8080:8080
 # open http://127.0.0.1:8080
 ```
 
@@ -19,7 +19,7 @@ ingress:
   enabled: true
   className: nginx
   hosts:
-    - host: pdffdp.example.com
+    - host: naupdf.example.com
       paths:
         - path: /
           pathType: Prefix
@@ -60,13 +60,13 @@ httpRoute:
 
 ### Image
 
-- **`image.repository`**: container image repo (default: `ghcr.io/alam00000/pdffdp-simple`)
+- **`image.repository`**: container image repo (default: `ghcr.io/alam00000/naupdf-simple`)
 - **`image.tag`**: image tag (default: `Chart.appVersion`)
 - **`image.pullPolicy`**: default `IfNotPresent`
 
 ### Ports
 
-- **`containerPort`**: container listen port (**8080** for the pdffdp nginx image)
+- **`containerPort`**: container listen port (**8080** for the naupdf nginx image)
 - **`service.port`**: Service port exposed in-cluster (default **80**)
 
 ### Environment Variables
@@ -87,8 +87,8 @@ echo "$GHCR_TOKEN" | helm registry login ghcr.io -u "$GHCR_USERNAME" --password-
 cd chart
 helm package .
 
-# produces pdffdp-<version>.tgz
-helm push pdffdp-*.tgz oci://ghcr.io/$GHCR_USERNAME/charts
+# produces naupdf-<version>.tgz
+helm push naupdf-*.tgz oci://ghcr.io/$GHCR_USERNAME/charts
 ```
 
 This could be automated as part of a GitHub workflow.
@@ -96,5 +96,5 @@ This could be automated as part of a GitHub workflow.
 ### Deploy
 
 ```bash
-helm upgrade --install pdffdp oci://ghcr.io/$GHCR_USERNAME/charts/pdffdp --version 1.0.0
+helm upgrade --install naupdf oci://ghcr.io/$GHCR_USERNAME/charts/naupdf --version 1.0.0
 ```

@@ -104,7 +104,7 @@ export function parseCombinedPem(
  *
  * If not set, certificates requiring external chain fetching will fail.
  *
- * On the official pdffdp domains we fall back to the project-operated proxy.
+ * On the official naupdf domains we fall back to the project-operated proxy.
  * The generated CSP already allows that origin by default (see
  * scripts/generate-security-headers.mjs), but the runtime never used it, which
  * left the timestamp tool broken on the official HTTPS site. The fallback is
@@ -112,9 +112,9 @@ export function parseCombinedPem(
  * requiring their own proxy.
  */
 const DEFAULT_CORS_PROXY_URL =
-  'https://pdffdp-cors-proxy.pdffdp.workers.dev';
+  'https://naupdf-cors-proxy.naupdf.workers.dev';
 
-const OFFICIAL_HOSTNAMES = new Set(['pdffdp.com', 'www.pdffdp.com']);
+const OFFICIAL_HOSTNAMES = new Set(['naupdf.com', 'www.naupdf.com']);
 
 function resolveCorsProxyUrl(): string {
   const configured = import.meta.env.VITE_CORS_PROXY_URL || '';
@@ -145,7 +145,7 @@ const CORS_PROXY_URL = resolveCorsProxyUrl();
  * 3. Have your frontend call your server, which then calls the CORS proxy
  *
  * This client-side HMAC provides limited protection (deters casual abuse)
- * but should NOT be considered secure against determined attackers. pdffdp
+ * but should NOT be considered secure against determined attackers. naupdf
  * accepts this tradeoff because of its client-side architecture.
  *
  * To enable (optional):

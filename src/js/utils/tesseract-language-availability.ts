@@ -89,7 +89,7 @@ function buildUnsupportedLanguageMessage(
   const availableText = formatTesseractLanguageList(availableLanguages);
 
   return [
-    `This pdffdp build only bundles OCR data for ${availableText}.`,
+    `This naupdf build only bundles OCR data for ${availableText}.`,
     `The requested OCR language is not available: ${unavailableText}.`,
     'Choose one of the bundled languages or rebuild the air-gapped bundle with the missing language added to --ocr-languages.',
   ].join(' ');

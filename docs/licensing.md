@@ -1,9 +1,9 @@
 # Commercial License
 
-pdffdp is dual-licensed under **AGPL-3.0** (for open-source projects) and a **Commercial License** (for proprietary/closed-source applications).
+naupdf is dual-licensed under **AGPL-3.0** (for open-source projects) and a **Commercial License** (for proprietary/closed-source applications).
 
 ::: tip Full Details
-For complete licensing information, delivery details, AGPL component notices, and invoicing, visit our [Licensing Page](https://pdffdp.com/licensing.html).
+For complete licensing information, delivery details, AGPL component notices, and invoicing, visit our [Licensing Page](https://naupdf.com/licensing.html).
 :::
 
 ## Get a Commercial License
@@ -22,16 +22,16 @@ For complete licensing information, delivery details, AGPL component notices, an
 
 ## Delivery & Licensing Model
 
-- **No license key is required or provided.** pdffdp intentionally does not use license keys to streamline deployment and reduce operational friction for users.
-- Upon purchase, users receive a ZIP archive containing the complete pdffdp source code and binaries.
+- **No license key is required or provided.** naupdf intentionally does not use license keys to streamline deployment and reduce operational friction for users.
+- Upon purchase, users receive a ZIP archive containing the complete naupdf source code and binaries.
 - The source code provided is identical to the code published in our public open-source repository.
 
-**GitHub Repository:** [github.com/alam00000/pdffdp](https://github.com/alam00000/pdffdp)
+**GitHub Repository:** [github.com/alam00000/naupdf](https://github.com/alam00000/naupdf)
 
 ## Important Notice on Third-Party Components
 
 ::: info AGPL Components — Pre-configured via CDN
-pdffdp **does not bundle** AGPL-licensed processing libraries in its source code. These components are loaded at runtime from CDN URLs that are **pre-configured by default** — all features work out of the box with zero setup.
+naupdf **does not bundle** AGPL-licensed processing libraries in its source code. These components are loaded at runtime from CDN URLs that are **pre-configured by default** — all features work out of the box with zero setup.
 
 | Component       | License  | Status                 |
 | --------------- | -------- | ---------------------- |
@@ -45,13 +45,13 @@ See [Self-Hosting > WASM Configuration](/self-hosting/#wasm-configuration-agpl-c
 
 This approach ensures:
 
-- pdffdp's core code remains under its dual-license (AGPL-3.0 / Commercial)
+- naupdf's core code remains under its dual-license (AGPL-3.0 / Commercial)
 - WASM binaries are loaded at runtime, not included in the source
 - Clear compliance boundaries for commercial users
   :::
 
 ::: tip Commercial License & AGPL Features
-The commercial license covers pdffdp's own code. If you configure and use AGPL components (PyMuPDF, Ghostscript, CoherentPDF), you must still comply with their respective AGPL-3.0 license terms, which may require source code disclosure if you distribute modified versions.
+The commercial license covers naupdf's own code. If you configure and use AGPL components (PyMuPDF, Ghostscript, CoherentPDF), you must still comply with their respective AGPL-3.0 license terms, which may require source code disclosure if you distribute modified versions.
 :::
 
 ## Invoicing
@@ -59,7 +59,7 @@ The commercial license covers pdffdp's own code. If you configure and use AGPL c
 - Ko-fi does not automatically issue invoices.
 - An official invoice will be provided immediately upon request.
 
-**Contact us:** [contact@pdffdp.com](mailto:contact@pdffdp.com) with your purchase details.
+**Contact us:** [contact@naupdf.com](mailto:contact@naupdf.com) with your purchase details.
 
 ## What's Included
 
@@ -75,18 +75,18 @@ The commercial license covers pdffdp's own code. If you configure and use AGPL c
 
 ## FAQ
 
-### Do I need a license key to use pdffdp?
+### Do I need a license key to use naupdf?
 
-No. pdffdp does not use license keys. The commercial license grants you legal rights to use the software in proprietary applications.
+No. naupdf does not use license keys. The commercial license grants you legal rights to use the software in proprietary applications.
 
-### Can I use pdffdp in my SaaS product?
+### Can I use naupdf in my SaaS product?
 
 Yes, with a commercial license. Without it, you must comply with AGPL-3.0, which requires you to make your full source code available to users.
 
 ### What about the AGPL components?
 
-Components like CoherentPDF are licensed under AGPL v3 and remain under that license. The commercial license covers pdffdp's own code but does not override third-party AGPL obligations.
+Components like CoherentPDF are licensed under AGPL v3 and remain under that license. The commercial license covers naupdf's own code but does not override third-party AGPL obligations.
 
 ### How do I get an invoice?
 
-Email [contact@pdffdp.com](mailto:contact@pdffdp.com) with your Ko-fi purchase confirmation, and we'll send an official invoice.
+Email [contact@naupdf.com](mailto:contact@naupdf.com) with your Ko-fi purchase confirmation, and we'll send an official invoice.

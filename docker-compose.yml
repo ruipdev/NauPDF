@@ -1,13 +1,13 @@
 services:
-  pdffdp:
+  naupdf:
     # GitHub Container Registry (Recommended)
-    # Self-Hosted build - ghcr.io/alam00000/pdffdp-simple:latest
-    # Commercial build  - ghcr.io/alam00000/pdffdp:latest
+    # Self-Hosted build - ghcr.io/alam00000/naupdf-simple:latest
+    # Commercial build  - ghcr.io/alam00000/naupdf:latest
     # Docker Hub (Alternative)
-    # Self-Hosted build - pdffdpteam/pdffdp-simple:latest
-    # Commercial build  - pdffdpteam/pdffdp:latest
-    image: ghcr.io/alam00000/pdffdp-simple:latest
-    container_name: pdffdp
+    # Self-Hosted build - naupdfteam/naupdf-simple:latest
+    # Commercial build  - naupdfteam/naupdf:latest
+    image: ghcr.io/alam00000/naupdf-simple:latest
+    container_name: naupdf
     restart: unless-stopped
     ports:
       - '8080:8080'

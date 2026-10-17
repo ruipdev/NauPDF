@@ -1,11 +1,11 @@
 /*
- * coherentpdf.global.d.ts — TypeScript type definitions for pdffdp / CoherentPDF integration
+ * coherentpdf.global.d.ts — TypeScript type definitions for naupdf / CoherentPDF integration
  *
- * These type definitions were written by Alam for use in the pdffdp project.
+ * These type definitions were written by Alam for use in the naupdf project.
  * They describe APIs provided by the CoherentPDF library (cpdf.js) but are original
  * work created for type safety and integration.
  *
- * Copyright © 2026 pdffdp
+ * Copyright © 2026 naupdf
  * Licensed under the GNU Affero General Public License v3.0 or later (AGPLv3+).
  */
 declare global {

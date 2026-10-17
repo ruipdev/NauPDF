@@ -84,7 +84,7 @@ if (isDevelopment) {
 
                 if (
                   confirm(
-                    'A new version of pdffdp is available. Reload to update?'
+                    'A new version of naupdf is available. Reload to update?'
                   )
                 ) {
                   newWorker.postMessage({ type: 'SKIP_WAITING' });

@@ -1,4 +1,4 @@
-name: pdffdp CodeQL config
+name: naupdf CodeQL config
 
 paths-ignore:
   - dist
@@ -6,9 +6,9 @@ paths-ignore:
   - coverage
   - node_modules
   - vendor
-  - pdffdp-pymupdf-wasm
+  - naupdf-pymupdf-wasm
   - libreoffice-wasm-package
-  - pdffdp-airgap-bundle
+  - naupdf-airgap-bundle
   - public/pdfjs-viewer
   - public/pdfjs-annotation-viewer
   - public/libreoffice-wasm

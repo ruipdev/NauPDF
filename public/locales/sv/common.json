@@ -12,7 +12,7 @@
     "noLanguagesFound": "Inga språk hittades"
   },
   "donation": {
-    "message": "Gillar du pdffdp? Hjälp oss att hålla det gratis och öppen källkod!",
+    "message": "Gillar du naupdf? Hjälp oss att hålla det gratis och öppen källkod!",
     "button": "Donera"
   },
   "hero": {
@@ -29,7 +29,7 @@
   },
   "features": {
     "title": "Varför välja",
-    "pdffdp": "pdffdp?",
+    "naupdf": "naupdf?",
     "noSignup": {
       "title": "Ingen registrering",
       "description": "Börja direkt, inga konton eller e-postadresser."
@@ -187,8 +187,8 @@
     "questions": "frågor",
     "sectionTitle": "Vanliga frågor och svar",
     "isFree": {
-      "question": "Är pdffdp verkligen gratis?",
-      "answer": "Ja, absolut. Alla verktyg på pdffdp är 100% gratis att använda, utan filgränser, utan registreringar och utan vattenstämplar. Vi tror att alla förtjänar tillgång till enkla, kraftfulla PDF-verktyg utan en betalvägg."
+      "question": "Är naupdf verkligen gratis?",
+      "answer": "Ja, absolut. Alla verktyg på naupdf är 100% gratis att använda, utan filgränser, utan registreringar och utan vattenstämplar. Vi tror att alla förtjänar tillgång till enkla, kraftfulla PDF-verktyg utan en betalvägg."
     },
     "areFilesSecure": {
       "question": "Är mina filer säkra? Var bearbetas de?",
@@ -196,27 +196,27 @@
     },
     "platforms": {
       "question": "Fungerar det på Mac, Windows och mobil?",
-      "answer": "Ja! Eftersom pdffdp körs helt i din webbläsare fungerar det på alla operativsystem med en modern webbläsare, inklusive Windows, macOS, Linux, iOS och Android."
+      "answer": "Ja! Eftersom naupdf körs helt i din webbläsare fungerar det på alla operativsystem med en modern webbläsare, inklusive Windows, macOS, Linux, iOS och Android."
     },
     "gdprCompliant": {
-      "question": "Är pdffdp GDPR-kompatibelt?",
-      "answer": "Ja. pdffdp är fullt GDPR-kompatibelt. Eftersom all filbearbetning sker lokalt i din webbläsare och vi aldrig samlar in eller överför dina filer till någon server, har vi ingen tillgång till dina data. Detta säkerställer att du alltid har kontroll över dina dokument."
+      "question": "Är naupdf GDPR-kompatibelt?",
+      "answer": "Ja. naupdf är fullt GDPR-kompatibelt. Eftersom all filbearbetning sker lokalt i din webbläsare och vi aldrig samlar in eller överför dina filer till någon server, har vi ingen tillgång till dina data. Detta säkerställer att du alltid har kontroll över dina dokument."
     },
     "dataStorage": {
       "question": "Lagrar eller spårar ni några av mina filer?",
-      "answer": "Nej. Vi lagrar, spårar eller loggar aldrig dina filer. Allt du gör på pdffdp händer i din webbläsares minne och försvinner när du stänger sidan. Det finns inga uppladdningar, inga historikloggar och inga servrar inblandade."
+      "answer": "Nej. Vi lagrar, spårar eller loggar aldrig dina filer. Allt du gör på naupdf händer i din webbläsares minne och försvinner när du stänger sidan. Det finns inga uppladdningar, inga historikloggar och inga servrar inblandade."
     },
     "different": {
-      "question": "Vad gör pdffdp annorlunda från andra PDF-verktyg?",
-      "answer": "De flesta PDF-verktyg laddar upp dina filer till en server för bearbetning. pdffdp gör aldrig det. Vi använder säker, modern webbteknik för att bearbeta dina filer direkt i din webbläsare. Detta innebär snabbare prestanda, starkare integritet och fullständig trygghet."
+      "question": "Vad gör naupdf annorlunda från andra PDF-verktyg?",
+      "answer": "De flesta PDF-verktyg laddar upp dina filer till en server för bearbetning. naupdf gör aldrig det. Vi använder säker, modern webbteknik för att bearbeta dina filer direkt i din webbläsare. Detta innebär snabbare prestanda, starkare integritet och fullständig trygghet."
     },
     "browserBased": {
       "question": "Hur håller webbläsarbaserad bearbetning mig säker?",
-      "answer": "Genom att köras helt inne i din webbläsare säkerställer pdffdp att dina filer aldrig lämnar din enhet. Detta eliminerar riskerna för serverhack, dataintrång eller obehörig åtkomst. Dina filer förblir dina - alltid."
+      "answer": "Genom att köras helt inne i din webbläsare säkerställer naupdf att dina filer aldrig lämnar din enhet. Detta eliminerar riskerna för serverhack, dataintrång eller obehörig åtkomst. Dina filer förblir dina - alltid."
     },
     "analytics": {
       "question": "Använder ni cookies eller analys för att spåra mig?",
-      "answer": "Nej. pdffdp spårar dig inte alls. Vi använder inga cookies, ingen analys och inga spårningsskript, inte ens på den publika webbplatsen pdffdp.com. Vi vet aldrig vem du är eller vad du gör med verktygen."
+      "answer": "Nej. naupdf spårar dig inte alls. Vi använder inga cookies, ingen analys och inga spårningsskript, inte ens på den publika webbplatsen naupdf.com. Vi vet aldrig vem du är eller vad du gör med verktygen."
     }
   },
   "testimonials": {
@@ -226,11 +226,11 @@
   },
   "support": {
     "title": "Gillar du mitt arbete?",
-    "description": "pdffdp är ett passionerat projekt, byggt för att erbjuda en gratis, privat och kraftfull PDF-verktygslåda för alla. Om du tycker det är användbart, överväg att stödja utvecklingen. Varje kaffe hjälper!",
+    "description": "NauPDF är ett passionerat projekt, byggt för att erbjuda en gratis, privat och kraftfull PDF-verktygslåda för alla. Om du tycker det är användbart, överväg att stödja utvecklingen. Varje kaffe hjälper!",
     "buyMeCoffee": "Buy Me a Coffee"
   },
   "footer": {
-    "copyright": "© 2026 pdffdp. Alla rättigheter reserverade.",
+    "copyright": "© 2026 naupdf. Alla rättigheter reserverade.",
     "version": "Version",
     "company": "Företag",
     "aboutUs": "Om oss",
@@ -295,9 +295,9 @@
     "philosophy": {
       "label": "Vår kärnfilosofi",
       "title": "Integritet först. Alltid.",
-      "description": "I en tid där data är en handelsvara tar vi en annan väg. All bearbetning i pdffdp sker lokalt i din webbläsare. Detta dina filer betyder att aldrig rör våra servrar, vi ser aldrig dina dokument och vi spårar inte vad du gör. Dina dokument förblir helt och hållet privata. Det är inte bara en funktion - det är vår grund."
+      "description": "I en tid där data är en handelsvara tar vi en annan väg. All bearbetning i naupdf sker lokalt i din webbläsare. Detta dina filer betyder att aldrig rör våra servrar, vi ser aldrig dina dokument och vi spårar inte vad du gör. Dina dokument förblir helt och hållet privata. Det är inte bara en funktion - det är vår grund."
     },
-    "whyPdffdp": {
+    "whyNauPDF": {
       "title": "Varför",
       "speed": {
         "title": "Byggd för hastighet",
@@ -318,7 +318,7 @@
     },
     "cta": {
       "title": "Redo att komma igång?",
-      "description": "Gå med i tusentals användare som litar på pdffdp för sina dagliga dokumentbehov. Upplev skillnaden som integritet och prestanda kan göra.",
+      "description": "Gå med i tusentals användare som litar på naupdf för sina dagliga dokumentbehov. Upplev skillnaden som integritet och prestanda kan göra.",
       "button": "Utforska alla verktyg"
     }
   },

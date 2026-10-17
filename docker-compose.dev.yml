@@ -1,11 +1,11 @@
 services:
-  pdffdp:
+  naupdf:
     build:
       context: .
       dockerfile: Dockerfile
       args:
         SIMPLE_MODE: false # false for default mode, true for simple mode
-    container_name: pdffdp
+    container_name: naupdf
     ports:
       - '8080:8080'
     restart: unless-stopped

@@ -2,13 +2,13 @@
 set -euo pipefail
 
 # ============================================================
-# pdffdp Air-Gapped Deployment Preparation Script
+# naupdf Air-Gapped Deployment Preparation Script
 # ============================================================
 # Automates the creation of a self-contained deployment bundle
 # for air-gapped (offline) networks.
 #
 # Run this on a machine WITH internet access. The output bundle
-# contains everything needed to deploy pdffdp offline.
+# contains everything needed to deploy naupdf offline.
 #
 # Usage:
 #   bash scripts/prepare-airgap.sh --wasm-base-url https://internal.example.com/wasm
@@ -43,8 +43,8 @@ fi
 
 # --- Defaults ---
 WASM_BASE_URL=""
-IMAGE_NAME="pdffdp"
-OUTPUT_DIR="./pdffdp-airgap-bundle"
+IMAGE_NAME="naupdf"
+OUTPUT_DIR="./naupdf-airgap-bundle"
 SIMPLE_MODE=""
 BASE_URL=""
 COMPRESSION_MODE=""
@@ -164,7 +164,7 @@ load_required_ocr_fonts() {
 # --- Usage ---
 usage() {
   cat <<'EOF'
-pdffdp Air-Gapped Deployment Preparation
+naupdf Air-Gapped Deployment Preparation
 
 USAGE:
   bash scripts/prepare-airgap.sh [OPTIONS]
@@ -176,8 +176,8 @@ REQUIRED:
                           (e.g. https://internal.example.com/wasm)
 
 OPTIONS:
-  --image-name <name>     Docker image name          (default: pdffdp)
-  --output-dir <path>     Output bundle directory     (default: ./pdffdp-airgap-bundle)
+  --image-name <name>     Docker image name          (default: naupdf)
+  --output-dir <path>     Output bundle directory     (default: ./naupdf-airgap-bundle)
   --dockerfile <path>     Dockerfile to use           (default: Dockerfile)
   --simple-mode           Enable Simple Mode
   --base-url <path>       Subdirectory base URL       (e.g. /pdf/)
@@ -247,7 +247,7 @@ done
 cd "$PROJECT_ROOT"
 
 if [ ! -f "package.json" ] || [ ! -f "src/js/const/cdn-version.ts" ]; then
-  error "This script must be run from the pdffdp project root."
+  error "This script must be run from the naupdf project root."
   error "Expected to find package.json and src/js/const/cdn-version.ts"
   exit 1
 fi
@@ -306,7 +306,7 @@ read_versions() {
 interactive_mode() {
   echo ""
   echo -e "${BOLD}============================================================${NC}"
-  echo -e "${BOLD}  pdffdp Air-Gapped Deployment Preparation${NC}"
+  echo -e "${BOLD}  naupdf Air-Gapped Deployment Preparation${NC}"
   echo -e "${BOLD}  App Version: ${APP_VERSION}${NC}"
   echo -e "${BOLD}============================================================${NC}"
   echo ""
@@ -326,7 +326,7 @@ interactive_mode() {
   echo "    Examples:"
   echo "      https://internal.example.com/wasm"
   echo "      http://192.168.1.100/assets/wasm"
-  echo "      https://cdn.mycompany.local/pdffdp"
+  echo "      https://cdn.mycompany.local/naupdf"
   echo ""
   while true; do
     read -r -p "    URL: " WASM_BASE_URL
@@ -371,14 +371,14 @@ interactive_mode() {
 
   # [5] Custom branding (optional)
   echo -e "${BOLD}[5/8] Custom Branding ${GREEN}(optional)${NC}"
-  echo "    Replace the default pdffdp name, logo, and footer text."
-  read -r -p "    Brand name [pdffdp]: " input
+  echo "    Replace the default naupdf name, logo, and footer text."
+  read -r -p "    Brand name [naupdf]: " input
   BRAND_NAME="${input:-}"
   if [ -n "$BRAND_NAME" ]; then
     echo "    Place your logo in the public/ folder before building."
     read -r -p "    Logo path relative to public/ [images/favicon-no-bg.svg]: " input
     BRAND_LOGO="${input:-}"
-    read -r -p "    Footer text [© 2026 pdffdp. All rights reserved.]: " input
+    read -r -p "    Footer text [© 2026 naupdf. All rights reserved.]: " input
     FOOTER_TEXT="${input:-}"
   fi
   echo ""
@@ -438,7 +438,7 @@ interactive_mode() {
   echo "  Dockerfile:     ${DOCKERFILE}"
   echo "  Simple Mode:    ${SIMPLE_MODE:-false}"
   echo "  Language:       ${LANGUAGE:-en (default)}"
-  echo "  Brand Name:     ${BRAND_NAME:-pdffdp (default)}"
+  echo "  Brand Name:     ${BRAND_NAME:-naupdf (default)}"
   [ -n "$BRAND_NAME" ] && echo "  Brand Logo:     ${BRAND_LOGO:-images/favicon-no-bg.svg (default)}"
   [ -n "$BRAND_NAME" ] && echo "  Footer Text:    ${FOOTER_TEXT:-(default)}"
   echo "  Base URL:       ${BASE_URL:-/ (root)}"
@@ -558,7 +558,7 @@ OCR_FONT_BASE_URL="${WASM_BASE_URL}/ocr/fonts"
 
 echo ""
 echo -e "${BOLD}============================================================${NC}"
-echo -e "${BOLD}  pdffdp Air-Gapped Bundle Preparation${NC}"
+echo -e "${BOLD}  naupdf Air-Gapped Bundle Preparation${NC}"
 echo -e "${BOLD}  App: v${APP_VERSION}  |  PyMuPDF: ${PYMUPDF_VERSION}  |  GS: ${GS_VERSION}  |  OCR: ${TESSERACT_VERSION}${NC}"
 echo -e "${BOLD}============================================================${NC}"
 
@@ -569,7 +569,7 @@ mkdir -p "$OUTPUT_DIR"
 OUTPUT_DIR="$(cd "$OUTPUT_DIR" && pwd)"
 
 # Warn if output directory already has bundle files
-if ls "$OUTPUT_DIR"/*.tgz "$OUTPUT_DIR"/pdffdp.tar "$OUTPUT_DIR"/setup.sh 2>/dev/null | head -1 &>/dev/null; then
+if ls "$OUTPUT_DIR"/*.tgz "$OUTPUT_DIR"/naupdf.tar "$OUTPUT_DIR"/setup.sh 2>/dev/null | head -1 &>/dev/null; then
   warn "Output directory already contains files from a previous run."
   warn "Existing files will be overwritten."
   if [ "$INTERACTIVE" = true ]; then
@@ -588,12 +588,12 @@ if [ "$SKIP_WASM" = true ]; then
   step "Skipping WASM download (--skip-wasm)"
   # Verify each file exists with specific errors
   wasm_missing=false
-  if ! ls "$OUTPUT_DIR"/pdffdp-pymupdf-wasm-*.tgz &>/dev/null; then
-    error "Missing: pdffdp-pymupdf-wasm-*.tgz"
+  if ! ls "$OUTPUT_DIR"/naupdf-pymupdf-wasm-*.tgz &>/dev/null; then
+    error "Missing: naupdf-pymupdf-wasm-*.tgz"
     wasm_missing=true
   fi
-  if ! ls "$OUTPUT_DIR"/pdffdp-gs-wasm-*.tgz &>/dev/null; then
-    error "Missing: pdffdp-gs-wasm-*.tgz"
+  if ! ls "$OUTPUT_DIR"/naupdf-gs-wasm-*.tgz &>/dev/null; then
+    error "Missing: naupdf-gs-wasm-*.tgz"
     wasm_missing=true
   fi
   if ! ls "$OUTPUT_DIR"/coherentpdf-*.tgz &>/dev/null; then
@@ -632,16 +632,16 @@ else
   WASM_TMP=$(mktemp -d)
   trap 'rm -rf "$WASM_TMP"' EXIT
 
-  info "Downloading @pdffdp/pymupdf-wasm@${PYMUPDF_VERSION}..."
-  if ! (cd "$WASM_TMP" && npm pack "@pdffdp/pymupdf-wasm@${PYMUPDF_VERSION}" --quiet 2>&1); then
-    error "Failed to download @pdffdp/pymupdf-wasm@${PYMUPDF_VERSION}"
+  info "Downloading @naupdf/pymupdf-wasm@${PYMUPDF_VERSION}..."
+  if ! (cd "$WASM_TMP" && npm pack "@naupdf/pymupdf-wasm@${PYMUPDF_VERSION}" --quiet 2>&1); then
+    error "Failed to download @naupdf/pymupdf-wasm@${PYMUPDF_VERSION}"
     error "Check your internet connection and that the package exists on npm."
     exit 1
   fi
 
-  info "Downloading @pdffdp/gs-wasm@${GS_VERSION}..."
-  if ! (cd "$WASM_TMP" && npm pack "@pdffdp/gs-wasm@${GS_VERSION}" --quiet 2>&1); then
-    error "Failed to download @pdffdp/gs-wasm@${GS_VERSION}"
+  info "Downloading @naupdf/gs-wasm@${GS_VERSION}..."
+  if ! (cd "$WASM_TMP" && npm pack "@naupdf/gs-wasm@${GS_VERSION}" --quiet 2>&1); then
+    error "Failed to download @naupdf/gs-wasm@${GS_VERSION}"
     error "Check your internet connection and that the package exists on npm."
     exit 1
   fi
@@ -697,8 +697,8 @@ else
   CPDF_VERSION=$(basename "$CPDF_TGZ" | sed 's/coherentpdf-\(.*\)\.tgz/\1/')
 
   success "Downloaded all WASM packages"
-  info "  PyMuPDF:      $(filesize "$OUTPUT_DIR"/pdffdp-pymupdf-wasm-*.tgz)"
-  info "  Ghostscript:  $(filesize "$OUTPUT_DIR"/pdffdp-gs-wasm-*.tgz)"
+  info "  PyMuPDF:      $(filesize "$OUTPUT_DIR"/naupdf-pymupdf-wasm-*.tgz)"
+  info "  Ghostscript:  $(filesize "$OUTPUT_DIR"/naupdf-gs-wasm-*.tgz)"
   info "  CoherentPDF:  $(filesize "$CPDF_TGZ") (v${CPDF_VERSION})"
   info "  Tesseract.js: $(filesize "$OUTPUT_DIR"/tesseract.js-*.tgz)"
   info "  OCR Core:     $(filesize "$OUTPUT_DIR"/tesseract.js-core-*.tgz)"
@@ -717,14 +717,14 @@ if [ "$SKIP_DOCKER" = true ]; then
   step "Skipping Docker build (--skip-docker)"
 
   # Check if image exists or tar exists
-  if [ -f "$OUTPUT_DIR/pdffdp.tar" ]; then
-    success "Reusing existing pdffdp.tar"
+  if [ -f "$OUTPUT_DIR/naupdf.tar" ]; then
+    success "Reusing existing naupdf.tar"
   elif docker image inspect "$IMAGE_NAME" &>/dev/null; then
     step "Exporting existing Docker image"
-    docker save "$IMAGE_NAME" -o "$OUTPUT_DIR/pdffdp.tar"
-    success "Exported: $(filesize "$OUTPUT_DIR/pdffdp.tar")"
+    docker save "$IMAGE_NAME" -o "$OUTPUT_DIR/naupdf.tar"
+    success "Exported: $(filesize "$OUTPUT_DIR/naupdf.tar")"
   else
-    warn "No Docker image '${IMAGE_NAME}' found and no pdffdp.tar in output."
+    warn "No Docker image '${IMAGE_NAME}' found and no naupdf.tar in output."
     warn "The bundle will not include a Docker image."
   fi
 else
@@ -786,8 +786,8 @@ else
   # --- Phase 4: Export Docker image ---
   step "Exporting Docker image"
 
-  docker save "$IMAGE_NAME" -o "$OUTPUT_DIR/pdffdp.tar"
-  success "Exported: $(filesize "$OUTPUT_DIR/pdffdp.tar")"
+  docker save "$IMAGE_NAME" -o "$OUTPUT_DIR/naupdf.tar"
+  success "Exported: $(filesize "$OUTPUT_DIR/naupdf.tar")"
 fi
 
 # --- Phase 5: Generate setup.sh ---
@@ -798,9 +798,9 @@ cat > "$OUTPUT_DIR/setup.sh" <<SETUP_EOF
 set -euo pipefail
 
 # ============================================================
-# pdffdp Air-Gapped Setup Script
+# naupdf Air-Gapped Setup Script
 # Generated on $(date -u +"%Y-%m-%d %H:%M:%S UTC")
-# pdffdp v${APP_VERSION}
+# naupdf v${APP_VERSION}
 # ============================================================
 # Transfer this entire directory to the air-gapped network,
 # then run this script.
@@ -830,7 +830,7 @@ WASM_DIR="\${WASM_EXTRACT_DIR:-\${SCRIPT_DIR}/wasm}"
 
 echo ""
 echo "============================================================"
-echo "  pdffdp Air-Gapped Setup"
+echo "  naupdf Air-Gapped Setup"
 echo "  Version: ${APP_VERSION}"
 echo "============================================================"
 echo ""
@@ -842,11 +842,11 @@ echo ""
 
 # --- Step 1: Load Docker Image ---
 echo "[1/3] Loading Docker image..."
-if [ -f "\${SCRIPT_DIR}/pdffdp.tar" ]; then
-  docker load -i "\${SCRIPT_DIR}/pdffdp.tar"
+if [ -f "\${SCRIPT_DIR}/naupdf.tar" ]; then
+  docker load -i "\${SCRIPT_DIR}/naupdf.tar"
   echo "  Docker image '\${IMAGE_NAME}' loaded."
 else
-  echo "  WARNING: pdffdp.tar not found. Skipping Docker load."
+  echo "  WARNING: naupdf.tar not found. Skipping Docker load."
   echo "  Make sure the image '\${IMAGE_NAME}' is already available."
 fi
 
@@ -858,12 +858,12 @@ mkdir -p "\${WASM_DIR}/pymupdf" "\${WASM_DIR}/gs" "\${WASM_DIR}/cpdf" "\${WASM_D
 
 # PyMuPDF: package has dist/ and assets/ at root
 echo "  Extracting PyMuPDF..."
-tar xzf "\${SCRIPT_DIR}"/pdffdp-pymupdf-wasm-*.tgz -C "\${WASM_DIR}/pymupdf" --strip-components=1
+tar xzf "\${SCRIPT_DIR}"/naupdf-pymupdf-wasm-*.tgz -C "\${WASM_DIR}/pymupdf" --strip-components=1
 
 # Ghostscript: browser expects gs.js and gs.wasm at root
 echo "  Extracting Ghostscript..."
 TEMP_GS="\$(mktemp -d)"
-tar xzf "\${SCRIPT_DIR}"/pdffdp-gs-wasm-*.tgz -C "\${TEMP_GS}"
+tar xzf "\${SCRIPT_DIR}"/naupdf-gs-wasm-*.tgz -C "\${TEMP_GS}"
 if [ -d "\${TEMP_GS}/package/assets" ]; then
   cp -r "\${TEMP_GS}/package/assets/"* "\${WASM_DIR}/gs/"
 else
@@ -912,21 +912,21 @@ echo "    \${WASM_BASE_URL}/ocr/core           ->  \${WASM_DIR}/ocr/core/"
 echo "    \${WASM_BASE_URL}/ocr/lang-data      ->  \${WASM_DIR}/ocr/lang-data/"
 echo "    \${WASM_BASE_URL}/ocr/fonts          ->  \${WASM_DIR}/ocr/fonts/"
 
-# --- Step 3: Start pdffdp ---
+# --- Step 3: Start naupdf ---
 echo ""
-echo "[3/3] Ready to start pdffdp"
+echo "[3/3] Ready to start naupdf"
 echo ""
 echo "  To start manually:"
-echo "    docker run -d --name pdffdp -p \${DOCKER_PORT}:8080 --restart unless-stopped \${IMAGE_NAME}"
+echo "    docker run -d --name naupdf -p \${DOCKER_PORT}:8080 --restart unless-stopped \${IMAGE_NAME}"
 echo ""
 echo "  Then open: http://localhost:\${DOCKER_PORT}"
 echo ""
 
-read -r -p "Start pdffdp now? (y/N): " REPLY
+read -r -p "Start naupdf now? (y/N): " REPLY
 if [[ "\${REPLY:-}" =~ ^[Yy]$ ]]; then
-  docker run -d --name pdffdp -p "\${DOCKER_PORT}:8080" --restart unless-stopped "\${IMAGE_NAME}"
+  docker run -d --name naupdf -p "\${DOCKER_PORT}:8080" --restart unless-stopped "\${IMAGE_NAME}"
   echo ""
-  echo "  pdffdp is running at http://localhost:\${DOCKER_PORT}"
+  echo "  naupdf is running at http://localhost:\${DOCKER_PORT}"
 fi
 SETUP_EOF
 
@@ -937,17 +937,17 @@ success "Generated setup.sh"
 step "Generating README"
 
 cat > "$OUTPUT_DIR/README.md" <<README_EOF
-# pdffdp Air-Gapped Deployment Bundle
+# naupdf Air-Gapped Deployment Bundle
 
-**pdffdp v${APP_VERSION}** | Generated on $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+**naupdf v${APP_VERSION}** | Generated on $(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
 ## Contents
 
 | File | Description |
 | --- | --- |
-| \`pdffdp.tar\` | Docker image |
-| \`pdffdp-pymupdf-wasm-${PYMUPDF_VERSION}.tgz\` | PyMuPDF WASM module |
-| \`pdffdp-gs-wasm-${GS_VERSION}.tgz\` | Ghostscript WASM module |
+| \`naupdf.tar\` | Docker image |
+| \`naupdf-pymupdf-wasm-${PYMUPDF_VERSION}.tgz\` | PyMuPDF WASM module |
+| \`naupdf-gs-wasm-${GS_VERSION}.tgz\` | Ghostscript WASM module |
 | \`coherentpdf-${CPDF_VERSION}.tgz\` | CoherentPDF WASM module |
 | \`tesseract.js-${TESSERACT_VERSION}.tgz\` | Tesseract browser worker package |
 | \`tesseract.js-core-${TESSERACT_CORE_VERSION}.tgz\` | Tesseract core runtime package |
@@ -988,14 +988,14 @@ bash setup.sh
 The setup script will:
 1. Load the Docker image
 2. Extract WASM packages to \`./wasm/\` (override with \`WASM_EXTRACT_DIR\`)
-3. Optionally start the pdffdp container
+3. Optionally start the naupdf container
 
 ## Manual Setup
 
 ### 1. Load the Docker image
 
 \`\`\`bash
-docker load -i pdffdp.tar
+docker load -i naupdf.tar
 \`\`\`
 
 ### 2. Extract WASM packages
@@ -1006,11 +1006,11 @@ Extract to your internal web server's document root:
 mkdir -p ./wasm/pymupdf ./wasm/gs ./wasm/cpdf ./wasm/ocr/core ./wasm/ocr/lang-data ./wasm/ocr/fonts
 
 # PyMuPDF
-tar xzf pdffdp-pymupdf-wasm-${PYMUPDF_VERSION}.tgz -C ./wasm/pymupdf --strip-components=1
+tar xzf naupdf-pymupdf-wasm-${PYMUPDF_VERSION}.tgz -C ./wasm/pymupdf --strip-components=1
 
 # Ghostscript (extract assets/ to root)
 TEMP_GS=\$(mktemp -d)
-tar xzf pdffdp-gs-wasm-${GS_VERSION}.tgz -C \$TEMP_GS
+tar xzf naupdf-gs-wasm-${GS_VERSION}.tgz -C \$TEMP_GS
 cp -r \$TEMP_GS/package/assets/* ./wasm/gs/
 rm -rf \$TEMP_GS
 
@@ -1050,10 +1050,10 @@ Ensure these paths are accessible at the configured URLs:
 | \`${OCR_TESSERACT_LANG_URL}\` | \`./wasm/ocr/lang-data/\` |
 | \`${OCR_FONT_BASE_URL}\` | \`./wasm/ocr/fonts/\` |
 
-### 4. Run pdffdp
+### 4. Run naupdf
 
 \`\`\`bash
-docker run -d --name pdffdp -p 3000:8080 --restart unless-stopped ${IMAGE_NAME}
+docker run -d --name naupdf -p 3000:8080 --restart unless-stopped ${IMAGE_NAME}
 \`\`\`
 
 Open: http://localhost:3000

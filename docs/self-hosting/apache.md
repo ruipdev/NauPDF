@@ -1,6 +1,6 @@
 # Deploy with Apache
 
-Host pdffdp using Apache HTTP Server.
+Host naupdf using Apache HTTP Server.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Host pdffdp using Apache HTTP Server.
 ## Step 1: Build the Project
 
 ```bash
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 npm install
 npm run build
 ```
@@ -26,14 +26,14 @@ VITE_BRAND_NAME="AcmePDF" VITE_BRAND_LOGO="images/acme-logo.svg" npm run build
 ## Step 2: Copy Files
 
 ```bash
-sudo mkdir -p /var/www/pdffdp
-sudo cp -r dist/* /var/www/pdffdp/
-sudo chown -R www-data:www-data /var/www/pdffdp
+sudo mkdir -p /var/www/naupdf
+sudo cp -r dist/* /var/www/naupdf/
+sudo chown -R www-data:www-data /var/www/naupdf
 ```
 
 ## Step 3: Apache Configuration
 
-Create `/etc/apache2/sites-available/pdffdp.conf`:
+Create `/etc/apache2/sites-available/naupdf.conf`:
 
 ```apache
 <VirtualHost *:80>
@@ -43,13 +43,13 @@ Create `/etc/apache2/sites-available/pdffdp.conf`:
 
 <VirtualHost *:443>
     ServerName your-domain.com
-    DocumentRoot /var/www/pdffdp
+    DocumentRoot /var/www/naupdf
 
     SSLEngine on
     SSLCertificateFile /etc/letsencrypt/live/your-domain.com/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/your-domain.com/privkey.pem
 
-    <Directory /var/www/pdffdp>
+    <Directory /var/www/naupdf>
         Options -Indexes +FollowSymLinks
         AllowOverride All
         Require all granted
@@ -99,7 +99,7 @@ Create `/etc/apache2/sites-available/pdffdp.conf`:
 
 ## Step 4: .htaccess for Routing
 
-Create `/var/www/pdffdp/.htaccess`:
+Create `/var/www/naupdf/.htaccess`:
 
 ```apache
 RewriteEngine On
@@ -152,7 +152,7 @@ sudo a2enmod deflate
 ## Step 6: Enable the Site
 
 ```bash
-sudo a2ensite pdffdp.conf
+sudo a2ensite naupdf.conf
 sudo apache2ctl configtest
 sudo systemctl reload apache2
 ```
@@ -270,6 +270,6 @@ Ensure `mod_headers` is enabled: `sudo a2enmod headers`
 ### Permission Denied
 
 ```bash
-sudo chown -R www-data:www-data /var/www/pdffdp
-sudo chmod -R 755 /var/www/pdffdp
+sudo chown -R www-data:www-data /var/www/naupdf
+sudo chmod -R 755 /var/www/naupdf
 ```

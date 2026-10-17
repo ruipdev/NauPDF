@@ -2,7 +2,7 @@
 
 ## Non-Root User Support
 
-pdffdp now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
+naupdf now uses nginx-unprivileged for enhanced security. This follows the Principle of Least Privilege and is essential for production environments.
 
 ### Security Benefits
 
@@ -16,18 +16,18 @@ pdffdp now uses nginx-unprivileged for enhanced security. This follows the Princ
 #### Default Configuration (nginx-unprivileged)
 
 ```bash
-docker build -t pdffdp .
-docker run -p 8080:8080 pdffdp
+docker build -t naupdf .
+docker run -p 8080:8080 naupdf
 ```
 
 #### Simple Mode
 
 ```bash
 # Build with simple mode enabled
-docker build --build-arg SIMPLE_MODE=true -t pdffdp-simple .
+docker build --build-arg SIMPLE_MODE=true -t naupdf-simple .
 
 # Run the container
-docker run -p 8080:8080 pdffdp-simple
+docker run -p 8080:8080 naupdf-simple
 ```
 
 #### Kubernetes Example
@@ -36,7 +36,7 @@ docker run -p 8080:8080 pdffdp-simple
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pdffdp
+  name: naupdf
 spec:
   template:
     spec:
@@ -45,8 +45,8 @@ spec:
         runAsUser: 2000
         runAsGroup: 2000
       containers:
-        - name: pdffdp
-          image: pdffdp:latest
+        - name: naupdf
+          image: naupdf:latest
           ports:
             - containerPort: 8080
 ```
@@ -56,7 +56,7 @@ spec:
 ```yaml
 version: '3.8'
 services:
-  pdffdp:
+  naupdf:
     build:
       context: .
       dockerfile: Dockerfile

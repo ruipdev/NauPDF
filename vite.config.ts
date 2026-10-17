@@ -15,7 +15,7 @@ import { createHash } from 'crypto';
 
 function engineVersion(): string {
   try {
-    const dir = resolve(__dirname, 'node_modules/pdffdp-pdfium');
+    const dir = resolve(__dirname, 'node_modules/naupdf-pdfium');
     const h = createHash('sha256');
     for (const f of ['editcore.js', 'editcore.wasm']) {
       h.update(fs.readFileSync(resolve(dir, f)));
@@ -235,7 +235,7 @@ function buildCorsProxyAllowedHosts(): Set<string> {
     'cdn.jsdelivr.net',
     'fonts.googleapis.com',
     'fonts.gstatic.com',
-    'pdffdp-cors-proxy.pdffdp.workers.dev',
+    'naupdf-cors-proxy.naupdf.workers.dev',
     'timestamp.digicert.com',
     'timestamp.sectigo.com',
     'ts.ssl.com',
@@ -617,12 +617,12 @@ export default defineConfig(() => {
     },
     optimizeDeps: {
       include: ['pdfkit', 'blob-stream'],
-      exclude: ['coherentpdf', 'wasm-vips', 'pdffdp-pdfium'],
+      exclude: ['coherentpdf', 'wasm-vips', 'naupdf-pdfium'],
     },
     server: {
       host: process.env.VITE_DEV_HOST || 'localhost',
       watch: {
-        ignored: ['!**/node_modules/pdffdp-pdfium/**'],
+        ignored: ['!**/node_modules/naupdf-pdfium/**'],
       },
       headers: {
         'Cross-Origin-Opener-Policy': 'same-origin',

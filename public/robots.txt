@@ -1,12 +1,12 @@
-# pdffdp Robots.txt
-# https://www.pdffdp.com
+# naupdf Robots.txt
+# https://www.naupdf.com
 
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.pdffdp.com/sitemap.xml
+Sitemap: https://www.naupdf.com/sitemap.xml
 
 # Disallow internal/system paths
 Disallow: /api/

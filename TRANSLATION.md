@@ -1,6 +1,6 @@
-# 🌍 Translation Guide for pdffdp
+# 🌍 Translation Guide for naupdf
 
-This guide will help you add new languages or improve existing translations for pdffdp.
+This guide will help you add new languages or improve existing translations for naupdf.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ This guide will help you add new languages or improve existing translations for 
 
 ## Overview
 
-pdffdp uses **i18next** for internationalization (i18n). Currently supported languages:
+naupdf uses **i18next** for internationalization (i18n). Currently supported languages:
 
 - **English** (`en`) - Default
 - **Belarusian** (`be`)
@@ -50,7 +50,7 @@ The app automatically detects the language from the URL path:
 
 ### Architecture
 
-pdffdp uses a **static pre-rendering** approach for SEO-optimized i18n:
+naupdf uses a **static pre-rendering** approach for SEO-optimized i18n:
 
 1. **Build time**: `scripts/generate-i18n-pages.mjs` generates localized HTML files in `dist/{lang}/`
 2. **Dev/Preview**: `languageRouterPlugin` in `vite.config.ts` handles URL rewriting
@@ -380,7 +380,7 @@ Test in different browsers:
 
 ### 1. Keep the Tone Consistent
 
-pdffdp is **friendly, clear, and professional**. Match this tone in your translations.
+naupdf is **friendly, clear, and professional**. Match this tone in your translations.
 
 ✅ **Good:**
 
@@ -400,7 +400,7 @@ Some strings contain HTML or special characters:
 
 ```json
 {
-  "faq.analytics.answer": "No. pdffdp does not track you at all. We do not use cookies, analytics, or any tracking scripts, not even on the live website at pdffdp.com. We never know who you are or what you do with the tools."
+  "faq.analytics.answer": "No. naupdf does not track you at all. We do not use cookies, analytics, or any tracking scripts, not even on the live website at naupdf.com. We never know who you are or what you do with the tools."
 }
 ```
 
@@ -408,7 +408,7 @@ When translating, **keep the HTML tags intact**:
 
 ```json
 {
-  "faq.analytics.answer": "Nein. pdffdp verfolgt Sie in keiner Weise. Wir verwenden keine Cookies, keine Analysetools und keine Tracking-Skripte – auch nicht auf der Live-Website pdffdp.com. Wir wissen nie, wer Sie sind oder was Sie mit den Tools tun."
+  "faq.analytics.answer": "Nein. naupdf verfolgt Sie in keiner Weise. Wir verwenden keine Cookies, keine Analysetools und keine Tracking-Skripte – auch nicht auf der Live-Website naupdf.com. Wir wissen nie, wer Sie sind oder was Sie mit den Tools tun."
 }
 ```
 
@@ -429,7 +429,7 @@ Example:
 
 Keep these as-is:
 
-- pdffdp
+- naupdf
 - PDF
 - GitHub
 - Discord
@@ -568,7 +568,7 @@ When adding a new language, make sure these files are updated:
 If you have questions or need help:
 
 1. Check existing translations in `public/locales/de/common.json` for reference
-2. Open an issue on [GitHub](https://github.com/alam00000/pdffdp/issues)
+2. Open an issue on [GitHub](https://github.com/alam00000/naupdf/issues)
 3. Join our [Discord server](https://discord.gg/Bgq3Ay3f2w)
 
 ---
@@ -587,7 +587,7 @@ Once you've completed a translation:
    - Screenshots showing the translation in action
    - Confirmation that you've tested all pages
 
-Thank you for contributing to pdffdp! 🎉
+Thank you for contributing to naupdf! 🎉
 
 ---
 

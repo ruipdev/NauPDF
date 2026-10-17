@@ -1,14 +1,14 @@
-# Simple Mode for pdffdp (the Self-Hosted build)
+# Simple Mode for naupdf (the Self-Hosted build)
 
-Simple Mode is what powers the **Self-Hosted build** of pdffdp (`pdffdp-simple`). It is **functionally identical** to the Commercial build that powers pdffdp.com — every PDF tool is present and behaves the same. It just hides the marketing chrome (hero, FAQ, testimonials, footer) that only makes sense on the public pdffdp.com site or on a commercial public-facing deployment.
+Simple Mode is what powers the **Self-Hosted build** of naupdf (`naupdf-simple`). It is **functionally identical** to the Commercial build that powers naupdf.com — every PDF tool is present and behaves the same. It just hides the marketing chrome (hero, FAQ, testimonials, footer) that only makes sense on the public naupdf.com site or on a commercial public-facing deployment.
 
 > **Simple Mode is not a feature-reduced "lite" version.** Every PDF tool — merge, split, edit, sign, OCR, Office conversion, every other tool — works identically in both builds. The only difference is the marketing UI around the tools.
 
-The Commercial build (`ghcr.io/alam00000/pdffdp:latest`) is used by pdffdp.com itself and by commercial license holders running public-facing PDF deployments where the full marketing site makes sense.
+The Commercial build (`ghcr.io/alam00000/naupdf:latest`) is used by naupdf.com itself and by commercial license holders running public-facing PDF deployments where the full marketing site makes sense.
 
 ## What Simple Mode Hides
 
-When enabled, Simple Mode hides the following pdffdp.com-specific marketing UI:
+When enabled, Simple Mode hides the following naupdf.com-specific marketing UI:
 
 - Navigation bar
 - Hero section with marketing content
@@ -31,32 +31,32 @@ Use the pre-built Simple Mode image directly:
 
 ```bash
 # Docker
-docker run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+docker run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 
 # Podman
-podman run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+podman run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 ```
 
 **Using Docker Hub:**
 
 ```bash
 # Docker
-docker run -p 3000:8080 pdffdpteam/pdffdp-simple:latest
+docker run -p 3000:8080 naupdfteam/naupdf-simple:latest
 
 # Podman
-podman run -p 3000:8080 docker.io/pdffdpteam/pdffdp-simple:latest
+podman run -p 3000:8080 docker.io/naupdfteam/naupdf-simple:latest
 ```
 
 Or with Docker Compose / Podman Compose:
 
 ```yaml
 services:
-  pdffdp:
+  naupdf:
     # Using GitHub Container Registry (Recommended)
-    image: ghcr.io/alam00000/pdffdp-simple:latest
+    image: ghcr.io/alam00000/naupdf-simple:latest
     # Or using Docker Hub
-    # image: pdffdpteam/pdffdp-simple:latest
-    container_name: pdffdp
+    # image: naupdfteam/naupdf-simple:latest
+    container_name: naupdf
     restart: unless-stopped
     ports:
       - '3000:8080'
@@ -76,8 +76,8 @@ docker compose -f docker-compose.dev.yml up -d
 Build the image with the SIMPLE_MODE build argument:
 
 ```bash
-docker build --build-arg SIMPLE_MODE=true -t pdffdp-simple .
-docker run -p 3000:8080 pdffdp-simple
+docker build --build-arg SIMPLE_MODE=true -t naupdf-simple .
+docker run -p 3000:8080 naupdf-simple
 ```
 
 ### Method 4: Using npm Script (Easiest for Local Development)
@@ -118,12 +118,12 @@ This automatically builds and serves Simple Mode on `http://localhost:3000`.
 
 ```bash
 # Docker - Pull and run the Simple Mode image
-docker pull ghcr.io/alam00000/pdffdp-simple:latest
-docker run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+docker pull ghcr.io/alam00000/naupdf-simple:latest
+docker run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 
 # Podman
-podman pull ghcr.io/alam00000/pdffdp-simple:latest
-podman run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+podman pull ghcr.io/alam00000/naupdf-simple:latest
+podman run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 ```
 
 Open `http://localhost:3000` in your browser.
@@ -143,11 +143,11 @@ Open `http://localhost:3000` in your browser.
 ### Method 4: Compare Both Builds Side-by-Side
 
 ```bash
-# Commercial build (the pdffdp.com look)
-docker run -p 3000:8080 ghcr.io/alam00000/pdffdp:latest
+# Commercial build (the naupdf.com look)
+docker run -p 3000:8080 ghcr.io/alam00000/naupdf:latest
 
 # Self-Hosted build (Simple Mode)
-docker run -p 3001:8080 ghcr.io/alam00000/pdffdp-simple:latest
+docker run -p 3001:8080 ghcr.io/alam00000/naupdf-simple:latest
 
 # Podman users: replace 'docker' with 'podman'
 ```
@@ -173,27 +173,27 @@ When Simple Mode is working correctly, you should see:
 
 **GitHub Container Registry (Recommended):**
 
-- `ghcr.io/alam00000/pdffdp-simple:latest`
-- `ghcr.io/alam00000/pdffdp-simple:v1.0.0` (versioned)
+- `ghcr.io/alam00000/naupdf-simple:latest`
+- `ghcr.io/alam00000/naupdf-simple:v1.0.0` (versioned)
 
 **Docker Hub:**
 
-- `pdffdpteam/pdffdp-simple:latest`
-- `pdffdpteam/pdffdp-simple:v1.0.0` (versioned)
+- `naupdfteam/naupdf-simple:latest`
+- `naupdfteam/naupdf-simple:v1.0.0` (versioned)
 
-### Commercial build — used by pdffdp.com and commercial license holders
+### Commercial build — used by naupdf.com and commercial license holders
 
-The full marketing site, including hero/FAQ/testimonials/footer. Pull this only if you specifically want the pdffdp.com look — for example, you're running a public-facing PDF deployment under a commercial license.
+The full marketing site, including hero/FAQ/testimonials/footer. Pull this only if you specifically want the naupdf.com look — for example, you're running a public-facing PDF deployment under a commercial license.
 
 **GitHub Container Registry (Recommended):**
 
-- `ghcr.io/alam00000/pdffdp:latest`
-- `ghcr.io/alam00000/pdffdp:v1.0.0` (versioned)
+- `ghcr.io/alam00000/naupdf:latest`
+- `ghcr.io/alam00000/naupdf:v1.0.0` (versioned)
 
 **Docker Hub:**
 
-- `pdffdpteam/pdffdp:latest`
-- `pdffdpteam/pdffdp:v1.0.0` (versioned)
+- `naupdfteam/naupdf:latest`
+- `naupdfteam/naupdf:v1.0.0` (versioned)
 
 ## 🚀 Production Deployment Examples
 
@@ -201,10 +201,10 @@ The full marketing site, including hero/FAQ/testimonials/footer. Pull this only 
 
 ```yaml
 services:
-  pdffdp:
-    image: ghcr.io/alam00000/pdffdp-simple:latest # Recommended
-    # image: pdffdpteam/pdffdp-simple:latest     # Alternative: Docker Hub
-    container_name: pdffdp
+  naupdf:
+    image: ghcr.io/alam00000/naupdf-simple:latest # Recommended
+    # image: naupdfteam/naupdf-simple:latest     # Alternative: Docker Hub
+    container_name: naupdf
     restart: unless-stopped
     ports:
       - '80:8080'
@@ -215,16 +215,16 @@ services:
 
 ### Podman Quadlet (Linux Systemd)
 
-Create `~/.config/containers/systemd/pdffdp-simple.container`:
+Create `~/.config/containers/systemd/naupdf-simple.container`:
 
 ```ini
 [Unit]
-Description=pdffdp Simple Mode
+Description=naupdf Simple Mode
 After=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/pdffdp-simple:latest
-ContainerName=pdffdp-simple
+Image=ghcr.io/alam00000/naupdf-simple:latest
+ContainerName=naupdf-simple
 PublishPort=80:8080
 AutoUpdate=registry
 
@@ -239,12 +239,12 @@ Enable and start:
 
 ```bash
 systemctl --user daemon-reload
-systemctl --user enable --now pdffdp-simple
+systemctl --user enable --now naupdf-simple
 ```
 
 ## ⚠️ Important Notes
 
-- **Pre-built images**: Use `ghcr.io/alam00000/pdffdp-simple:latest` for Simple Mode (recommended)
+- **Pre-built images**: Use `ghcr.io/alam00000/naupdf-simple:latest` for Simple Mode (recommended)
 - **Environment variables**: `SIMPLE_MODE=true` only works during build, not runtime
 - **Build-time optimization**: Simple Mode uses dead code elimination for smaller bundles
 - **Same functionality**: All PDF tools work identically in both modes

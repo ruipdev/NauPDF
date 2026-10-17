@@ -1,6 +1,6 @@
 # Deploy with Nginx
 
-Host pdffdp on your own server using Nginx.
+Host naupdf on your own server using Nginx.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Host pdffdp on your own server using Nginx.
 ## Step 1: Build the Project
 
 ```bash
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 npm install
 npm run build
 ```
@@ -26,14 +26,14 @@ VITE_BRAND_NAME="AcmePDF" VITE_BRAND_LOGO="images/acme-logo.svg" npm run build
 ## Step 2: Copy Files
 
 ```bash
-sudo mkdir -p /var/www/pdffdp
-sudo cp -r dist/* /var/www/pdffdp/
-sudo chown -R www-data:www-data /var/www/pdffdp
+sudo mkdir -p /var/www/naupdf
+sudo cp -r dist/* /var/www/naupdf/
+sudo chown -R www-data:www-data /var/www/naupdf
 ```
 
 ## Step 3: Nginx Configuration
 
-Create `/etc/nginx/sites-available/pdffdp`:
+Create `/etc/nginx/sites-available/naupdf`:
 
 ```nginx
 server {
@@ -50,7 +50,7 @@ server {
     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
 
-    root /var/www/pdffdp;
+    root /var/www/naupdf;
     index index.html;
 
     # Gzip compression
@@ -114,7 +114,7 @@ server {
 ## Step 4: Enable the Site
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/pdffdp /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/naupdf /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -132,7 +132,7 @@ To host at `/pdf/`:
 
 ```nginx
 location /pdf/ {
-    alias /var/www/pdffdp/;
+    alias /var/www/naupdf/;
     try_files $uri $uri/ /pdf/index.html;
 }
 ```

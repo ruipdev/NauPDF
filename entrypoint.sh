@@ -16,10 +16,10 @@ if [ "$PUID" -eq 0 ] || [ "$PGID" -eq 0 ]; then
     exit 1
 fi
 
-echo "Starting pdffdp with PUID=$PUID PGID=$PGID"
+echo "Starting naupdf with PUID=$PUID PGID=$PGID"
 
-addgroup -g "$PGID" pdffdp 2>/dev/null || true
-adduser -u "$PUID" -G pdffdp -D -H -s /sbin/nologin pdffdp 2>/dev/null || true
+addgroup -g "$PGID" naupdf 2>/dev/null || true
+adduser -u "$PUID" -G naupdf -D -H -s /sbin/nologin naupdf 2>/dev/null || true
 
 rm -f /var/log/nginx/error.log /var/log/nginx/access.log
 touch /var/log/nginx/error.log /var/log/nginx/access.log
@@ -52,8 +52,8 @@ if [ "$DISABLE_IPV6" = "true" ]; then
     sed -i '/^[[:space:]]*listen[[:space:]]*\[::\]:[0-9]*/s/^/#/' /etc/nginx/nginx.conf
 fi
 
-if [ "${ROBOTS_NOINDEX:-false}" = "true" ] && [ -x /usr/local/bin/pdffdp-noindex.sh ]; then
-    NOINDEX_HTML_ROOT=/usr/share/nginx/html /usr/local/bin/pdffdp-noindex.sh || true
+if [ "${ROBOTS_NOINDEX:-false}" = "true" ] && [ -x /usr/local/bin/naupdf-noindex.sh ]; then
+    NOINDEX_HTML_ROOT=/usr/share/nginx/html /usr/local/bin/naupdf-noindex.sh || true
 fi
 
 exec su-exec "$PUID:$PGID" "$@"

@@ -1,16 +1,16 @@
 # Getting Started
 
-Welcome to pdffdp! This guide will help you get up and running quickly.
+Welcome to naupdf! This guide will help you get up and running quickly.
 
-## What is pdffdp?
+## What is naupdf?
 
-pdffdp is a free, open-source, privacy-first PDF toolkit that runs **entirely in your browser**. Your files never leave your device—all processing happens locally using WebAssembly (WASM) technology.
+naupdf is a free, open-source, privacy-first PDF toolkit that runs **entirely in your browser**. Your files never leave your device—all processing happens locally using WebAssembly (WASM) technology.
 
 ## Quick Start
 
 ### Option 1: Use the Hosted Version
 
-Visit [pdffdp.com](https://pdffdp.com) to use pdffdp instantly—no installation required.
+Visit [naupdf.com](https://naupdf.com) to use naupdf instantly—no installation required.
 
 ### Option 2: Self-Host with Docker
 
@@ -25,15 +25,15 @@ Visit [pdffdp.com](https://pdffdp.com) to use pdffdp instantly—no installation
 
 ```bash
 # Pull and run the Docker image (self-hosted build)
-docker run -d -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+docker run -d -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 
 # Or use Docker Compose
-curl -O https://raw.githubusercontent.com/alam00000/pdffdp/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/alam00000/naupdf/main/docker-compose.yml
 docker compose up -d
 ```
 
 > [!TIP]
-> pdffdp ships in two builds: the **Self-Hosted build** (`pdffdp-simple`, used above) for internal/team/organization deployments, and the **Commercial build** (`pdffdp:latest`) used by pdffdp.com itself and by commercial license holders running public-facing deployments. Both ship the same PDF tools — the Commercial build adds the pdffdp.com hero, FAQ, testimonials, and footer. If in doubt, use the Self-Hosted build.
+> naupdf ships in two builds: the **Self-Hosted build** (`naupdf-simple`, used above) for internal/team/organization deployments, and the **Commercial build** (`naupdf:latest`) used by naupdf.com itself and by commercial license holders running public-facing deployments. Both ship the same PDF tools — the Commercial build adds the naupdf.com hero, FAQ, testimonials, and footer. If in doubt, use the Self-Hosted build.
 
 Then open `http://localhost:3000` in your browser.
 
@@ -44,8 +44,8 @@ Then open `http://localhost:3000` in your browser.
 
 ```bash
 # Clone the repository
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 
 # Install dependencies
 npm install
@@ -67,7 +67,7 @@ npm run dev
 
 ## Browser Support
 
-pdffdp works best on modern browsers:
+naupdf works best on modern browsers:
 
 - ✅ Chrome/Edge 90+
 - ✅ Firefox 90+
@@ -76,5 +76,5 @@ pdffdp works best on modern browsers:
 ## Next Steps
 
 - [Explore all tools](/tools/)
-- [Self-host pdffdp](/self-hosting/)
+- [Self-host naupdf](/self-hosting/)
 - [Contribute to the project](/contributing)

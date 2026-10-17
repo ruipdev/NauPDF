@@ -192,7 +192,7 @@ export async function initializeQpdf(): Promise<QpdfInstanceExtended> {
 export function initializeIcons(): void {
   createIcons({
     attrs: {
-      class: 'pdffdp-icon',
+      class: 'naupdf-icon',
       'stroke-width': '1.5',
     },
   });

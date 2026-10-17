@@ -1,6 +1,6 @@
-# Contributing to pdffdp
+# Contributing to naupdf
 
-First off, thank you for considering contributing to **pdffdp**! Your help makes this project better for everyone.
+First off, thank you for considering contributing to **naupdf**! Your help makes this project better for everyone.
 
 This document outlines how to contribute, report issues, and get involved in the project.
 
@@ -8,7 +8,7 @@ This document outlines how to contribute, report issues, and get involved in the
 
 ## Contributor License Agreement (CLA)
 
-Before we can accept your contributions, you must sign our Contributor License Agreement (CLA). This is required because pdffdp uses a dual licensing model:
+Before we can accept your contributions, you must sign our Contributor License Agreement (CLA). This is required because naupdf uses a dual licensing model:
 
 - **AGPL-3.0** for open source use
 - **Commercial license** for proprietary use
@@ -21,7 +21,7 @@ Sign our [Individual Contributor License Agreement (ICLA)](ICLA.md). When you su
 
 ### For Corporate Contributors
 
-If you are contributing on behalf of your employer, your organization needs to sign our [Corporate Contributor License Agreement (CCLA)](CCLA.md). Please contact us at [contact@pdffdp.com](mailto:contact@pdffdp.com) to arrange corporate CLA signing.
+If you are contributing on behalf of your employer, your organization needs to sign our [Corporate Contributor License Agreement (CCLA)](CCLA.md). Please contact us at [contact@naupdf.com](mailto:contact@naupdf.com) to arrange corporate CLA signing.
 
 ### What the CLA Grants
 
@@ -80,8 +80,8 @@ When submitting code contributions, please use our [pull request template](.gith
 1.  **Fork the Repository**
 
     ```bash
-    git clone https://github.com/alam00000/pdffdp.git
-    cd pdffdp
+    git clone https://github.com/alam00000/naupdf.git
+    cd naupdf
     npm install
     ```
 
@@ -140,7 +140,7 @@ When submitting code contributions, please use our [pull request template](.gith
 
 If you discover a security vulnerability, please **do not** open a public issue. Instead, contact the project maintainer directly at:
 
-**Email:** [contact@pdffdp.com](mailto:contact@pdffdp.com)
+**Email:** [contact@naupdf.com](mailto:contact@naupdf.com)
 
 ---
 
@@ -150,4 +150,4 @@ All contributors are expected to follow the Code of Conduct. Be respectful and c
 
 ---
 
-Thank you for helping make **pdffdp** a better library for everyone!
+Thank you for helping make **naupdf** a better library for everyone!

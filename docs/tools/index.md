@@ -1,6 +1,6 @@
 # Tools Reference
 
-pdffdp offers **130+ tools** for working with PDFs. All tools run entirely in your browser — your files never leave your device.
+naupdf offers **130+ tools** for working with PDFs. All tools run entirely in your browser — your files never leave your device.
 
 ---
 

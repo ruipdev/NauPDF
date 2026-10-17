@@ -1,4 +1,4 @@
-name = "pdffdp-cors-proxy"
+name = "naupdf-cors-proxy"
 main = "cors-proxy-worker.js"
 compatibility_date = "2024-01-01"
 
@@ -37,9 +37,9 @@ id = "b88e030b308941118cd484e3fcb3ae49"
 
 # Optional: Custom domain routing
 # routes = [
-#   { pattern = "cors-proxy.pdffdp.com/*", zone_name = "pdffdp.com" }
+#   { pattern = "cors-proxy.naupdf.com/*", zone_name = "naupdf.com" }
 # ]
 
 # Optional: Environment variables (for non-secret config)
 # [vars]
-# ALLOWED_ORIGINS = "https://www.pdffdp.com,https://pdffdp.com"
+# ALLOWED_ORIGINS = "https://www.naupdf.com,https://naupdf.com"

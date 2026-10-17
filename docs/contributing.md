@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to pdffdp! This guide will help you get started.
+Thank you for your interest in contributing to naupdf! This guide will help you get started.
 
 ## Getting Started
 
@@ -14,8 +14,8 @@ Thank you for your interest in contributing to pdffdp! This guide will help you 
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/pdffdp.git
-cd pdffdp
+git clone https://github.com/YOUR_USERNAME/naupdf.git
+cd naupdf
 
 # Install dependencies
 npm install
@@ -27,7 +27,7 @@ npm run dev
 ## Project Structure
 
 ```
-pdffdp/
+naupdf/
 ├── src/
 │   ├── js/
 │   │   ├── config/       # Tool definitions
@@ -112,23 +112,23 @@ Add entries to all locale files in `public/locales/`:
 
 ## Translation
 
-See [TRANSLATION.md](https://github.com/alam00000/pdffdp/blob/main/TRANSLATION.md) for adding new languages.
+See [TRANSLATION.md](https://github.com/alam00000/naupdf/blob/main/TRANSLATION.md) for adding new languages.
 
 ## Contributor License Agreement
 
 Before your PR can be merged, you'll need to sign our CLA:
 
-- [Individual CLA (ICLA)](https://github.com/alam00000/pdffdp/blob/main/ICLA.md)
-- [Corporate CLA (CCLA)](https://github.com/alam00000/pdffdp/blob/main/CCLA.md)
+- [Individual CLA (ICLA)](https://github.com/alam00000/naupdf/blob/main/ICLA.md)
+- [Corporate CLA (CCLA)](https://github.com/alam00000/naupdf/blob/main/CCLA.md)
 
 ## Getting Help
 
-- [GitHub Issues](https://github.com/alam00000/pdffdp/issues)
+- [GitHub Issues](https://github.com/alam00000/naupdf/issues)
 - [Discord Community](https://discord.gg/Bgq3Ay3f2w)
 
 ## License
 
-pdffdp is dual-licensed:
+naupdf is dual-licensed:
 
 - **AGPL-3.0** for open-source projects where you share your full source code publicly
 - **Commercial License** for proprietary/closed-source applications - [Get Lifetime License for $79](https://ko-fi.com/s/f32ca4cb75)

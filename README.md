@@ -1,5 +1,5 @@
 <p align="center"><img src="public/images/favicon-no-bg.svg" width="80"></p>
-<h1 align="center">pdffdp</h1>
+<h1 align="center">NauPDF</h1>
 <p align="center"><sub>Supported by</sub></p>
 <p align="center">
   <a href="https://vercel.com/open-source-program">
@@ -11,12 +11,12 @@
   </a>
 </p>
 
-**pdffdp** is a powerful, privacy-first, client-side PDF toolkit that is self-hostable and allows you to manipulate, edit, merge, and process PDF files directly in your browser. No server-side processing is required, ensuring your files remain secure and private.
+**naupdf** is a powerful, privacy-first, client-side PDF toolkit that is self-hostable and allows you to manipulate, edit, merge, and process PDF files directly in your browser. No server-side processing is required, ensuring your files remain secure and private.
 
-[![Docker Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Falam00000%2Fpdffdp%2Fbadges%2Fdocker-downloads.json&cacheSeconds=3600)](https://github.com/alam00000/pdffdp/pkgs/container/pdffdp-simple) [![Ko-fi](https://img.shields.io/badge/Buy%20me%20a%20Coffee-yellow?logo=kofi&style=flat-square)](https://ko-fi.com/alio01) ![GitHub Stars](https://img.shields.io/github/stars/alam00000/pdffdp?style=social)
+[![Docker Downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Falam00000%2Fnaupdf%2Fbadges%2Fdocker-downloads.json&cacheSeconds=3600)](https://github.com/alam00000/naupdf/pkgs/container/naupdf-simple) [![Ko-fi](https://img.shields.io/badge/Buy%20me%20a%20Coffee-yellow?logo=kofi&style=flat-square)](https://ko-fi.com/alio01) ![GitHub Stars](https://img.shields.io/github/stars/alam00000/naupdf?style=social)
 [![Sponsor me on GitHub](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ff69b4)](https://github.com/sponsors/alam00000)
 
-![pdffdp Tools](public/images/pdffdp-tools.png)
+![naupdf Tools](public/images/naupdf-tools.png)
 
 ---
 
@@ -27,7 +27,7 @@
 - [Licensing](#-licensing)
 - [Stargazers over time](#-stargazers-over-time)
 - [Thank You to Our Sponsors](#-thank-you-to-our-sponsors)
-- [Why pdffdp?](#-why-pdffdp)
+- [Why naupdf?](#-why-naupdf)
 - [Features / Tools Supported](#️-features--tools-supported)
   - [Organize & Manage PDFs](#organize--manage-pdfs)
   - [Edit & Modify PDFs](#edit--modify-pdfs)
@@ -71,9 +71,9 @@ Have questions, feature requests, or want to chat with the community? Join our D
 
 ## 📚 Documentation
 
-[![Documentation](https://img.shields.io/badge/Docs-VitePress-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://pdffdp.com/docs/)
+[![Documentation](https://img.shields.io/badge/Docs-VitePress-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://naupdf.com/docs/)
 
-Visit our [Documentation](https://pdffdp.com/docs/) for:
+Visit our [Documentation](https://naupdf.com/docs/) for:
 
 - **Getting Started** guide
 - **Tools Reference** (50+ tools)
@@ -85,7 +85,7 @@ Visit our [Documentation](https://pdffdp.com/docs/) for:
 
 ## 📜 Licensing
 
-pdffdp is **dual-licensed** to fit your needs:
+naupdf is **dual-licensed** to fit your needs:
 
 | License        | Best For                                     | Price              |
 | -------------- | -------------------------------------------- | ------------------ |
@@ -100,11 +100,11 @@ pdffdp is **dual-licensed** to fit your needs:
 
 > **One-time purchase** · **Unlimited devices & users** · **Lifetime updates** · **No AGPL obligations**
 
-📖 For more details, see our [Licensing Page](https://pdffdp.com/licensing.html)
+📖 For more details, see our [Licensing Page](https://naupdf.com/licensing.html)
 
 ### AGPL Components (Pre-configured via CDN)
 
-pdffdp does **not** bundle AGPL-licensed processing libraries in its source code, but **pre-configures CDN URLs** so all features work out of the box with zero setup:
+naupdf does **not** bundle AGPL-licensed processing libraries in its source code, but **pre-configures CDN URLs** so all features work out of the box with zero setup:
 
 | Component              | License  | Features Enabled                                                                                    |
 | ---------------------- | -------- | --------------------------------------------------------------------------------------------------- |
@@ -119,13 +119,13 @@ pdffdp does **not** bundle AGPL-licensed processing libraries in its source code
 
 ## ⭐ Stargazers over time
 
-[![Star History Chart](https://star-history.dera.page/svg?repos=alam00000/pdffdp&type=Date)](https://github.com/alam00000/pdffdp/stargazers)
+[![Star History Chart](https://star-history.dera.page/svg?repos=alam00000/naupdf&type=Date)](https://github.com/alam00000/naupdf/stargazers)
 
 ---
 
 ## 💖 Thank You to Our Sponsors
 
-We're incredibly grateful to all our sponsors and supporters who help keep pdffdp free and open source!
+We're incredibly grateful to all our sponsors and supporters who help keep naupdf free and open source!
 
 [![Sponsor me on GitHub](https://img.shields.io/badge/Become%20a%20Sponsor-%E2%9D%A4-ff69b4?style=for-the-badge)](https://github.com/sponsors/alam00000)
 [![Buy me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20Coffee-yellow?style=for-the-badge&logo=kofi)](https://ko-fi.com/alio01)
@@ -135,18 +135,18 @@ We're incredibly grateful to all our sponsors and supporters who help keep pdffd
 
 ---
 
-## ✨ Why pdffdp?
+## ✨ Why naupdf?
 
 - **Privacy First**: All processing happens in your browser. Your files are never uploaded to a server, guaranteeing 100% privacy.
 - **No Limits**: Manipulate as many files as you want, as often as you want. There are no restrictions or upload limits.
-- **High Performance**: Built with modern web technologies, pdffdp is fast and efficient, handling even large PDF files with ease.
-- **Completely Free**: pdffdp is a free and open-source tool for everyone.
+- **High Performance**: Built with modern web technologies, naupdf is fast and efficient, handling even large PDF files with ease.
+- **Completely Free**: naupdf is a free and open-source tool for everyone.
 
 ---
 
 ## 🛠️ Features / Tools Supported
 
-pdffdp offers a comprehensive suite of tools to handle all your PDF needs.
+naupdf offers a comprehensive suite of tools to handle all your PDF needs.
 
 ### Organize & Manage PDFs
 
@@ -293,7 +293,7 @@ pdffdp offers a comprehensive suite of tools to handle all your PDF needs.
 
 ## 🌍 Translations
 
-pdffdp is available in multiple languages:
+naupdf is available in multiple languages:
 
 | Language            | Status                                                                                                                    |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -310,13 +310,13 @@ pdffdp is available in multiple languages:
 | Korean              | [![Korean](https://img.shields.io/badge/Complete-green?style=flat-square)](public/locales/ko/common.json)                 |
 | Russian             | [![Russian](https://img.shields.io/badge/Complete-green?style=flat-square)](public/locales/ru/common.json)                |
 
-Want to help translate pdffdp into your language? Check out our [Translation Guide](TRANSLATION.md)!
+Want to help translate naupdf into your language? Check out our [Translation Guide](TRANSLATION.md)!
 
 ---
 
 ## 🚀 Getting Started
 
-You can run pdffdp locally for development or personal use.
+You can run naupdf locally for development or personal use.
 
 ### Prerequisites
 
@@ -326,19 +326,19 @@ You can run pdffdp locally for development or personal use.
 
 ### 🚀 Quick Start
 
-Run pdffdp instantly from GitHub Container Registry (Recommended):
+Run naupdf instantly from GitHub Container Registry (Recommended):
 
 ```bash
-docker run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+docker run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 ```
 
 Open your browser at: http://localhost:3000
 
 > [!TIP]
-> pdffdp ships in two builds:
+> naupdf ships in two builds:
 >
-> - **Self-Hosted build** — `ghcr.io/alam00000/pdffdp-simple:latest`. Every PDF tool the public site has, **without** the pdffdp marketing (no hero, FAQ, testimonials, footer). Use this for internal/team/organization deployments. It is **not** a feature-reduced lite version.
-> - **Commercial build** — `ghcr.io/alam00000/pdffdp:latest`. The full marketing site, used by pdffdp.com itself and by commercial license holders running public-facing deployments. Includes hero, FAQ, testimonials, and footer.
+> - **Self-Hosted build** — `ghcr.io/alam00000/naupdf-simple:latest`. Every PDF tool the public site has, **without** the naupdf marketing (no hero, FAQ, testimonials, footer). Use this for internal/team/organization deployments. It is **not** a feature-reduced lite version.
+> - **Commercial build** — `ghcr.io/alam00000/naupdf:latest`. The full marketing site, used by naupdf.com itself and by commercial license holders running public-facing deployments. Includes hero, FAQ, testimonials, and footer.
 >
 > If in doubt: pull the Self-Hosted build.
 
@@ -348,19 +348,19 @@ Open your browser at: http://localhost:3000
 **Docker Hub:**
 
 ```bash
-docker run -p 3000:8080 pdffdpteam/pdffdp-simple:latest
+docker run -p 3000:8080 naupdfteam/naupdf-simple:latest
 ```
 
 **Podman (GHCR):**
 
 ```bash
-podman run -p 3000:8080 ghcr.io/alam00000/pdffdp-simple:latest
+podman run -p 3000:8080 ghcr.io/alam00000/naupdf-simple:latest
 ```
 
 **Podman (Docker Hub):**
 
 ```bash
-podman run -p 3000:8080 docker.io/pdffdpteam/pdffdp-simple:latest
+podman run -p 3000:8080 docker.io/naupdfteam/naupdf-simple:latest
 ```
 
 > [!NOTE]
@@ -370,20 +370,20 @@ podman run -p 3000:8080 docker.io/pdffdpteam/pdffdp-simple:latest
 
 ### Static Hosting using Netlify, Vercel, and GitHub Pages
 
-It is very straightforward to host your own instance of pdffdp using a static web page hosting service. Plus, services such as Netlify, Vercel, and GitHub Pages all offer a free tier for getting started. See [Static Hosting](https://github.com/alam00000/pdffdp/blob/main/STATIC-HOSTING.md) for details.
+It is very straightforward to host your own instance of naupdf using a static web page hosting service. Plus, services such as Netlify, Vercel, and GitHub Pages all offer a free tier for getting started. See [Static Hosting](https://github.com/alam00000/naupdf/blob/main/STATIC-HOSTING.md) for details.
 
 ### 🏠 Self-Hosting Locally
 
-Since pdffdp is fully client-side, all processing happens in the user's browser and no server-side processing is required. This means you can host pdffdp as simple static files on any web server or hosting platform.
+Since naupdf is fully client-side, all processing happens in the user's browser and no server-side processing is required. This means you can host naupdf as simple static files on any web server or hosting platform.
 
 > [!IMPORTANT]
 > Office file conversion uses LibreOffice WASM, which requires `SharedArrayBuffer`. That means the app must be both cross-origin isolated and served from a secure context. `http://localhost` works for local testing, but `http://192.168.x.x` or other LAN IPs usually require HTTPS even if the server already sends the correct COOP/COEP headers.
 
 **Download from Releases (Recommended):**
 
-The easiest way to self-host is to download the pre-built distribution file from our [GitHub releases](https://github.com/alam00000/pdffdp/releases). Each release includes a `dist-{version}.zip` file that contains all necessary files for self-hosting.
+The easiest way to self-host is to download the pre-built distribution file from our [GitHub releases](https://github.com/alam00000/naupdf/releases). Each release includes a `dist-{version}.zip` file that contains all necessary files for self-hosting.
 
-1. Go to [pdffdp Releases](https://github.com/alam00000/pdffdp/releases)
+1. Go to [naupdf Releases](https://github.com/alam00000/naupdf/releases)
 2. Download the latest `dist-{version}.zip` file
 3. Extract the zip file
 4. Serve the extracted folder with your preferred web server
@@ -409,8 +409,8 @@ If you prefer to build from source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 
 # Install dependencies
 npm install
@@ -430,24 +430,24 @@ npm run preview
 
 **Compression Modes:**
 
-pdffdp supports different compression modes for optimized builds:
+naupdf supports different compression modes for optimized builds:
 
 ```bash
 # Gzip only (smallest Docker image size)
 npm run build:gzip
-docker build --build-arg COMPRESSION_MODE=g -t pdffdp:gzip .
+docker build --build-arg COMPRESSION_MODE=g -t naupdf:gzip .
 
 # Brotli only (best compression ratio)
 npm run build:brotli
-docker build --build-arg COMPRESSION_MODE=b -t pdffdp:brotli .
+docker build --build-arg COMPRESSION_MODE=b -t naupdf:brotli .
 
 # No compression (fastest build time)
 npm run build:original
-docker build --build-arg COMPRESSION_MODE=o -t pdffdp:original .
+docker build --build-arg COMPRESSION_MODE=o -t naupdf:original .
 
 # All formats (default, maximum browser compatibility)
 npm run build:all
-docker build --build-arg COMPRESSION_MODE=all -t pdffdp:all .
+docker build --build-arg COMPRESSION_MODE=all -t naupdf:all .
 ```
 
 | Mode  | Files Kept  | Use Case                          |
@@ -459,7 +459,7 @@ docker build --build-arg COMPRESSION_MODE=all -t pdffdp:all .
 
 **CDN Optimization:**
 
-pdffdp can use jsDelivr CDN to serve large WASM files (LibreOffice, Ghostscript, PyMuPDF) for improved performance and reduced bandwidth costs:
+naupdf can use jsDelivr CDN to serve large WASM files (LibreOffice, Ghostscript, PyMuPDF) for improved performance and reduced bandwidth costs:
 
 ```bash
 # Production build with CDN (Recommended)
@@ -482,8 +482,8 @@ Advanced PDF features (PyMuPDF, Ghostscript, CoherentPDF) are pre-configured to 
 The default URLs are set in `.env.production`:
 
 ```bash
-VITE_WASM_PYMUPDF_URL=https://cdn.jsdelivr.net/npm/@pdffdp/pymupdf-wasm@0.11.16/
-VITE_WASM_GS_URL=https://cdn.jsdelivr.net/npm/@pdffdp/gs-wasm@0.1.1/assets/
+VITE_WASM_PYMUPDF_URL=https://cdn.jsdelivr.net/npm/@naupdf/pymupdf-wasm@0.11.16/
+VITE_WASM_GS_URL=https://cdn.jsdelivr.net/npm/@naupdf/gs-wasm@0.1.1/assets/
 VITE_WASM_CPDF_URL=https://cdn.jsdelivr.net/npm/coherentpdf@2.5.5/dist/
 VITE_TESSERACT_WORKER_URL=
 VITE_TESSERACT_CORE_URL=
@@ -504,7 +504,7 @@ docker build \
   --build-arg VITE_TESSERACT_LANG_URL=https://your-server.com/ocr/lang-data \
   --build-arg VITE_TESSERACT_AVAILABLE_LANGUAGES=eng,deu \
   --build-arg VITE_OCR_FONT_BASE_URL=https://your-server.com/ocr/fonts \
-  -t pdffdp .
+  -t naupdf .
 ```
 
 To disable a module (require manual user config via Advanced Settings), set its variable to an empty string.
@@ -525,8 +525,8 @@ For networks with no internet access (government, healthcare, financial, etc.), 
 The included `prepare-airgap.sh` script automates the entire process — downloading WASM packages, building the Docker image, exporting everything into a self-contained bundle with a setup script.
 
 ```bash
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 
 # Show supported OCR language codes (for --ocr-languages)
 bash scripts/prepare-airgap.sh --list-ocr-languages
@@ -544,8 +544,8 @@ bash scripts/prepare-airgap.sh --wasm-base-url https://internal.example.com/wasm
 This produces a bundle directory containing:
 
 ```
-pdffdp-airgap-bundle/
-  pdffdp.tar              # Docker image
+naupdf-airgap-bundle/
+  naupdf.tar              # Docker image
   *.tgz                     # WASM packages (PyMuPDF, Ghostscript, CoherentPDF, Tesseract)
   tesseract-langdata/       # OCR traineddata files
   ocr-fonts/                # OCR text-layer font files
@@ -556,7 +556,7 @@ pdffdp-airgap-bundle/
 **Transfer the bundle** into the air-gapped network via USB, internal artifact repo, or approved method. Then run the included setup script:
 
 ```bash
-cd pdffdp-airgap-bundle
+cd naupdf-airgap-bundle
 bash setup.sh
 ```
 
@@ -568,8 +568,8 @@ The setup script loads the Docker image, extracts WASM files, and optionally sta
 | Flag                           | Description                                      | Default                           |
 | ------------------------------ | ------------------------------------------------ | --------------------------------- |
 | `--wasm-base-url <url>`        | Where WASMs will be hosted internally            | _(required, prompted if missing)_ |
-| `--image-name <name>`          | Docker image tag                                 | `pdffdp`                        |
-| `--output-dir <path>`          | Output bundle directory                          | `./pdffdp-airgap-bundle`        |
+| `--image-name <name>`          | Docker image tag                                 | `naupdf`                        |
+| `--output-dir <path>`          | Output bundle directory                          | `./naupdf-airgap-bundle`        |
 | `--simple-mode`                | Enable Simple Mode                               | off                               |
 | `--base-url <path>`            | Subdirectory base URL (e.g. `/pdf/`)             | `/`                               |
 | `--language <code>`            | Default UI language (e.g. `fr`, `de`)            | _(none)_                          |
@@ -588,7 +588,7 @@ The setup script loads the Docker image, extracts WASM files, and optionally sta
 The interactive prompt also accepts `list` to print the full supported Tesseract code list and `search <term>` to find matches such as `search german` or `search chi`.
 
 > [!IMPORTANT]
-> WASM files must be served from the **same origin** as the pdffdp app. Web Workers use `importScripts()` which cannot load scripts cross-origin. For example, if pdffdp runs at `https://internal.example.com`, the WASM base URL should also be `https://internal.example.com/wasm`.
+> WASM files must be served from the **same origin** as the naupdf app. Web Workers use `importScripts()` which cannot load scripts cross-origin. For example, if naupdf runs at `https://internal.example.com`, the WASM base URL should also be `https://internal.example.com/wasm`.
 
 #### Manual Steps
 
@@ -598,8 +598,8 @@ The interactive prompt also accepts `list` to print the full supported Tesseract
 **Step 1: Download the WASM and OCR packages** (on a machine with internet)
 
 ```bash
-npm pack @pdffdp/pymupdf-wasm@0.11.16
-npm pack @pdffdp/gs-wasm
+npm pack @naupdf/pymupdf-wasm@0.11.16
+npm pack @naupdf/gs-wasm
 npm pack coherentpdf
 npm pack tesseract.js@7.0.0
 npm pack tesseract.js-core@7.0.0
@@ -612,8 +612,8 @@ curl -fsSL https://raw.githack.com/googlefonts/noto-fonts/main/hinted/ttf/NotoSa
 **Step 2: Build the Docker image with internal URLs**
 
 ```bash
-git clone https://github.com/alam00000/pdffdp.git
-cd pdffdp
+git clone https://github.com/alam00000/naupdf.git
+cd naupdf
 
 docker build \
   --build-arg VITE_WASM_PYMUPDF_URL=https://internal-server.example.com/wasm/pymupdf/ \
@@ -623,22 +623,22 @@ docker build \
   --build-arg VITE_TESSERACT_CORE_URL=https://internal-server.example.com/wasm/ocr/core \
   --build-arg VITE_TESSERACT_LANG_URL=https://internal-server.example.com/wasm/ocr/lang-data \
   --build-arg VITE_OCR_FONT_BASE_URL=https://internal-server.example.com/wasm/ocr/fonts \
-  -t pdffdp .
+  -t naupdf .
 ```
 
 **Step 3: Export the Docker image**
 
 ```bash
-docker save pdffdp -o pdffdp.tar
+docker save naupdf -o naupdf.tar
 ```
 
 **Step 4: Transfer into the air-gapped network**
 
 Copy these files via USB drive, internal artifact repository, or approved transfer method:
 
-- `pdffdp.tar` — the Docker image
-- `pdffdp-pymupdf-wasm-0.11.14.tgz` — PyMuPDF WASM package
-- `pdffdp-gs-wasm-*.tgz` — Ghostscript WASM package
+- `naupdf.tar` — the Docker image
+- `naupdf-pymupdf-wasm-0.11.14.tgz` — PyMuPDF WASM package
+- `naupdf-gs-wasm-*.tgz` — Ghostscript WASM package
 - `coherentpdf-*.tgz` — CoherentPDF WASM package
 - `tesseract.js-7.0.0.tgz` — Tesseract worker package
 - `tesseract.js-core-7.0.0.tgz` — Tesseract core runtime package
@@ -649,12 +649,12 @@ Copy these files via USB drive, internal artifact repository, or approved transf
 
 ```bash
 # Load the Docker image
-docker load -i pdffdp.tar
+docker load -i naupdf.tar
 
 # Extract the WASM packages
 mkdir -p ./wasm/pymupdf ./wasm/gs ./wasm/cpdf ./wasm/ocr/core ./wasm/ocr/lang-data ./wasm/ocr/fonts
-tar xzf pdffdp-pymupdf-wasm-0.11.14.tgz -C ./wasm/pymupdf --strip-components=1
-tar xzf pdffdp-gs-wasm-*.tgz -C ./wasm/gs --strip-components=1
+tar xzf naupdf-pymupdf-wasm-0.11.14.tgz -C ./wasm/pymupdf --strip-components=1
+tar xzf naupdf-gs-wasm-*.tgz -C ./wasm/gs --strip-components=1
 tar xzf coherentpdf-*.tgz -C ./wasm/cpdf --strip-components=1
 TEMP_TESS=$(mktemp -d)
 tar xzf tesseract.js-7.0.0.tgz -C "$TEMP_TESS"
@@ -664,8 +664,8 @@ tar xzf tesseract.js-core-7.0.0.tgz -C ./wasm/ocr/core --strip-components=1
 cp ./tesseract-langdata/*.traineddata.gz ./wasm/ocr/lang-data/
 cp ./ocr-fonts/* ./wasm/ocr/fonts/
 
-# Run pdffdp
-docker run -d -p 3000:8080 --restart unless-stopped pdffdp
+# Run naupdf
+docker run -d -p 3000:8080 --restart unless-stopped naupdf
 ```
 
 Make sure the files are accessible at the URLs you configured in Step 2, including `.../ocr/worker.min.js`, `.../ocr/core`, `.../ocr/lang-data`, and `.../ocr/fonts`.
@@ -687,41 +687,41 @@ Make sure the files are accessible at the URLs you configured in Step 2, includi
 
 **Subdirectory Hosting:**
 
-pdffdp can also be hosted from a subdirectory (e.g., `example.com/tools/pdffdp/`):
+naupdf can also be hosted from a subdirectory (e.g., `example.com/tools/naupdf/`):
 
 ```bash
 
 # Example:
-# 1. Build the app with the specific BASE_URL. BASE_URL must have a trailing and leading slash. The BASE_URL can be any URL of your choice. Here we are using /tools/pdffdp/ as an example.
+# 1. Build the app with the specific BASE_URL. BASE_URL must have a trailing and leading slash. The BASE_URL can be any URL of your choice. Here we are using /tools/naupdf/ as an example.
 
-BASE_URL=/tools/pdffdp/ npm run build
+BASE_URL=/tools/naupdf/ npm run build
 
 # 2. Create the nested directory structure inside serve-test (or any folder of your choice for local testing. In case of production, create the nested directory structure inside the root directory)
-mkdir -p serve-test/tools/pdffdp
+mkdir -p serve-test/tools/naupdf
 
 # 3. Copy all files from the 'dist' folder into that nested directory
-cp -r dist/* serve-test/tools/pdffdp/
+cp -r dist/* serve-test/tools/naupdf/
 
 # 4. Serve the 'serve-test' folder
 npx serve serve-test
 ```
 
-The website can be accessible at: `http://localhost:3000/tools/pdffdp/`
+The website can be accessible at: `http://localhost:3000/tools/naupdf/`
 
 The `npm run package` command creates a `dist-{version}.zip` file that you can use for self-hosting.
 
 **Docker Subdirectory Deployment:**
 
-pdffdp's Docker image also supports the `BASE_URL` build argument for subdirectory deployments:
+naupdf's Docker image also supports the `BASE_URL` build argument for subdirectory deployments:
 
 ```bash
 # Build for subdirectory deployment
-docker build --build-arg BASE_URL=/pdffdp/ -t pdffdp .
+docker build --build-arg BASE_URL=/naupdf/ -t naupdf .
 
 # Run the container
-docker run -p 3000:8080 pdffdp
+docker run -p 3000:8080 naupdf
 
-# The app will be accessible at http://localhost:3000/pdffdp/
+# The app will be accessible at http://localhost:3000/naupdf/
 ```
 
 **Default Language:**
@@ -729,7 +729,7 @@ docker run -p 3000:8080 pdffdp
 Set the default UI language at build time. Users can still switch languages — this only changes the initial default. Supported: `en`, `ar`, `be`, `fr`, `de`, `es`, `zh`, `zh-TW`, `vi`, `tr`, `id`, `it`, `pt`, `nl`, `da`.
 
 ```bash
-docker build --build-arg VITE_DEFAULT_LANGUAGE=fr -t pdffdp .
+docker build --build-arg VITE_DEFAULT_LANGUAGE=fr -t naupdf .
 ```
 
 **Combined with Simple Mode:**
@@ -739,14 +739,14 @@ docker build --build-arg VITE_DEFAULT_LANGUAGE=fr -t pdffdp .
 docker build \
   --build-arg BASE_URL=/tools/pdf/ \
   --build-arg SIMPLE_MODE=true \
-  -t pdffdp-simple .
+  -t naupdf-simple .
 
-docker run -p 3000:8080 pdffdp-simple
+docker run -p 3000:8080 naupdf-simple
 ```
 
 > [!IMPORTANT]
 >
-> - Always include trailing slashes in `BASE_URL` (e.g., `/pdffdp/` not `/pdffdp`)
+> - Always include trailing slashes in `BASE_URL` (e.g., `/naupdf/` not `/naupdf`)
 > - The default value is `/` for root deployment
 
 ### 🚀 Run with Docker Compose / Podman Compose (Recommended)
@@ -757,11 +757,11 @@ For a more robust setup with auto-restart capabilities:
 
 ```yaml
 services:
-  pdffdp:
-    image: ghcr.io/alam00000/pdffdp-simple:latest # Self-Hosted build (recommended)
-    # image: pdffdpteam/pdffdp-simple:latest     # Self-Hosted build (Docker Hub)
-    # image: ghcr.io/alam00000/pdffdp:latest       # Commercial build (pdffdp.com / commercial license holders)
-    container_name: pdffdp
+  naupdf:
+    image: ghcr.io/alam00000/naupdf-simple:latest # Self-Hosted build (recommended)
+    # image: naupdfteam/naupdf-simple:latest     # Self-Hosted build (Docker Hub)
+    # image: ghcr.io/alam00000/naupdf:latest       # Commercial build (naupdf.com / commercial license holders)
+    container_name: naupdf
     ports:
       - '3000:8080'
     restart: unless-stopped
@@ -781,18 +781,18 @@ The application will be available at `http://localhost:3000`.
 
 ### 🐧 Podman Quadlet (Systemd Integration)
 
-For Linux production deployments, you can run pdffdp as a systemd service using [Podman Quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html).
+For Linux production deployments, you can run naupdf as a systemd service using [Podman Quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html).
 
-Create `~/.config/containers/systemd/pdffdp.container`:
+Create `~/.config/containers/systemd/naupdf.container`:
 
 ```ini
 [Unit]
-Description=pdffdp - Privacy-first PDF toolkit
+Description=naupdf - Privacy-first PDF toolkit
 After=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/pdffdp-simple:latest
-ContainerName=pdffdp
+Image=ghcr.io/alam00000/naupdf-simple:latest
+ContainerName=naupdf
 PublishPort=3000:8080
 AutoUpdate=registry
 
@@ -807,14 +807,14 @@ Then enable and start:
 
 ```bash
 systemctl --user daemon-reload
-systemctl --user enable --now pdffdp
+systemctl --user enable --now naupdf
 ```
 
-For detailed Quadlet configuration, see [Self-Hosting Docker Guide](https://pdffdp.com/docs/self-hosting/docker).
+For detailed Quadlet configuration, see [Self-Hosting Docker Guide](https://naupdf.com/docs/self-hosting/docker).
 
 ### 🏢 Self-Hosted build (Simple Mode)
 
-The Self-Hosted build (the `pdffdp-simple` image, also called Simple Mode) is **functionally identical** to the Commercial build. Every PDF tool is present and behaves the same. It just hides the marketing that only makes sense on pdffdp.com itself or on a commercial public-facing deployment. **It is not a feature-reduced or "lite" version.**
+The Self-Hosted build (the `naupdf-simple` image, also called Simple Mode) is **functionally identical** to the Commercial build. Every PDF tool is present and behaves the same. It just hides the marketing that only makes sense on naupdf.com itself or on a commercial public-facing deployment. **It is not a feature-reduced or "lite" version.**
 
 **What the Self-Hosted build hides** (cosmetic only, no PDF features are removed):
 
@@ -826,25 +826,25 @@ The Self-Hosted build (the `pdffdp-simple` image, also called Simple Mode) is **
 - All PDF tools (merge, split, edit, sign, OCR, Office conversion, every other tool)
 - Custom branding support, all build-time and runtime config
 
-The Commercial build (`ghcr.io/alam00000/pdffdp:latest`) is what powers pdffdp.com itself and is used by commercial license holders running public-facing deployments. It adds the hero, FAQ, testimonials, and footer that wouldn't make sense on an internal tool.
+The Commercial build (`ghcr.io/alam00000/naupdf:latest`) is what powers naupdf.com itself and is used by commercial license holders running public-facing deployments. It adds the hero, FAQ, testimonials, and footer that wouldn't make sense on an internal tool.
 
-If you're self-hosting pdffdp for your team, organization, or as an internal tool, pull `ghcr.io/alam00000/pdffdp-simple:latest`. For more details, see [SIMPLE_MODE.md](SIMPLE_MODE.md).
+If you're self-hosting naupdf for your team, organization, or as an internal tool, pull `ghcr.io/alam00000/naupdf-simple:latest`. For more details, see [SIMPLE_MODE.md](SIMPLE_MODE.md).
 
 ### 🏬 Commercial Build
 
-The Commercial build (the `pdffdp` image. Note: no `-simple` suffix) is what powers pdffdp.com itself. It includes the full marketing site (hero, features, FAQ, testimonials, footer) on top of every PDF tool. Use this build when you're running pdffdp as a **public-facing PDF service under your own brand**. For example:
+The Commercial build (the `naupdf` image. Note: no `-simple` suffix) is what powers naupdf.com itself. It includes the full marketing site (hero, features, FAQ, testimonials, footer) on top of every PDF tool. Use this build when you're running naupdf as a **public-facing PDF service under your own brand**. For example:
 
-- You're deploying pdffdp as a hosted SaaS for end-users (with your own domain and branding)
+- You're deploying naupdf as a hosted SaaS for end-users (with your own domain and branding)
 - You want the landing-page experience (marketing sections + tools), not just the tool surface
-- You're a commercial license holder embedding pdffdp into a commercial product or workflow
+- You're a commercial license holder embedding naupdf into a commercial product or workflow
 
-**Run it as-is** (carries pdffdp branding by default. Useful to evaluate what the build looks like):
+**Run it as-is** (carries naupdf branding by default. Useful to evaluate what the build looks like):
 
 ```bash
-docker run -p 3000:8080 ghcr.io/alam00000/pdffdp:latest
+docker run -p 3000:8080 ghcr.io/alam00000/naupdf:latest
 ```
 
-**Build with your own brand** (the typical commercial path — replace the pdffdp logo, name, and footer):
+**Build with your own brand** (the typical commercial path — replace the naupdf logo, name, and footer):
 
 ```bash
 docker build \
@@ -861,22 +861,22 @@ Or set the same variables when building from source — see [Custom Branding](#-
 **Combine with other build-time flags** (`BASE_URL`, `VITE_DEFAULT_LANGUAGE`, `DISABLE_TOOLS`, `VITE_USE_CDN`, WASM URL overrides for air-gapped use, etc.) — every option that works on the Self-Hosted build also works here.
 
 > [!IMPORTANT]
-> **Licensing**: Running the Commercial build is allowed under both license options pdffdp ships under:
+> **Licensing**: Running the Commercial build is allowed under both license options naupdf ships under:
 >
 > - **AGPL-3.0** (free): allowed if your deployment publishes its full source code under AGPL — this includes any branding modifications, custom configuration, and any code you build on top of it.
 > - **Commercial license** ($79 lifetime): required for closed-source / proprietary deployments — e.g., a private SaaS where you don't open-source your branding fork or surrounding business logic.
 >
-> See the [Licensing page](https://pdffdp.com/licensing.html) for the full comparison.
+> See the [Licensing page](https://naupdf.com/licensing.html) for the full comparison.
 
 ### 🎨 Custom Branding
 
-Replace the default pdffdp logo, name, and footer text with your own. Branding is configured via environment variables at **build time** and works across all deployment methods (Docker, static hosting, air-gapped VMs).
+Replace the default naupdf logo, name, and footer text with your own. Branding is configured via environment variables at **build time** and works across all deployment methods (Docker, static hosting, air-gapped VMs).
 
 | Variable           | Description                             | Default                                 |
 | ------------------ | --------------------------------------- | --------------------------------------- |
-| `VITE_BRAND_NAME`  | Brand name shown in header and footer   | `pdffdp`                              |
+| `VITE_BRAND_NAME`  | Brand name shown in header and footer   | `naupdf`                              |
 | `VITE_BRAND_LOGO`  | Path to logo file relative to `public/` | `images/favicon-no-bg.svg`              |
-| `VITE_FOOTER_TEXT` | Custom footer/copyright text            | `© 2026 pdffdp. All rights reserved.` |
+| `VITE_FOOTER_TEXT` | Custom footer/copyright text            | `© 2026 naupdf. All rights reserved.` |
 
 **Docker:**
 
@@ -913,7 +913,7 @@ Tool IDs are the page URL without `.html` — open any tool and look at the URL 
 **Build-time** (baked into the bundle):
 
 ```bash
-docker build --build-arg DISABLE_TOOLS="edit-pdf,sign-pdf,encrypt-pdf" -t pdffdp .
+docker build --build-arg DISABLE_TOOLS="edit-pdf,sign-pdf,encrypt-pdf" -t naupdf .
 ```
 
 **Runtime** (no rebuild — mount a `config.json`):
@@ -927,10 +927,10 @@ docker build --build-arg DISABLE_TOOLS="edit-pdf,sign-pdf,encrypt-pdf" -t pdffdp
 ```bash
 docker run -d -p 3000:8080 \
   -v ./config.json:/usr/share/nginx/html/config.json:ro \
-  ghcr.io/alam00000/pdffdp-simple:latest
+  ghcr.io/alam00000/naupdf-simple:latest
 ```
 
-Both methods can be combined — the lists are merged. For the full list of tool IDs, see the [self-hosting docs](https://pdffdp.com/docs/self-hosting/docker#disabling-specific-tools).
+Both methods can be combined — the lists are merged. For the full list of tool IDs, see the [self-hosting docs](https://naupdf.com/docs/self-hosting/docker#disabling-specific-tools).
 
 You can also disable specific features inside the PDF Editor (e.g., redaction, forms) without disabling the entire editor. Add `editorDisabledCategories` to your `config.json`:
 
@@ -940,18 +940,18 @@ You can also disable specific features inside the PDF Editor (e.g., redaction, f
 }
 ```
 
-For the full list of editor categories, see the [self-hosting docs](https://pdffdp.com/docs/self-hosting/docker#disabling-editor-features).
+For the full list of editor categories, see the [self-hosting docs](https://naupdf.com/docs/self-hosting/docker#disabling-editor-features).
 
 ### 🔕 Disabling the GitHub Star Counter
 
 The navbar shows a live GitHub star count, fetched from `api.github.com` on page load. The only external request that isn't serving a PDF feature. Self-hosters who want zero non-essential network calls can disable it at build time. This removes the fetch code from the bundle entirely and drops `api.github.com` from the Content-Security-Policy.
 
-Simple Mode builds (`pdffdp-simple`) always skip the star counter — this flag is only needed on the Commercial build or custom full builds.
+Simple Mode builds (`naupdf-simple`) always skip the star counter — this flag is only needed on the Commercial build or custom full builds.
 
 **Docker:**
 
 ```bash
-docker build --build-arg DISABLE_GITHUB_STARS=true -t pdffdp .
+docker build --build-arg DISABLE_GITHUB_STARS=true -t naupdf .
 ```
 
 **Building from source:**
@@ -962,7 +962,7 @@ DISABLE_GITHUB_STARS=true npm run build
 
 ### 🔒 Security Features
 
-pdffdp runs as a non-root user using nginx-unprivileged for enhanced security:
+naupdf runs as a non-root user using nginx-unprivileged for enhanced security:
 
 - **Non-Root Execution**: Container runs with minimal privileges using nginx-unprivileged
 - **Port 8080**: Uses high port number to avoid requiring root privileges (configurable via `PORT` env var)
@@ -971,16 +971,16 @@ pdffdp runs as a non-root user using nginx-unprivileged for enhanced security:
 #### Basic Usage
 
 ```bash
-docker build -t pdffdp .
-docker run -p 8080:8080 pdffdp
+docker build -t naupdf .
+docker run -p 8080:8080 naupdf
 ```
 
 #### Custom Port
 
-By default, pdffdp listens on port `8080` inside the container. To change this, set the `PORT` environment variable:
+By default, naupdf listens on port `8080` inside the container. To change this, set the `PORT` environment variable:
 
 ```bash
-docker run -p 3000:9090 -e PORT=9090 ghcr.io/alam00000/pdffdp-simple:latest
+docker run -p 3000:9090 -e PORT=9090 ghcr.io/alam00000/naupdf-simple:latest
 ```
 
 | Variable | Description                    | Default |
@@ -993,10 +993,10 @@ For environments that require running as a specific non-root user (e.g., NAS dev
 
 ```bash
 # Build the non-root image
-docker build -f Dockerfile.nonroot -t pdffdp-nonroot .
+docker build -f Dockerfile.nonroot -t naupdf-nonroot .
 
 # Run with custom UID/GID
-docker run -d -p 3000:8080 -e PUID=1000 -e PGID=1000 pdffdp-nonroot
+docker run -d -p 3000:8080 -e PUID=1000 -e PGID=1000 naupdf-nonroot
 ```
 
 | Variable | Description        | Default |
@@ -1043,7 +1043,7 @@ The **Digital Signature** tool uses a signing library that may need to fetch cer
    ```
 
    > [!IMPORTANT]
-   > Without this step, the proxy will reject all requests from your site with a 403 error. The default only allows `pdffdp.com`.
+   > Without this step, the proxy will reject all requests from your site with a 403 error. The default only allows `naupdf.com`.
 
 4. **Deploy the worker:**
 
@@ -1051,7 +1051,7 @@ The **Digital Signature** tool uses a signing library that may need to fetch cer
    npx wrangler deploy
    ```
 
-5. **Note your worker URL** (e.g., `https://pdffdp-cors-proxy.your-subdomain.workers.dev`)
+5. **Note your worker URL** (e.g., `https://naupdf-cors-proxy.your-subdomain.workers.dev`)
 
 6. **Set the environment variable when building:**
    ```bash
@@ -1062,7 +1062,7 @@ The **Digital Signature** tool uses a signing library that may need to fetch cer
    export VITE_CORS_PROXY_URL="https://your-worker-url.workers.dev"
    DOCKER_BUILDKIT=1 docker build \
     --secret id=VITE_CORS_PROXY_URL,env=VITE_CORS_PROXY_URL \
-    -t your-pdffdp .
+    -t your-naupdf .
    ```
 
 #### Production Security Features
@@ -1105,7 +1105,7 @@ npx wrangler deploy
 > [!WARNING]
 > Client-side secrets can be extracted from bundled JavaScript. For production deployments with sensitive requirements, use your own backend server to proxy requests instead of embedding secrets in frontend code.
 
-pdffdp uses client-side HMAC as a deterrent against casual abuse, but accepts this tradeoff due to its fully client-side architecture. To enable:
+naupdf uses client-side HMAC as a deterrent against casual abuse, but accepts this tradeoff due to its fully client-side architecture. To enable:
 
 ```bash
 # Generate a secret
@@ -1123,24 +1123,24 @@ export VITE_CORS_PROXY_SECRET="your-secret"
 DOCKER_BUILDKIT=1 docker build \
   --secret id=VITE_CORS_PROXY_URL,env=VITE_CORS_PROXY_URL \
   --secret id=VITE_CORS_PROXY_SECRET,env=VITE_CORS_PROXY_SECRET \
-  -t your-pdffdp .
+  -t your-naupdf .
 ```
 
 ### 📦 Version Management
 
-pdffdp publishes two image variants. Both ship the same PDF tools. The difference is purely whether the pdffdp.com marketing is included.
+naupdf publishes two image variants. Both ship the same PDF tools. The difference is purely whether the naupdf.com marketing is included.
 
 **Self-Hosted build** — recommended for internal/team/organization deployments:
 
-- **Latest**: `ghcr.io/alam00000/pdffdp-simple:latest`
-- **Specific Version**: `ghcr.io/alam00000/pdffdp-simple:1.0.0`
-- **Docker Hub**: `pdffdpteam/pdffdp-simple:latest`
+- **Latest**: `ghcr.io/alam00000/naupdf-simple:latest`
+- **Specific Version**: `ghcr.io/alam00000/naupdf-simple:1.0.0`
+- **Docker Hub**: `naupdfteam/naupdf-simple:latest`
 
-**Commercial build** — used by pdffdp.com itself and by commercial license holders running public-facing deployments:
+**Commercial build** — used by naupdf.com itself and by commercial license holders running public-facing deployments:
 
-- **Latest**: `ghcr.io/alam00000/pdffdp:latest`
-- **Specific Version**: `ghcr.io/alam00000/pdffdp:1.0.0`
-- **Docker Hub**: `pdffdpteam/pdffdp:latest`
+- **Latest**: `ghcr.io/alam00000/naupdf:latest`
+- **Specific Version**: `ghcr.io/alam00000/naupdf:1.0.0`
+- **Docker Hub**: `naupdfteam/naupdf:latest`
 
 #### Quick Release
 
@@ -1164,8 +1164,8 @@ For detailed release instructions, see [RELEASE.md](RELEASE.md).
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/alam00000/pdffdp.git
-   cd pdffdp
+   git clone https://github.com/alam00000/naupdf.git
+   cd naupdf
    ```
 
 2. **Install Dependencies**:
@@ -1189,8 +1189,8 @@ For detailed release instructions, see [RELEASE.md](RELEASE.md).
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/alam00000/pdffdp.git
-   cd pdffdp
+   git clone https://github.com/alam00000/naupdf.git
+   cd naupdf
    ```
 
 2. **Run with Docker Compose**:
@@ -1214,7 +1214,7 @@ For detailed release instructions, see [RELEASE.md](RELEASE.md).
 
 ## 🛠️ Tech Stack & Background
 
-pdffdp was originally built using **HTML**, **CSS**, and **vanilla JavaScript**. As the project grew, it was migrated to a modern stack for better maintainability and scalability:
+naupdf was originally built using **HTML**, **CSS**, and **vanilla JavaScript**. As the project grew, it was migrated to a modern stack for better maintainability and scalability:
 
 - **Vite**: A fast build tool for modern web development.
 - **TypeScript**: For type safety and an improved developer experience.
@@ -1229,8 +1229,8 @@ pdffdp was originally built using **HTML**, **CSS**, and **vanilla JavaScript**.
 
 | Product            | Description                                                                                                                           | Links                                                                                                  |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------- |
-| **Kura**           | PDF standards and preflight engine. Converts to every PDF/A level, PDF/UA, PDF/X, PDF/E and PDF/VT, and can perform preflight checks. | [Website](https://kura.pdffdp.com) · [GitHub](https://github.com/alam00000/pdffdp-kura)            |
-| **Hyper Compress** | The best open source PDF compression engine.                                                                                          | [Website](https://hyper.pdffdp.com) · [GitHub](https://github.com/alam00000/pdffdp-hyper-compress) |
+| **Kura**           | PDF standards and preflight engine. Converts to every PDF/A level, PDF/UA, PDF/X, PDF/E and PDF/VT, and can perform preflight checks. | [Website](https://kura.naupdf.com) · [GitHub](https://github.com/alam00000/naupdf-kura)            |
+| **Hyper Compress** | The best open source PDF compression engine.                                                                                          | [Website](https://hyper.naupdf.com) · [GitHub](https://github.com/alam00000/naupdf-hyper-compress) |
 
 ---
 
@@ -1253,7 +1253,7 @@ We welcome contributions from the community! Here's how you can get started:
 3.  Make your changes and commit them with a clear message.
 4.  **Open a Pull Request** and describe the changes you've made.
 
-Have an idea for a new tool or an improvement? [Open an issue](https://github.com/alam00000/pdffdp/issues) to discuss it first.
+Have an idea for a new tool or an improvement? [Open an issue](https://github.com/alam00000/naupdf/issues) to discuss it first.
 
 ### 📖 Contributing to Documentation
 
@@ -1286,7 +1286,7 @@ Documentation files are in the `docs/` folder:
 
 ## Special Thanks
 
-pdffdp wouldn't be possible without the amazing open-source tools and libraries that power it. We'd like to extend our heartfelt thanks to the creators and maintainers of:
+naupdf wouldn't be possible without the amazing open-source tools and libraries that power it. We'd like to extend our heartfelt thanks to the creators and maintainers of:
 
 **Bundled Libraries:**
 
@@ -1311,6 +1311,6 @@ pdffdp wouldn't be possible without the amazing open-source tools and libraries 
 - **[Ghostscript (GhostPDL)](https://github.com/ArtifexSoftware/ghostpdl)** – For PDF/A conversion and font outlining. _(AGPL-3.0)_
 
 > [!NOTE]
-> AGPL-licensed libraries are not bundled in pdffdp's source code. They are loaded at runtime from CDN (pre-configured) and can be overridden via environment variables or Advanced Settings.
+> AGPL-licensed libraries are not bundled in naupdf's source code. They are loaded at runtime from CDN (pre-configured) and can be overridden via environment variables or Advanced Settings.
 
 Your work inspires and empowers developers everywhere. Thank you for making open-source amazing!
